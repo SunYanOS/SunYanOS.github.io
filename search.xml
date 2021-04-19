@@ -14,49 +14,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL安全配置向导mysql_secure_installation详解</title>
-    <url>/2021/04/19/MySQL%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BCmysql-secure-installation%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p><a href="https://www.jb51.net/article/47727.htm">原文地址</a></p>
-<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：<br>  a)为root用户设置密码<br>  b)删除匿名账号<br>  c)取消root用户远程登录<br>  d)删除test库和对test库的访问权限<br>  e)刷新授权表使修改生效</p>
-<p>通过这几项的设置能够提高mysql库的安全。建议生产环境中mysql安装这完成后一定要运行一次mysql_secure_installation，详细步骤请参看下面的命令:</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment"># mysql_secure_installation</span></span><br><span class="line">NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED <span class="keyword">FOR</span> ALL MySQL</span><br><span class="line">SERVERS <span class="keyword">IN</span> PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!</span><br><span class="line"><span class="keyword">In</span> order to log into MySQL to secure it, we<span class="string">&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user. If you&#x27;</span>ve just installed MySQL, and</span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string">Enter current password for root (enter for none):   																						初次运行直接回车</span></span><br><span class="line"><span class="string">OK, successfully used password, moving on…</span></span><br><span class="line"><span class="string">Setting the root password ensures that nobody can log into the MySQL</span></span><br><span class="line"><span class="string">root user without the proper authorisation.</span></span><br><span class="line"><span class="string">Set root password? [Y/n]																			是否设置root用户密码，输入y并回车或直接回车</span></span><br><span class="line"><span class="string">New password: 																																					设置root用户的密码</span></span><br><span class="line"><span class="string">Re-enter new password: 																															再输入一次你设置的密码</span></span><br><span class="line"><span class="string">Password updated successfully!</span></span><br><span class="line"><span class="string">Reloading privilege tables..</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, a MySQL installation has an anonymous user, allowing anyone</span></span><br><span class="line"><span class="string">to log into MySQL without having to have a user account created for</span></span><br><span class="line"><span class="string">them. This is intended only for testing, and to make the installation</span></span><br><span class="line"><span class="string">go a bit smoother. You should remove them before moving into a</span></span><br><span class="line"><span class="string">production environment.</span></span><br><span class="line"><span class="string">Remove anonymous users? [Y/n] 												 是否删除匿名用户,生产环境建议删除，所以直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Normally, root should only be allowed to connect from &#x27;</span>localhost<span class="string">&#x27;. This</span></span><br><span class="line"><span class="string">ensures that someone cannot guess at the root password from the network.</span></span><br><span class="line"><span class="string">Disallow root login remotely? [Y/n] 						是否禁止root远程登录,根据自己的需求选择Y/n并回车,建议禁止</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, MySQL comes with a database named &#x27;</span>test<span class="string">&#x27; that anyone can</span></span><br><span class="line"><span class="string">access. This is also intended only for testing, and should be removed</span></span><br><span class="line"><span class="string">before moving into a production environment.</span></span><br><span class="line"><span class="string">Remove test database and access to it? [Y/n] 																	 是否删除test数据库,直接回车</span></span><br><span class="line"><span class="string">- Dropping test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">- Removing privileges on test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Reloading the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="string">will take effect immediately.</span></span><br><span class="line"><span class="string">Reload privilege tables now? [Y/n] 																							是否重新加载权限表，直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Cleaning up…</span></span><br><span class="line"><span class="string">All done! If you&#x27;</span>ve completed all of the above steps, your MySQL</span><br><span class="line">installation should now be secure.</span><br><span class="line">Thanks <span class="keyword">for</span> <span class="keyword">using</span> MySQL!</span><br><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu 18.04 完美安装搜狗拼音输入法</title>
-    <url>/2021/04/19/Ubuntu-18-04-%E5%AE%8C%E7%BE%8E%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。</p>
-<p>安装Fcitx框架后，本想使用搜狗输入法，但由于fcitx组件问题，搜狗频频出现候选字乱码甚至没有候选字问题，只好退而其次依次尝试了Sunpinyin和Googlepinyin，然鹅使用体验也不好，缺词库，用了一段时间，最后在昨天决定换回搜狗输入法，毕竟搜狗词库和云同步实在太香了。</p>
-<p>搜狗输入法的官方安装包是没有问题的，那么频频出现乱码的原因只能是Fcitx组件的一些误装造成的。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
-<li>首先卸载IBus<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载IBus</span></span><br><span class="line">sudo apt<span class="literal">-get</span> remove ibus</span><br><span class="line"><span class="comment"># 清除IBus配置</span></span><br><span class="line">sudo apt<span class="literal">-get</span> purge ibus</span><br></pre></td></tr></table></figure></li>
-<li>如果曾经安装了Fcitx，彻底卸载掉<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载Fcixt及其组件</span></span><br><span class="line">sudo apt<span class="literal">-get</span> <span class="literal">-y</span>  remove *fcitx*</span><br><span class="line"><span class="comment"># 清除依赖包</span></span><br><span class="line">sudo apt<span class="literal">-get</span> autoremove</span><br></pre></td></tr></table></figure></li>
-<li>最简化安装Fcitx<br>Ubuntu软件中心搜索fcitx，只安装<code>Fcitx</code>和<code>Fcitx配置</code>两项<br><img src="https://img-blog.csdnimg.cn/20191108204511178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li><a href="https://pinyin.sogou.com/linux/?r=pinyin">下载</a>安装搜狗拼音输入法<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo dpkg <span class="literal">-i</span> sougoupinyin_xxxxxxx_amd64.deb</span><br><span class="line"><span class="comment"># 修复依赖</span></span><br><span class="line">sudo apt<span class="literal">-get</span> install <span class="operator">-f</span></span><br></pre></td></tr></table></figure></li>
-<li>更改输入法框架配置<blockquote>
-<p>设置&gt;&gt;区域与语言&gt;&gt;管理已安装的语言</p>
-</blockquote>
-</li>
-</ol>
-<p>若提示语言不完整，则选择稍后提醒，若选择安装将会开始安装IBus</p>
-<p><img src="https://img-blog.csdnimg.cn/20191108205749352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>在弹出的窗口内将键盘输入法系统从ibus改为fcitx<br><img src="https://img-blog.csdnimg.cn/20191108205951744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ol start="6">
-<li>重启<br>重新启动，而非注销<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo shutdown <span class="literal">-r</span> now</span><br></pre></td></tr></table></figure></li>
-<li>配置搜狗拼音输入法<br>重启后，顶栏右边会出现一个小键盘图标，<img src="https://img-blog.csdnimg.cn/20191108210507108.png" alt="在这里插入图片描述"><br>点击，配置，或者直接搜索打开<code>fcitx配置</code></li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20191108210701996.png" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191108210650615.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191108210817961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>移除搜狗五笔等，只保留这两项输入法<br>使用时，通过<code>shift</code>在两种输入法之间切换，<code>shift</code>是不能在搜狗输入法内切换中英文的。</p>
-<p>通过这种方式安装，再没有出现过乱码现象，账户同步功能也可以正常使用</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux中apt与apt-get命令的区别与解释[转]</title>
     <url>/2021/04/19/Linux%E4%B8%ADapt%E4%B8%8Eapt-get%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%A7%A3%E9%87%8A/</url>
     <content><![CDATA[<p><a href="https://www.sysgeek.cn/apt-vs-apt-get/">原文地址</a></p>
@@ -167,6 +124,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Shell编写“Hello Qt”Qt程序</title>
+    <url>/2021/04/19/Shell%E7%BC%96%E5%86%99%E2%80%9CHello-Qt%E2%80%9DQt%E7%A8%8B%E5%BA%8F/</url>
+    <content><![CDATA[<p>首先在~/qt目录下新建prac文件夹，在prac文件夹内编写c++源代码程序</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> ~/qt/prac</span><br><span class="line"><span class="variable">$</span> vim prac.cpp</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QApplication&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QLabel&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">int</span> argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">QApplication</span>(argc, argv);</span><br><span class="line">	QLabel *label = <span class="keyword">new</span> <span class="built_in">QLabel</span>(<span class="string">&quot;Hello Qt!&quot;</span>);</span><br><span class="line">	label-&gt;<span class="built_in">show</span>();</span><br><span class="line">	<span class="keyword">return</span> app.<span class="built_in">exec</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输入以下命令，生成一个与平台无关的项目文件prac.pro</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">qmake <span class="literal">-project</span></span><br></pre></td></tr></table></figure>
+<p>编辑生成的prac.pro文件，添加语句<code>greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</code>或<code>QT += widgets</code>，为了保持与Qt4的兼容性，建议使用前者</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vim prac.pro</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">######################################################################</span><br><span class="line"># <span class="function">Automatically generated by <span class="title">qmake</span> <span class="params">(<span class="number">3.1</span>)</span> Thu Nov 14 20:<span class="number">22</span>:<span class="number">38</span> <span class="number">2019</span></span></span><br><span class="line"><span class="function">######################################################################</span></span><br><span class="line"><span class="function">TEMPLATE =</span> app</span><br><span class="line">TARGET = prac</span><br><span class="line">INCLUDEPATH += .</span><br><span class="line"></span><br><span class="line"># You can make your code fail to compile <span class="keyword">if</span> you use deprecated APIs.</span><br><span class="line"># In order to <span class="keyword">do</span> so, uncomment the following line.</span><br><span class="line"># Please consult the documentation of the deprecated API in order to know</span><br><span class="line"><span class="meta"># how to port your code away from it.</span></span><br><span class="line"># You can also select to disable deprecated APIs only up to a certain version of Q    t.</span><br><span class="line">#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=<span class="number">0x060000</span>    <span class="meta"># disables all the APIs depre    cated before Qt 6.0.0</span></span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">SOURCES += prac.cpp</span><br><span class="line"></span><br><span class="line"><span class="built_in">greaterThan</span>(QT_MAJOR_VERSION,<span class="number">4</span>):QT += widgets                                     </span><br><span class="line">                                                </span><br></pre></td></tr></table></figure>
+<p>保存退出，然后输入以下命令，从这个项目文件生成一个与平台相关的makefile文件：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">qmake prac.pro</span><br></pre></td></tr></table></figure>
+<p>键入<code>make</code>命令就可以构建该程序，然后就可以执行生成的可执行文件了</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">./prac</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20191114204646688.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Qt</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C/C++编程YouCompleteMe报错：RuntimeError: No completions found； errors in the file?</title>
     <url>/2021/04/19/C-C-%E7%BC%96%E7%A8%8BYouCompleteMe%E6%8A%A5%E9%94%99%EF%BC%9ARuntimeError-No-completions-found%EF%BC%9B-errors-in-the-file/</url>
     <content><![CDATA[<p><code>Vimplus</code>自带<code>YouCompleteMe</code>插件，在正确安装Vimplus后，使用C语言编程的过程中频繁报错：</p>
@@ -182,6 +161,36 @@
         <tag>Ubuntu</tag>
         <tag>Vim</tag>
         <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu18.04/19.04/20.04安装笔记&amp;&amp;通用指南</title>
+    <url>/2021/04/19/Ubuntu18-04-19-04-20-04%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0-%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p><em>&emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。</em><br>&emsp;<br><strong>设备配置：<br>&emsp;&emsp;微星 GL62M 7REX-1650CN<br>&emsp;&emsp;CPU  i7-7700HQ<br>&emsp;&emsp;NVIDIA GeForce GTX 1050Ti<br>&emsp;&emsp;128SSD+1THDD</strong><br>&emsp;</p>
+<h2 id="1-制作U盘启动盘"><a href="#1-制作U盘启动盘" class="headerlink" title="1.制作U盘启动盘"></a>1.制作U盘启动盘</h2><p>&emsp;&emsp;建议使用<a href="https://www.balena.io/etcher/">Etcher</a>刷写Linux镜像。<br>&emsp;&emsp;Etcher是一款开源的跨平台的系统级刷写工具，支持Windows，Linux，Mac OS。<br>&emsp;&emsp;使用Etcher将Ubuntu 19.04 Desktop ISO刷写进U盘中<br>&emsp;</p>
+<h2 id="2-安装系统"><a href="#2-安装系统" class="headerlink" title="2. 安装系统"></a>2. 安装系统</h2><h4 id="2-1安装前准备"><a href="#2-1安装前准备" class="headerlink" title="2.1安装前准备"></a>2.1安装前准备</h4><ul>
+<li> 关闭安全启动：Secure Boot设置为<code>Disable</code></li>
+<li>Startup-&gt;设置为Network Boot为<code>USB HDD</code></li>
+<li>启动方式设置为<code>UEFI Only</code></li>
+<li>在Startup Boot中将<code>USB HDD</code>设为第一启动项</li>
+<li>F10保存所有设置并重启，进入U盘安装</li>
+</ul>
+<p>总的来讲，需要禁用安全启动以及在启动电脑时进行U盘启动即可,这一安装步骤仅供参考。</p>
+<h4 id="2-2-安装"><a href="#2-2-安装" class="headerlink" title="2.2. 安装"></a>2.2. 安装</h4><p> 由于安装时缺省使用Canonical提供的Nouveau显卡驱动，这个驱动在很多机器上存在兼容性问题，易卡死在Ubuntu安装界面，因此，首先需要禁用Nouveau，使用机器自带的集成显卡进入安装程序，并在Ubuntu系统内安装并启用Nvidia显卡驱动</p>
+<ul>
+<li>插入U盘，启动电脑，进入grub界面，光标移动到<code>Install Ubuntu</code>条目，键盘按<code>e</code>键进入编辑模式，在”quite splash”后先空格，再键入”nomodeset”，按F10保存，进入Ubuntu19.04安装系统<h4 id="2-3-分区方案"><a href="#2-3-分区方案" class="headerlink" title="2.3. 分区方案"></a>2.3. 分区方案</h4></li>
+<li>本人安装模式为Ubuntu单系统，128SSD+1THDD，8G+8G RAM双通道</li>
+<li> /swap交换空间&emsp;16G(至少为内存的1倍)&ensp;SSD;</li>
+<li>/boot &emsp;500MB&ensp;SSD</li>
+<li>/EFI &emsp; 500MB&ensp;SSD</li>
+<li>/ &emsp; &emsp; 剩余SSD</li>
+<li>/home&emsp;&emsp;1T&ensp;HDD<h4 id="2-3-双系统"><a href="#2-3-双系统" class="headerlink" title="2.3. 双系统"></a>2.3. 双系统</h4>若是Windows + Ubuntu 双系统安装，重新启动后，将进入grub引导界面：选中第一个启动选项<code>Ubuntu</code>,按<code>e</code>进入编辑模式，找到”quite splash”，删除其后的一小段文字，空格，键入”nomodeset”，F10保存，进入Ubuntu。<br>若为单系统安装，请忽略此条目。<br>&emsp;<h4 id="3-禁用Nouveau"><a href="#3-禁用Nouveau" class="headerlink" title="3.禁用Nouveau"></a>3.禁用Nouveau</h4>重启后进入登录界面，不要登录，<code>Ctrl+Alt+F2/F3/F4...</code>从图形化界面切换到文本界面（<code>Ctrl+Alt+F1</code>从文本界面切换到图形化界面），输入命令：<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo nano  /etc/modprobe.d/blacklist.conf</span><br></pre></td></tr></table></figure>
+在打开的文件末尾输入”blacklist nouveau” ,<code>Ctrl+x</code>退出,键入<code>y</code>确定更改,回车，返回到了Terminal，并输入：sudo update-initramfs -u使修改生效以禁用Nouveau驱动，然后重启。<br>&emsp;<h2 id="4-安装Nvidia驱动"><a href="#4-安装Nvidia驱动" class="headerlink" title="4.安装Nvidia驱动"></a>4.安装Nvidia驱动</h2><h4 id="emsp-4-1-自动安装驱动"><a href="#emsp-4-1-自动安装驱动" class="headerlink" title="&emsp;4.1 自动安装驱动"></a>&emsp;4.1 自动安装驱动</h4></li>
+<li>找到并打开<code>软件和更新</code>程序，在附加驱动页面，选择第一个选项，<code>应用更改</code>，等待下载安装完毕<br><img src="https://img-blog.csdnimg.cn/20191001095959477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="软件和更新"><h4 id="4-2-手动安装驱动"><a href="#4-2-手动安装驱动" class="headerlink" title="4.2 手动安装驱动"></a>4.2 手动安装驱动</h4>到<a href="https://www.nvidia.com/Download/index.aspx?lang=cn">NVIDIA驱动程序官网</a>，根据显卡的具体型号查找安装包，下载后 sudo chmod 777 xxx.run 给予权限，运行安装,安装过程中会有一些问题，自行查询。<br><img src="https://img-blog.csdnimg.cn/20191017181708295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -206,25 +215,39 @@
       </tags>
   </entry>
   <entry>
-    <title>Shell编写“Hello Qt”Qt程序</title>
-    <url>/2021/04/19/Shell%E7%BC%96%E5%86%99%E2%80%9CHello-Qt%E2%80%9DQt%E7%A8%8B%E5%BA%8F/</url>
-    <content><![CDATA[<p>首先在~/qt目录下新建prac文件夹，在prac文件夹内编写c++源代码程序</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> ~/qt/prac</span><br><span class="line"><span class="variable">$</span> vim prac.cpp</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QApplication&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QLabel&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">int</span> argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">QApplication</span>(argc, argv);</span><br><span class="line">	QLabel *label = <span class="keyword">new</span> <span class="built_in">QLabel</span>(<span class="string">&quot;Hello Qt!&quot;</span>);</span><br><span class="line">	label-&gt;<span class="built_in">show</span>();</span><br><span class="line">	<span class="keyword">return</span> app.<span class="built_in">exec</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输入以下命令，生成一个与平台无关的项目文件prac.pro</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">qmake <span class="literal">-project</span></span><br></pre></td></tr></table></figure>
-<p>编辑生成的prac.pro文件，添加语句<code>greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</code>或<code>QT += widgets</code>，为了保持与Qt4的兼容性，建议使用前者</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vim prac.pro</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">######################################################################</span><br><span class="line"># <span class="function">Automatically generated by <span class="title">qmake</span> <span class="params">(<span class="number">3.1</span>)</span> Thu Nov 14 20:<span class="number">22</span>:<span class="number">38</span> <span class="number">2019</span></span></span><br><span class="line"><span class="function">######################################################################</span></span><br><span class="line"><span class="function">TEMPLATE =</span> app</span><br><span class="line">TARGET = prac</span><br><span class="line">INCLUDEPATH += .</span><br><span class="line"></span><br><span class="line"># You can make your code fail to compile <span class="keyword">if</span> you use deprecated APIs.</span><br><span class="line"># In order to <span class="keyword">do</span> so, uncomment the following line.</span><br><span class="line"># Please consult the documentation of the deprecated API in order to know</span><br><span class="line"><span class="meta"># how to port your code away from it.</span></span><br><span class="line"># You can also select to disable deprecated APIs only up to a certain version of Q    t.</span><br><span class="line">#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=<span class="number">0x060000</span>    <span class="meta"># disables all the APIs depre    cated before Qt 6.0.0</span></span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">SOURCES += prac.cpp</span><br><span class="line"></span><br><span class="line"><span class="built_in">greaterThan</span>(QT_MAJOR_VERSION,<span class="number">4</span>):QT += widgets                                     </span><br><span class="line">                                                </span><br></pre></td></tr></table></figure>
-<p>保存退出，然后输入以下命令，从这个项目文件生成一个与平台相关的makefile文件：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">qmake prac.pro</span><br></pre></td></tr></table></figure>
-<p>键入<code>make</code>命令就可以构建该程序，然后就可以执行生成的可执行文件了</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">./prac</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20191114204646688.png" alt="在这里插入图片描述"></p>
+    <title>Ubuntu18.04.2 amd64编译安装libcurl支持https[转]</title>
+    <url>/2021/04/19/Ubuntu18-04-2-amd64%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85libcurl%E6%94%AF%E6%8C%81https-%E8%BD%AC/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/areful/p/11306651.html">原文地址</a></p>
+<p>1.准备工作，安装ssl库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install openssl</span><br><span class="line">sudo apt-get install libssl-dev</span><br></pre></td></tr></table></figure>
+<p>2.下载libcurl源代码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://curl.haxx.se/download/curl-7.65.3.tar.xz</span><br></pre></td></tr></table></figure>
+<p>3.解压并进入源代码目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar xf curl-7.65.3.tar.xz</span><br><span class="line"><span class="built_in">cd</span> curl-7.65.3</span><br></pre></td></tr></table></figure>
+<p>4.配置编译选项：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure  --prefix=/usr  													\</span><br><span class="line">           				--disable-static 												\</span><br><span class="line">          			    --enable-threaded-resolver						\</span><br><span class="line">       			        --with-ca-path=/etc/ssl/certs</span><br></pre></td></tr></table></figure>
+<p>5.编译：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<p>6.安装（需要root权限）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make install &amp;&amp;</span><br><span class="line"></span><br><span class="line">rm -rf docs/examples/.deps &amp;&amp;</span><br><span class="line"></span><br><span class="line">find docs \( -name Makefile\* -o -name \*.1 -o -name \*.3 \) -<span class="built_in">exec</span> rm &#123;&#125; \; &amp;&amp;</span><br><span class="line"></span><br><span class="line">install -v -d -m755 /usr/share/doc/curl-7.65.3 &amp;&amp;</span><br><span class="line">cp -v -R docs/*     /usr/share/doc/curl-7.65.3</span><br></pre></td></tr></table></figure>
+<p>至此，编译安装完成。</p>
+<p>&emsp;<br>&emsp;<br>写代码测试一下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;curl/curl.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  CURL *curl;</span><br><span class="line">  CURLcode res;</span><br><span class="line"> </span><br><span class="line">  curl_global_init(CURL_GLOBAL_DEFAULT);</span><br><span class="line"> </span><br><span class="line">  curl = curl_easy_init();</span><br><span class="line">  <span class="keyword">if</span>(curl) &#123;</span><br><span class="line">    curl_easy_setopt(curl, CURLOPT_URL, <span class="string">&quot;https://www.baidu.com/&quot;</span>);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* Perform the request, res will get the return code */</span></span><br><span class="line">    res = curl_easy_perform(curl);</span><br><span class="line">    <span class="comment">/* Check for errors */</span></span><br><span class="line">    <span class="keyword">if</span>(res != CURLE_OK)</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;curl_easy_perform() failed: %s\n&quot;</span>,</span><br><span class="line">              curl_easy_strerror(res));</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* always cleanup */</span></span><br><span class="line">    curl_easy_cleanup(curl);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  curl_global_cleanup();</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc hello_https.c -l curl -o hello_https</span><br></pre></td></tr></table></figure>
+
+<p>运行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./hello_https</span><br></pre></td></tr></table></figure>
+
+<p>运行结果截图：<br><img src="https://img-blog.csdnimg.cn/20191031104423437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> 附 自定义回调处理响应数据代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;curl/curl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">size_t</span> <span class="title">write_data</span><span class="params">(<span class="keyword">void</span> *ptr, <span class="keyword">size_t</span> size, <span class="keyword">size_t</span> nmemb, <span class="keyword">void</span> *stream)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(stream == <span class="literal">NULL</span>) </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, ptr);</span><br><span class="line">    <span class="keyword">return</span> size * nmemb;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  CURL *curl;</span><br><span class="line">  CURLcode res;</span><br><span class="line"> </span><br><span class="line">  curl_global_init(CURL_GLOBAL_DEFAULT);</span><br><span class="line"> </span><br><span class="line">  curl = curl_easy_init();</span><br><span class="line">  <span class="keyword">if</span>(curl) &#123;</span><br><span class="line">    curl_easy_setopt(curl, CURLOPT_URL, <span class="string">&quot;https://www.baidu.com/&quot;</span>);</span><br><span class="line">    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* Perform the request, res will get the return code */</span></span><br><span class="line">    res = curl_easy_perform(curl);</span><br><span class="line">    <span class="comment">/* Check for errors */</span></span><br><span class="line">    <span class="keyword">if</span>(res != CURLE_OK)</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;curl_easy_perform() failed: %s\n&quot;</span>,</span><br><span class="line">              curl_easy_strerror(res));</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* always cleanup */</span></span><br><span class="line">    curl_easy_cleanup(curl);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  curl_global_cleanup();</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <tags>
         <tag>Ubuntu</tag>
-        <tag>Qt</tag>
+        <tag>图像识别</tag>
       </tags>
   </entry>
   <entry>
@@ -330,31 +353,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu终端内打开当前目录文件夹图形界面</title>
-    <url>/2021/04/19/Ubuntu%E7%BB%88%E7%AB%AF%E5%86%85%E6%89%93%E5%BC%80%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/</url>
-    <content><![CDATA[<p>Ubuntu18.04中已经缺省支持在右键菜单中从当前目录打开终端，但是怎么通过终端打开当前目录的文件夹？<br>看了一些帖子，知道了可以通过<code>nautilus</code>命令解决</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 默认打开~/目录文件夹</span></span><br><span class="line">nautilus</span><br><span class="line"><span class="comment"># 打开当前目录文件</span></span><br><span class="line">nautilus ./</span><br><span class="line"><span class="comment"># 打开/usr/bin 目录文件夹</span></span><br><span class="line">nautilus /usr/bin</span><br></pre></td></tr></table></figure>
-<p>但是很快我就发现了另一个更方便的解决方案——<code>xdg-open</code>!<br>之前一直用<code>xdg-open</code>命令打开目录、各种文件、网址等等，却没想到用它打开文件路径</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xdg<span class="literal">-open</span> ./</span><br><span class="line">xdg<span class="literal">-open</span> a.jpg</span><br><span class="line">xdg<span class="literal">-open</span>  b.odt</span><br><span class="line">xdg<span class="literal">-open</span> http://www.google.com</span><br></pre></td></tr></table></figure>
-<p><code>gnome-open</code>实现以上需求</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vim简单配置</title>
-    <url>/2021/04/19/Vim%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>总是折腾，每次重新配置vim重新写很麻烦，就在此做个备份</p>
-<p>set autoindent “”自动缩进<br>set cindent “”以C语言的方式缩进<br>set shiftwidth=4 “”设置自动缩进的空格数量<br>set softtabstop=4 “”tab键的实际占有空格数，统一缩进<br>set tabstop=4 “”设置tab键的空格数</p>
-<p>set cursorline “”突出当前行<br>syntax on “”语法高亮<br>set nu “”设置行号</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>Vim</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu安装WPS后报错：缺失字体[转]</title>
     <url>/2021/04/19/Ubuntu%E5%AE%89%E8%A3%85WPS%E5%90%8E%E6%8A%A5%E9%94%99%EF%BC%9A%E7%BC%BA%E5%A4%B1%E5%AD%97%E4%BD%93-%E8%BD%AC/</url>
     <content><![CDATA[<p><a href="https://blog.csdn.net/dejunyang/article/details/81437632">原文地址</a></p>
@@ -389,56 +387,44 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>qbittorrent+树莓派3B+制作bt下载机</title>
-    <url>/2021/04/19/qbittorrent-%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B6%E4%BD%9Cbt%E4%B8%8B%E8%BD%BD%E6%9C%BA/</url>
-    <content><![CDATA[<h2 id="一、刷入系统"><a href="#一、刷入系统" class="headerlink" title="一、刷入系统"></a>一、刷入系统</h2><p>为了节省资源，系统选择的是没有图形界面的<code>raspbian-lite</code><br>使用<code>BalenaEtcher</code>刷入镜像后，在<code>/boot</code>目录新建<code>ssh</code>文件夹，用于ssh连接树莓派<br>如果需要省略低电压警告，在/boot分区的config.txt问价内写入<code>avoid_warnings=1</code>即可</p>
-<h2 id="二、ssh连接"><a href="#二、ssh连接" class="headerlink" title="二、ssh连接"></a>二、ssh连接</h2><p>由于本人是通过网线直连路由器，很简单就能获得树莓派的IP地址<br>在Ubuntu内打开终端，使用ssh连接树莓派</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP</span><br></pre></td></tr></table></figure>
-<p>树莓派初始用户名<code>pi</code>，密码<code>raspberry</code></p>
-<h2 id="三、-安装qbittorrent"><a href="#三、-安装qbittorrent" class="headerlink" title="三、 安装qbittorrent"></a>三、 安装qbittorrent</h2><ol>
-<li>换清华源</li>
-</ol>
-<p><a href="https://mirror.tuna.tsinghua.edu.cn/help/raspbian/">清华开源软件镜像站</a></p>
-<ol start="2">
-<li>安装qbittorrent<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装qbittorent</span></span><br><span class="line">sudo apt install qbittorrent<span class="literal">-nox</span></span><br><span class="line"><span class="comment">#启动</span></span><br><span class="line">qbittorrent<span class="literal">-nox</span> <span class="literal">-d</span></span><br></pre></td></tr></table></figure>
-<h2 id="四、-Web远程控制"><a href="#四、-Web远程控制" class="headerlink" title="四、 Web远程控制"></a>四、 Web远程控制</h2>在Ubuntu中打开浏览器，地址栏输入<code>树莓派IP：8080</code>（qbittorent默认端口为8080）<br>qbittorrent初始用户名<code>admin</code>，初始密码<code>adminadmin</code></li>
-</ol>
-<p>开始使用吧！</p>
-<p>密码端口等都是可以自定义修改的，本人也准备找个闲置的u盘/硬盘接到树莓派上，以后就可以在低耗电的情况下</p>
-<h2 id="五、-调整分辨率"><a href="#五、-调整分辨率" class="headerlink" title="五、 调整分辨率"></a>五、 调整分辨率</h2><p><a href="https://www.cnblogs.com/dongxiaodong/p/9682311.html">调整VNC连接中图像显示的分辨率</a></p>
-]]></content>
-      <tags>
-        <tag>Raspberry</tag>
-        <tag>Raspbian</tag>
-        <tag>Bt</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>firt_blog</title>
     <url>/2021/04/01/firt-blog/</url>
     <content><![CDATA[<p>I’m so happy to build and own the first blog by myself  : )! And thanks to Hexo help me achieve this plan !</p>
 ]]></content>
   </entry>
   <entry>
-    <title>初次使用Qt时遇到的几个坑</title>
-    <url>/2021/04/19/%E5%88%9D%E6%AC%A1%E4%BD%BF%E7%94%A8Qt%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91/</url>
-    <content><![CDATA[<h2 id="1-error-cannot-find-lGL"><a href="#1-error-cannot-find-lGL" class="headerlink" title="1.　error:cannot find -lGL"></a>1.　error:cannot find -lGL</h2><p>原因分析: 在已经安装openGL库的前提下出现这种错误，是因为libGL没有正确链接:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:/opt/busybox-1.31.0$ locate libGL</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGL.so.1</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGL.so.1.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_indirect.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0</span><br><span class="line">/usr/lib/libGL.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGL.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGL.so.1.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLU.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLU.so.1.3.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX.so.0.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_indirect.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_mesa.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_mesa.so.0.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLdispatch.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLdispatch.so.0.0.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.la</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so.1</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so.1.7.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1.0.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1.2.0</span><br></pre></td></tr></table></figure>
-<p>这里有很多libGL的路径，随便找一个链接就可以</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:/opt/busybox-1.31.0$ sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1</span><br></pre></td></tr></table></figure>
-<h2 id="２．qmake-could-not-exec-＇-usr-lib-x86-64-linux-gnu-qt5-bin-qmake＇-No-such-file-or-directory"><a href="#２．qmake-could-not-exec-＇-usr-lib-x86-64-linux-gnu-qt5-bin-qmake＇-No-such-file-or-directory" class="headerlink" title="２．qmake: could not exec ＇/usr/lib/x86_64-linux-gnu/qt5/bin/qmake＇: No such file or directory"></a>２．qmake: could not exec ＇/usr/lib/x86_64-linux-gnu/qt5/bin/qmake＇: No such file or directory</h2><p>原因：qtchooser默认选择路径中没有指向qmake路径</p>
-<p>修改配置文件，修改为Qt路径：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:~$ sudo vim /usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf</span><br></pre></td></tr></table></figure>
-<p>将default.conf的内容删除并键入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/Qt5.13.1/5.13.1/gcc_64/bin</span><br><span class="line">/opt/Qt5.13.1/5.13.1</span><br></pre></td></tr></table></figure>
-<p>保存退出后，进行测试：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:~$ qmake -v</span><br><span class="line">QMake version 3.1</span><br><span class="line">Using Qt version 5.13.1 <span class="keyword">in</span> /opt/Qt5.13.1/5.13.1/gcc_64/lib</span><br></pre></td></tr></table></figure>
-<p>配置成功</p>
-<h2 id="3-fatal-error-QApplication-No-such-file-or-directory"><a href="#3-fatal-error-QApplication-No-such-file-or-directory" class="headerlink" title="3. fatal error: QApplication:No such file or directory"></a>3. fatal error: QApplication:No such file or directory</h2><p>在使用make构建程序时报错<br><img src="https://img-blog.csdnimg.cn/20191028162701793.png" alt="在这里插入图片描述"><br>原因：Qt5将大部分桌面部件移到了Qt Widgets模块中，即QApplication已经从原来的&lt;QtGui/QApplication&gt;移动到&lt;QtWidgets/QApplication&gt;</p>
-<p>解决方案：修改.pro文件,加入一段代码:<code>greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</code><br><img src="https://img-blog.csdnimg.cn/20191028163900357.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+    <title>Ubuntu终端内打开当前目录文件夹图形界面</title>
+    <url>/2021/04/19/Ubuntu%E7%BB%88%E7%AB%AF%E5%86%85%E6%89%93%E5%BC%80%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/</url>
+    <content><![CDATA[<p>Ubuntu18.04中已经缺省支持在右键菜单中从当前目录打开终端，但是怎么通过终端打开当前目录的文件夹？<br>看了一些帖子，知道了可以通过<code>nautilus</code>命令解决</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 默认打开~/目录文件夹</span></span><br><span class="line">nautilus</span><br><span class="line"><span class="comment"># 打开当前目录文件</span></span><br><span class="line">nautilus ./</span><br><span class="line"><span class="comment"># 打开/usr/bin 目录文件夹</span></span><br><span class="line">nautilus /usr/bin</span><br></pre></td></tr></table></figure>
+<p>但是很快我就发现了另一个更方便的解决方案——<code>xdg-open</code>!<br>之前一直用<code>xdg-open</code>命令打开目录、各种文件、网址等等，却没想到用它打开文件路径</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xdg<span class="literal">-open</span> ./</span><br><span class="line">xdg<span class="literal">-open</span> a.jpg</span><br><span class="line">xdg<span class="literal">-open</span>  b.odt</span><br><span class="line">xdg<span class="literal">-open</span> http://www.google.com</span><br></pre></td></tr></table></figure>
+<p><code>gnome-open</code>实现以上需求</p>
 ]]></content>
       <tags>
-        <tag>Qt</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu18.04 Mac主题美化</title>
+    <url>/2021/04/19/Ubuntu18-04-Mac%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前总觉得原主题就挺好，看了一些美化教程后自然而然就香了起来，下面是效果图<br><img src="https://img-blog.csdnimg.cn/20191213203229935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="美化准备"><a href="#美化准备" class="headerlink" title="美化准备"></a>美化准备</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-tweaks</span></span><br></pre></td></tr></table></figure>
+<p>安装后打开<strong>Tweaks</strong>，在<strong>拓展栏</strong>启用<code>Ubuntu appindicators</code>和<code>Ubuntu dock</code>,并在<strong>窗口栏</strong>修改<code>标题栏按钮</code>的位置,其他的一些配置根据个人喜好就行<img src="https://img-blog.csdnimg.cn/20191213203418757.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213205443523.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但是如果需要对<strong>Shell</strong>进行美化，则还需要安装一个拓展</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-shell</span><span class="literal">-extensions</span></span><br></pre></td></tr></table></figure>
+<p>打开<strong>Tweaks</strong>在<strong>拓展栏</strong>启用<code>User themes</code><br>&emsp;</p>
+<h2 id="正式美化"><a href="#正式美化" class="headerlink" title="正式美化"></a>正式美化</h2><h3 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h3><p>在<a href="https://www.pling.com/browse/cat/135/ord/rating/">这里</a>找喜欢的主题,本人用的是<a href="https://www.pling.com/p/1275087/">McMojave</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/themes**</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/themes</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2019121321042740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 应用程序</strong>,启用主题美化<br>&emsp;</p>
+<h3 id="Shell美化"><a href="#Shell美化" class="headerlink" title="Shell美化"></a>Shell美化</h3><p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; Shell</strong>,启用Shell美化<br>&emsp;</p>
+<h3 id="图标美化"><a href="#图标美化" class="headerlink" title="图标美化"></a>图标美化</h3><p>在<a href="https://www.pling.com/s/Gnome/browse/cat/132/order/latest/">这里</a>找喜欢的图标包,本人用的是<a href="https://www.pling.com/s/Gnome/p/1210856">Mcjave CT icons</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/icons**</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/icons</span><br></pre></td></tr></table></figure>
+<p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 图标</strong>,替换图标<br>&emsp;</p>
+<h3 id="Dash-to-Dock"><a href="#Dash-to-Dock" class="headerlink" title="Dash to Dock"></a>Dash to Dock</h3><p>在<strong>Ubuntu软件</strong>中搜索安装<code>Dash to Dock</code>,设置自定义<br><img src="https://img-blog.csdnimg.cn/20191213211948155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213212123894.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;</p>
+<h3 id="Terminal美化"><a href="#Terminal美化" class="headerlink" title="Terminal美化"></a>Terminal美化</h3><p>这里只改变了窗口的透明度,其他的可自行调整<br><img src="https://img-blog.csdnimg.cn/20191213212257751.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>结束</p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -492,61 +478,112 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>树莓派3B+无屏幕和键盘配置WiFi[转]</title>
-    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AEWiFi/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/huryer/article/details/83146721">原文地址</a></p>
-<p>一、WiFi 网络配置<br>用户可以在未启动树莓派的状态下单独修改 /boot/wpa_supplicant.conf 文件配置 WiFi 的 SSID 和密码，这样树莓派启动后会自行读取 wpa_supplicant.conf 配置文件连接 WiFi 设备。</p>
-<p>操作方法简单：将刷好 Raspbian  系统的 SD 卡用电脑读取。在 boot 分区，也就是树莓派的 /boot 目录下新建 wpa_supplicant.conf 文件，按照下面的参考格式填入内容并保存 wpa_supplicant.conf 文件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-A&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-B&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;2</span><br><span class="line">scan_ssid&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>说明以及不同安全性的 WiFi 配置示例：<br>#ssid:网络的ssid<br>#psk:密码<br>#priority:连接优先级，数字越大优先级越高（不可以是负数）<br>#scan_ssid:连接隐藏WiFi时需要指定该值为1</p>
-<p>如果你的 WiFi 没有密码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br></pre></td></tr></table></figure>
-<p>如果你的 WiFi 使用WEP加密</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br><span class="line">wep_key0&#x3D;&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果你的 WiFi 使用WPA/WPA2加密</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">psk&#x3D;&quot;你的wifi密码&quot;</span><br></pre></td></tr></table></figure>
-<p>如果你不清楚 WiFi 的加密模式，可以在安卓手机上用 root explorer 打开 /data/misc/wifi/wpa/wpa_supplicant.conf，查看 WiFi 的信息。</p>
-]]></content>
-      <tags>
-        <tag>Raspberry</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>树莓派3B+自动挂载移动硬盘或U盘[转]</title>
-    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/</url>
-    <content><![CDATA[<p><a href="http://blog.sina.com.cn/s/blog_563ac5900102wwxq.html">原文地址</a></p>
-<p>fdisk -l<br>命令查看一下U盘是否有被识别到，及识别的U盘是在哪个位置<br>外接U盘或移动硬盘时，默认不会自动挂载，所以需要用mount 命令挂载。通常我们在/mnt 或/media 目录下新建一个目录作为挂载点。比如：</p>
-<p>sudo mkdir /mnt/1GB_USB_flash<br>sudo mount -o uid=pi,gid=pi /dev/sda1 /mnt/1GB_USB_flash<br>//用完之后卸载<br>sudo umount /mnt/1GB_USB_flash  </p>
-<p>sda1 是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。</p>
-<p>挂载exFAT格式的硬盘<br>FAT 格式U盘mount 本身就能支持，但如果你的U盘或移动硬盘使用的是exFAT 格式，mount会说不支持。没关系，安装 exfat-fuse软件之后 mount就支持了。</p>
-<p>sudo apt-get install exfat-fuse  </p>
-<p>如果想开机自动挂载，而不是每次手工执行，可以编辑 /etc/fstab 文件。比如在末尾添加一行：</p>
-<p>/dev/sda1 /mnt/usbdisk vfat rw,defaults 0 0  </p>
-<p>挂载NTFS格式的硬盘(读写方式挂载)<br>默认挂载NTFS格式的硬盘只有只读权限，需要借助其它工具实现。</p>
-<p>#安装所需软件包  </p>
-<p>sudo apt-get install fuse-utils ntfs-3g  </p>
-<p>#加载内核模块  </p>
-<p>modprobe fuse  </p>
-<p>#编辑fstab让移动硬盘开机自动挂载  </p>
-<p>sudo nano /etc/fstab  </p>
-<p>#在最后一行添加如下内容  </p>
-<p>/dev/sda1 /mnt/myusbdrive ntfs-3g defaults,noatime,umask=0000 0 0  </p>
-<p>#保存重启，即可生效  </p>
-<p>挂载FAT32格式的硬盘</p>
-<p>#创建挂载点  </p>
-<p>sudo mkdir /mnt/myusbdrive  </p>
-<p>#编辑fstab让移动硬盘开机自动挂载  </p>
-<p>sudo nano /etc/fstab  </p>
-<p>#在最后一行添加如下内容  </p>
-<p>/dev/sda1 /mnt/myusbdrive auto defaults,noatime,umask=0000 0 0  </p>
-<p>#保存重启，即可生效  </p>
-<p>说明：<br>sda1是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。<br>umask=0000 0 0<br>前面四个0就是对所有人,可读可写可执行,<br>后面两个0,第一个代表dump,0是不备份<br>第二个代表fsck检查的顺序,0表示不检查<br>卸载：sudo umount /mnt/myusbdrive<br>查看挂载情况可使用以下命令。<br>cd /mnt/myusbdrive  </p>
-<p>ls  </p>
+    <title>qbittorrent+树莓派3B+制作bt下载机</title>
+    <url>/2021/04/19/qbittorrent-%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B6%E4%BD%9Cbt%E4%B8%8B%E8%BD%BD%E6%9C%BA/</url>
+    <content><![CDATA[<h2 id="一、刷入系统"><a href="#一、刷入系统" class="headerlink" title="一、刷入系统"></a>一、刷入系统</h2><p>为了节省资源，系统选择的是没有图形界面的<code>raspbian-lite</code><br>使用<code>BalenaEtcher</code>刷入镜像后，在<code>/boot</code>目录新建<code>ssh</code>文件夹，用于ssh连接树莓派<br>如果需要省略低电压警告，在/boot分区的config.txt问价内写入<code>avoid_warnings=1</code>即可</p>
+<h2 id="二、ssh连接"><a href="#二、ssh连接" class="headerlink" title="二、ssh连接"></a>二、ssh连接</h2><p>由于本人是通过网线直连路由器，很简单就能获得树莓派的IP地址<br>在Ubuntu内打开终端，使用ssh连接树莓派</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP</span><br></pre></td></tr></table></figure>
+<p>树莓派初始用户名<code>pi</code>，密码<code>raspberry</code></p>
+<h2 id="三、-安装qbittorrent"><a href="#三、-安装qbittorrent" class="headerlink" title="三、 安装qbittorrent"></a>三、 安装qbittorrent</h2><ol>
+<li>换清华源</li>
+</ol>
+<p><a href="https://mirror.tuna.tsinghua.edu.cn/help/raspbian/">清华开源软件镜像站</a></p>
+<ol start="2">
+<li>安装qbittorrent<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装qbittorent</span></span><br><span class="line">sudo apt install qbittorrent<span class="literal">-nox</span></span><br><span class="line"><span class="comment">#启动</span></span><br><span class="line">qbittorrent<span class="literal">-nox</span> <span class="literal">-d</span></span><br></pre></td></tr></table></figure>
+<h2 id="四、-Web远程控制"><a href="#四、-Web远程控制" class="headerlink" title="四、 Web远程控制"></a>四、 Web远程控制</h2>在Ubuntu中打开浏览器，地址栏输入<code>树莓派IP：8080</code>（qbittorent默认端口为8080）<br>qbittorrent初始用户名<code>admin</code>，初始密码<code>adminadmin</code></li>
+</ol>
+<p>开始使用吧！</p>
+<p>密码端口等都是可以自定义修改的，本人也准备找个闲置的u盘/硬盘接到树莓派上，以后就可以在低耗电的情况下</p>
+<h2 id="五、-调整分辨率"><a href="#五、-调整分辨率" class="headerlink" title="五、 调整分辨率"></a>五、 调整分辨率</h2><p><a href="https://www.cnblogs.com/dongxiaodong/p/9682311.html">调整VNC连接中图像显示的分辨率</a></p>
 ]]></content>
       <tags>
         <tag>Raspberry</tag>
         <tag>Raspbian</tag>
+        <tag>Bt</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>初次使用Qt时遇到的几个坑</title>
+    <url>/2021/04/19/%E5%88%9D%E6%AC%A1%E4%BD%BF%E7%94%A8Qt%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91/</url>
+    <content><![CDATA[<h2 id="1-error-cannot-find-lGL"><a href="#1-error-cannot-find-lGL" class="headerlink" title="1.　error:cannot find -lGL"></a>1.　error:cannot find -lGL</h2><p>原因分析: 在已经安装openGL库的前提下出现这种错误，是因为libGL没有正确链接:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:/opt/busybox-1.31.0$ locate libGL</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGL.so.1</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGL.so.1.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_indirect.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0</span><br><span class="line">/usr/lib/libGL.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGL.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGL.so.1.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLU.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLU.so.1.3.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX.so.0.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_indirect.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_mesa.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_mesa.so.0.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLdispatch.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLdispatch.so.0.0.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.la</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so.1</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so.1.7.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1.0.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1.2.0</span><br></pre></td></tr></table></figure>
+<p>这里有很多libGL的路径，随便找一个链接就可以</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:/opt/busybox-1.31.0$ sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1</span><br></pre></td></tr></table></figure>
+<h2 id="２．qmake-could-not-exec-＇-usr-lib-x86-64-linux-gnu-qt5-bin-qmake＇-No-such-file-or-directory"><a href="#２．qmake-could-not-exec-＇-usr-lib-x86-64-linux-gnu-qt5-bin-qmake＇-No-such-file-or-directory" class="headerlink" title="２．qmake: could not exec ＇/usr/lib/x86_64-linux-gnu/qt5/bin/qmake＇: No such file or directory"></a>２．qmake: could not exec ＇/usr/lib/x86_64-linux-gnu/qt5/bin/qmake＇: No such file or directory</h2><p>原因：qtchooser默认选择路径中没有指向qmake路径</p>
+<p>修改配置文件，修改为Qt路径：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:~$ sudo vim /usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf</span><br></pre></td></tr></table></figure>
+<p>将default.conf的内容删除并键入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/Qt5.13.1/5.13.1/gcc_64/bin</span><br><span class="line">/opt/Qt5.13.1/5.13.1</span><br></pre></td></tr></table></figure>
+<p>保存退出后，进行测试：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:~$ qmake -v</span><br><span class="line">QMake version 3.1</span><br><span class="line">Using Qt version 5.13.1 <span class="keyword">in</span> /opt/Qt5.13.1/5.13.1/gcc_64/lib</span><br></pre></td></tr></table></figure>
+<p>配置成功</p>
+<h2 id="3-fatal-error-QApplication-No-such-file-or-directory"><a href="#3-fatal-error-QApplication-No-such-file-or-directory" class="headerlink" title="3. fatal error: QApplication:No such file or directory"></a>3. fatal error: QApplication:No such file or directory</h2><p>在使用make构建程序时报错<br><img src="https://img-blog.csdnimg.cn/20191028162701793.png" alt="在这里插入图片描述"><br>原因：Qt5将大部分桌面部件移到了Qt Widgets模块中，即QApplication已经从原来的&lt;QtGui/QApplication&gt;移动到&lt;QtWidgets/QApplication&gt;</p>
+<p>解决方案：修改.pro文件,加入一段代码:<code>greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</code><br><img src="https://img-blog.csdnimg.cn/20191028163900357.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <tags>
+        <tag>Qt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vim简单配置</title>
+    <url>/2021/04/19/Vim%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>总是折腾，每次重新配置vim重新写很麻烦，就在此做个备份</p>
+<p>set autoindent “”自动缩进<br>set cindent “”以C语言的方式缩进<br>set shiftwidth=4 “”设置自动缩进的空格数量<br>set softtabstop=4 “”tab键的实际占有空格数，统一缩进<br>set tabstop=4 “”设置tab键的空格数</p>
+<p>set cursorline “”突出当前行<br>syntax on “”语法高亮<br>set nu “”设置行号</p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL安全配置向导mysql_secure_installation详解</title>
+    <url>/2021/04/19/MySQL%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BCmysql-secure-installation%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p><a href="https://www.jb51.net/article/47727.htm">原文地址</a></p>
+<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：<br>  a)为root用户设置密码<br>  b)删除匿名账号<br>  c)取消root用户远程登录<br>  d)删除test库和对test库的访问权限<br>  e)刷新授权表使修改生效</p>
+<p>通过这几项的设置能够提高mysql库的安全。建议生产环境中mysql安装这完成后一定要运行一次mysql_secure_installation，详细步骤请参看下面的命令:</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment"># mysql_secure_installation</span></span><br><span class="line">NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED <span class="keyword">FOR</span> ALL MySQL</span><br><span class="line">SERVERS <span class="keyword">IN</span> PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!</span><br><span class="line"><span class="keyword">In</span> order to log into MySQL to secure it, we<span class="string">&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user. If you&#x27;</span>ve just installed MySQL, and</span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string">Enter current password for root (enter for none):   																						初次运行直接回车</span></span><br><span class="line"><span class="string">OK, successfully used password, moving on…</span></span><br><span class="line"><span class="string">Setting the root password ensures that nobody can log into the MySQL</span></span><br><span class="line"><span class="string">root user without the proper authorisation.</span></span><br><span class="line"><span class="string">Set root password? [Y/n]																			是否设置root用户密码，输入y并回车或直接回车</span></span><br><span class="line"><span class="string">New password: 																																					设置root用户的密码</span></span><br><span class="line"><span class="string">Re-enter new password: 																															再输入一次你设置的密码</span></span><br><span class="line"><span class="string">Password updated successfully!</span></span><br><span class="line"><span class="string">Reloading privilege tables..</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, a MySQL installation has an anonymous user, allowing anyone</span></span><br><span class="line"><span class="string">to log into MySQL without having to have a user account created for</span></span><br><span class="line"><span class="string">them. This is intended only for testing, and to make the installation</span></span><br><span class="line"><span class="string">go a bit smoother. You should remove them before moving into a</span></span><br><span class="line"><span class="string">production environment.</span></span><br><span class="line"><span class="string">Remove anonymous users? [Y/n] 												 是否删除匿名用户,生产环境建议删除，所以直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Normally, root should only be allowed to connect from &#x27;</span>localhost<span class="string">&#x27;. This</span></span><br><span class="line"><span class="string">ensures that someone cannot guess at the root password from the network.</span></span><br><span class="line"><span class="string">Disallow root login remotely? [Y/n] 						是否禁止root远程登录,根据自己的需求选择Y/n并回车,建议禁止</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, MySQL comes with a database named &#x27;</span>test<span class="string">&#x27; that anyone can</span></span><br><span class="line"><span class="string">access. This is also intended only for testing, and should be removed</span></span><br><span class="line"><span class="string">before moving into a production environment.</span></span><br><span class="line"><span class="string">Remove test database and access to it? [Y/n] 																	 是否删除test数据库,直接回车</span></span><br><span class="line"><span class="string">- Dropping test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">- Removing privileges on test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Reloading the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="string">will take effect immediately.</span></span><br><span class="line"><span class="string">Reload privilege tables now? [Y/n] 																							是否重新加载权限表，直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Cleaning up…</span></span><br><span class="line"><span class="string">All done! If you&#x27;</span>ve completed all of the above steps, your MySQL</span><br><span class="line">installation should now be secure.</span><br><span class="line">Thanks <span class="keyword">for</span> <span class="keyword">using</span> MySQL!</span><br><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu 18.04 完美安装搜狗拼音输入法</title>
+    <url>/2021/04/19/Ubuntu-18-04-%E5%AE%8C%E7%BE%8E%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。</p>
+<p>安装Fcitx框架后，本想使用搜狗输入法，但由于fcitx组件问题，搜狗频频出现候选字乱码甚至没有候选字问题，只好退而其次依次尝试了Sunpinyin和Googlepinyin，然鹅使用体验也不好，缺词库，用了一段时间，最后在昨天决定换回搜狗输入法，毕竟搜狗词库和云同步实在太香了。</p>
+<p>搜狗输入法的官方安装包是没有问题的，那么频频出现乱码的原因只能是Fcitx组件的一些误装造成的。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
+<li>首先卸载IBus<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载IBus</span></span><br><span class="line">sudo apt<span class="literal">-get</span> remove ibus</span><br><span class="line"><span class="comment"># 清除IBus配置</span></span><br><span class="line">sudo apt<span class="literal">-get</span> purge ibus</span><br></pre></td></tr></table></figure></li>
+<li>如果曾经安装了Fcitx，彻底卸载掉<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载Fcixt及其组件</span></span><br><span class="line">sudo apt<span class="literal">-get</span> <span class="literal">-y</span>  remove *fcitx*</span><br><span class="line"><span class="comment"># 清除依赖包</span></span><br><span class="line">sudo apt<span class="literal">-get</span> autoremove</span><br></pre></td></tr></table></figure></li>
+<li>最简化安装Fcitx<br>Ubuntu软件中心搜索fcitx，只安装<code>Fcitx</code>和<code>Fcitx配置</code>两项<br><img src="https://img-blog.csdnimg.cn/20191108204511178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li><a href="https://pinyin.sogou.com/linux/?r=pinyin">下载</a>安装搜狗拼音输入法<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo dpkg <span class="literal">-i</span> sougoupinyin_xxxxxxx_amd64.deb</span><br><span class="line"><span class="comment"># 修复依赖</span></span><br><span class="line">sudo apt<span class="literal">-get</span> install <span class="operator">-f</span></span><br></pre></td></tr></table></figure></li>
+<li>更改输入法框架配置<blockquote>
+<p>设置&gt;&gt;区域与语言&gt;&gt;管理已安装的语言</p>
+</blockquote>
+</li>
+</ol>
+<p>若提示语言不完整，则选择稍后提醒，若选择安装将会开始安装IBus</p>
+<p><img src="https://img-blog.csdnimg.cn/20191108205749352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>在弹出的窗口内将键盘输入法系统从ibus改为fcitx<br><img src="https://img-blog.csdnimg.cn/20191108205951744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol start="6">
+<li>重启<br>重新启动，而非注销<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo shutdown <span class="literal">-r</span> now</span><br></pre></td></tr></table></figure></li>
+<li>配置搜狗拼音输入法<br>重启后，顶栏右边会出现一个小键盘图标，<img src="https://img-blog.csdnimg.cn/20191108210507108.png" alt="在这里插入图片描述"><br>点击，配置，或者直接搜索打开<code>fcitx配置</code></li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20191108210701996.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191108210650615.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191108210817961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>移除搜狗五笔等，只保留这两项输入法<br>使用时，通过<code>shift</code>在两种输入法之间切换，<code>shift</code>是不能在搜狗输入法内切换中英文的。</p>
+<p>通过这种方式安装，再没有出现过乱码现象，账户同步功能也可以正常使用</p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章迁移公告</title>
+    <url>/2021/04/19/%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB%E5%85%AC%E5%91%8A/</url>
+    <content><![CDATA[<p>2021.4.19日及之前日期的博客均迁移自原博客<a href="https://blog.csdn.net/qq_29627051">CSDN</a>，至今日，文章迁移全部完成</p>
+]]></content>
   </entry>
   <entry>
     <title>阿里云Ubuntu18.04/20.04LTS上搭建Minecraft服务器</title>
@@ -603,61 +640,40 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu18.04 Mac主题美化</title>
-    <url>/2021/04/19/Ubuntu18-04-Mac%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前总觉得原主题就挺好，看了一些美化教程后自然而然就香了起来，下面是效果图<br><img src="https://img-blog.csdnimg.cn/20191213203229935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="美化准备"><a href="#美化准备" class="headerlink" title="美化准备"></a>美化准备</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-tweaks</span></span><br></pre></td></tr></table></figure>
-<p>安装后打开<strong>Tweaks</strong>，在<strong>拓展栏</strong>启用<code>Ubuntu appindicators</code>和<code>Ubuntu dock</code>,并在<strong>窗口栏</strong>修改<code>标题栏按钮</code>的位置,其他的一些配置根据个人喜好就行<img src="https://img-blog.csdnimg.cn/20191213203418757.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213205443523.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但是如果需要对<strong>Shell</strong>进行美化，则还需要安装一个拓展</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-shell</span><span class="literal">-extensions</span></span><br></pre></td></tr></table></figure>
-<p>打开<strong>Tweaks</strong>在<strong>拓展栏</strong>启用<code>User themes</code><br>&emsp;</p>
-<h2 id="正式美化"><a href="#正式美化" class="headerlink" title="正式美化"></a>正式美化</h2><h3 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h3><p>在<a href="https://www.pling.com/browse/cat/135/ord/rating/">这里</a>找喜欢的主题,本人用的是<a href="https://www.pling.com/p/1275087/">McMojave</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/themes**</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/themes</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/2019121321042740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 应用程序</strong>,启用主题美化<br>&emsp;</p>
-<h3 id="Shell美化"><a href="#Shell美化" class="headerlink" title="Shell美化"></a>Shell美化</h3><p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; Shell</strong>,启用Shell美化<br>&emsp;</p>
-<h3 id="图标美化"><a href="#图标美化" class="headerlink" title="图标美化"></a>图标美化</h3><p>在<a href="https://www.pling.com/s/Gnome/browse/cat/132/order/latest/">这里</a>找喜欢的图标包,本人用的是<a href="https://www.pling.com/s/Gnome/p/1210856">Mcjave CT icons</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/icons**</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/icons</span><br></pre></td></tr></table></figure>
-<p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 图标</strong>,替换图标<br>&emsp;</p>
-<h3 id="Dash-to-Dock"><a href="#Dash-to-Dock" class="headerlink" title="Dash to Dock"></a>Dash to Dock</h3><p>在<strong>Ubuntu软件</strong>中搜索安装<code>Dash to Dock</code>,设置自定义<br><img src="https://img-blog.csdnimg.cn/20191213211948155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213212123894.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;</p>
-<h3 id="Terminal美化"><a href="#Terminal美化" class="headerlink" title="Terminal美化"></a>Terminal美化</h3><p>这里只改变了窗口的透明度,其他的可自行调整<br><img src="https://img-blog.csdnimg.cn/20191213212257751.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>结束</p>
+    <title>树莓派3B+自动挂载移动硬盘或U盘[转]</title>
+    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/</url>
+    <content><![CDATA[<p><a href="http://blog.sina.com.cn/s/blog_563ac5900102wwxq.html">原文地址</a></p>
+<p>fdisk -l<br>命令查看一下U盘是否有被识别到，及识别的U盘是在哪个位置<br>外接U盘或移动硬盘时，默认不会自动挂载，所以需要用mount 命令挂载。通常我们在/mnt 或/media 目录下新建一个目录作为挂载点。比如：</p>
+<p>sudo mkdir /mnt/1GB_USB_flash<br>sudo mount -o uid=pi,gid=pi /dev/sda1 /mnt/1GB_USB_flash<br>//用完之后卸载<br>sudo umount /mnt/1GB_USB_flash  </p>
+<p>sda1 是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。</p>
+<p>挂载exFAT格式的硬盘<br>FAT 格式U盘mount 本身就能支持，但如果你的U盘或移动硬盘使用的是exFAT 格式，mount会说不支持。没关系，安装 exfat-fuse软件之后 mount就支持了。</p>
+<p>sudo apt-get install exfat-fuse  </p>
+<p>如果想开机自动挂载，而不是每次手工执行，可以编辑 /etc/fstab 文件。比如在末尾添加一行：</p>
+<p>/dev/sda1 /mnt/usbdisk vfat rw,defaults 0 0  </p>
+<p>挂载NTFS格式的硬盘(读写方式挂载)<br>默认挂载NTFS格式的硬盘只有只读权限，需要借助其它工具实现。</p>
+<p>#安装所需软件包  </p>
+<p>sudo apt-get install fuse-utils ntfs-3g  </p>
+<p>#加载内核模块  </p>
+<p>modprobe fuse  </p>
+<p>#编辑fstab让移动硬盘开机自动挂载  </p>
+<p>sudo nano /etc/fstab  </p>
+<p>#在最后一行添加如下内容  </p>
+<p>/dev/sda1 /mnt/myusbdrive ntfs-3g defaults,noatime,umask=0000 0 0  </p>
+<p>#保存重启，即可生效  </p>
+<p>挂载FAT32格式的硬盘</p>
+<p>#创建挂载点  </p>
+<p>sudo mkdir /mnt/myusbdrive  </p>
+<p>#编辑fstab让移动硬盘开机自动挂载  </p>
+<p>sudo nano /etc/fstab  </p>
+<p>#在最后一行添加如下内容  </p>
+<p>/dev/sda1 /mnt/myusbdrive auto defaults,noatime,umask=0000 0 0  </p>
+<p>#保存重启，即可生效  </p>
+<p>说明：<br>sda1是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。<br>umask=0000 0 0<br>前面四个0就是对所有人,可读可写可执行,<br>后面两个0,第一个代表dump,0是不备份<br>第二个代表fsck检查的顺序,0表示不检查<br>卸载：sudo umount /mnt/myusbdrive<br>查看挂载情况可使用以下命令。<br>cd /mnt/myusbdrive  </p>
+<p>ls  </p>
 ]]></content>
       <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu18.04.2 amd64编译安装libcurl支持https[转]</title>
-    <url>/2021/04/19/Ubuntu18-04-2-amd64%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85libcurl%E6%94%AF%E6%8C%81https-%E8%BD%AC/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/areful/p/11306651.html">原文地址</a></p>
-<p>1.准备工作，安装ssl库：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install openssl</span><br><span class="line">sudo apt-get install libssl-dev</span><br></pre></td></tr></table></figure>
-<p>2.下载libcurl源代码：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://curl.haxx.se/download/curl-7.65.3.tar.xz</span><br></pre></td></tr></table></figure>
-<p>3.解压并进入源代码目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar xf curl-7.65.3.tar.xz</span><br><span class="line"><span class="built_in">cd</span> curl-7.65.3</span><br></pre></td></tr></table></figure>
-<p>4.配置编译选项：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure  --prefix=/usr  													\</span><br><span class="line">           				--disable-static 												\</span><br><span class="line">          			    --enable-threaded-resolver						\</span><br><span class="line">       			        --with-ca-path=/etc/ssl/certs</span><br></pre></td></tr></table></figure>
-<p>5.编译：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
-
-<p>6.安装（需要root权限）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make install &amp;&amp;</span><br><span class="line"></span><br><span class="line">rm -rf docs/examples/.deps &amp;&amp;</span><br><span class="line"></span><br><span class="line">find docs \( -name Makefile\* -o -name \*.1 -o -name \*.3 \) -<span class="built_in">exec</span> rm &#123;&#125; \; &amp;&amp;</span><br><span class="line"></span><br><span class="line">install -v -d -m755 /usr/share/doc/curl-7.65.3 &amp;&amp;</span><br><span class="line">cp -v -R docs/*     /usr/share/doc/curl-7.65.3</span><br></pre></td></tr></table></figure>
-<p>至此，编译安装完成。</p>
-<p>&emsp;<br>&emsp;<br>写代码测试一下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;curl/curl.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  CURL *curl;</span><br><span class="line">  CURLcode res;</span><br><span class="line"> </span><br><span class="line">  curl_global_init(CURL_GLOBAL_DEFAULT);</span><br><span class="line"> </span><br><span class="line">  curl = curl_easy_init();</span><br><span class="line">  <span class="keyword">if</span>(curl) &#123;</span><br><span class="line">    curl_easy_setopt(curl, CURLOPT_URL, <span class="string">&quot;https://www.baidu.com/&quot;</span>);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* Perform the request, res will get the return code */</span></span><br><span class="line">    res = curl_easy_perform(curl);</span><br><span class="line">    <span class="comment">/* Check for errors */</span></span><br><span class="line">    <span class="keyword">if</span>(res != CURLE_OK)</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;curl_easy_perform() failed: %s\n&quot;</span>,</span><br><span class="line">              curl_easy_strerror(res));</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* always cleanup */</span></span><br><span class="line">    curl_easy_cleanup(curl);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  curl_global_cleanup();</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc hello_https.c -l curl -o hello_https</span><br></pre></td></tr></table></figure>
-
-<p>运行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./hello_https</span><br></pre></td></tr></table></figure>
-
-<p>运行结果截图：<br><img src="https://img-blog.csdnimg.cn/20191031104423437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> 附 自定义回调处理响应数据代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;curl/curl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">size_t</span> <span class="title">write_data</span><span class="params">(<span class="keyword">void</span> *ptr, <span class="keyword">size_t</span> size, <span class="keyword">size_t</span> nmemb, <span class="keyword">void</span> *stream)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(stream == <span class="literal">NULL</span>) </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, ptr);</span><br><span class="line">    <span class="keyword">return</span> size * nmemb;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  CURL *curl;</span><br><span class="line">  CURLcode res;</span><br><span class="line"> </span><br><span class="line">  curl_global_init(CURL_GLOBAL_DEFAULT);</span><br><span class="line"> </span><br><span class="line">  curl = curl_easy_init();</span><br><span class="line">  <span class="keyword">if</span>(curl) &#123;</span><br><span class="line">    curl_easy_setopt(curl, CURLOPT_URL, <span class="string">&quot;https://www.baidu.com/&quot;</span>);</span><br><span class="line">    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* Perform the request, res will get the return code */</span></span><br><span class="line">    res = curl_easy_perform(curl);</span><br><span class="line">    <span class="comment">/* Check for errors */</span></span><br><span class="line">    <span class="keyword">if</span>(res != CURLE_OK)</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;curl_easy_perform() failed: %s\n&quot;</span>,</span><br><span class="line">              curl_easy_strerror(res));</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* always cleanup */</span></span><br><span class="line">    curl_easy_cleanup(curl);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  curl_global_cleanup();</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>图像识别</tag>
+        <tag>Raspberry</tag>
+        <tag>Raspbian</tag>
       </tags>
   </entry>
   <entry>
@@ -705,39 +721,23 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu18.04/19.04/20.04安装笔记&amp;&amp;通用指南</title>
-    <url>/2021/04/19/Ubuntu18-04-19-04-20-04%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0-%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<p><em>&emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。</em><br>&emsp;<br><strong>设备配置：<br>&emsp;&emsp;微星 GL62M 7REX-1650CN<br>&emsp;&emsp;CPU  i7-7700HQ<br>&emsp;&emsp;NVIDIA GeForce GTX 1050Ti<br>&emsp;&emsp;128SSD+1THDD</strong><br>&emsp;</p>
-<h2 id="1-制作U盘启动盘"><a href="#1-制作U盘启动盘" class="headerlink" title="1.制作U盘启动盘"></a>1.制作U盘启动盘</h2><p>&emsp;&emsp;建议使用<a href="https://www.balena.io/etcher/">Etcher</a>刷写Linux镜像。<br>&emsp;&emsp;Etcher是一款开源的跨平台的系统级刷写工具，支持Windows，Linux，Mac OS。<br>&emsp;&emsp;使用Etcher将Ubuntu 19.04 Desktop ISO刷写进U盘中<br>&emsp;</p>
-<h2 id="2-安装系统"><a href="#2-安装系统" class="headerlink" title="2. 安装系统"></a>2. 安装系统</h2><h4 id="2-1安装前准备"><a href="#2-1安装前准备" class="headerlink" title="2.1安装前准备"></a>2.1安装前准备</h4><ul>
-<li> 关闭安全启动：Secure Boot设置为<code>Disable</code></li>
-<li>Startup-&gt;设置为Network Boot为<code>USB HDD</code></li>
-<li>启动方式设置为<code>UEFI Only</code></li>
-<li>在Startup Boot中将<code>USB HDD</code>设为第一启动项</li>
-<li>F10保存所有设置并重启，进入U盘安装</li>
-</ul>
-<p>总的来讲，需要禁用安全启动以及在启动电脑时进行U盘启动即可,这一安装步骤仅供参考。</p>
-<h4 id="2-2-安装"><a href="#2-2-安装" class="headerlink" title="2.2. 安装"></a>2.2. 安装</h4><p> 由于安装时缺省使用Canonical提供的Nouveau显卡驱动，这个驱动在很多机器上存在兼容性问题，易卡死在Ubuntu安装界面，因此，首先需要禁用Nouveau，使用机器自带的集成显卡进入安装程序，并在Ubuntu系统内安装并启用Nvidia显卡驱动</p>
-<ul>
-<li>插入U盘，启动电脑，进入grub界面，光标移动到<code>Install Ubuntu</code>条目，键盘按<code>e</code>键进入编辑模式，在”quite splash”后先空格，再键入”nomodeset”，按F10保存，进入Ubuntu19.04安装系统<h4 id="2-3-分区方案"><a href="#2-3-分区方案" class="headerlink" title="2.3. 分区方案"></a>2.3. 分区方案</h4></li>
-<li>本人安装模式为Ubuntu单系统，128SSD+1THDD，8G+8G RAM双通道</li>
-<li> /swap交换空间&emsp;16G(至少为内存的1倍)&ensp;SSD;</li>
-<li>/boot &emsp;500MB&ensp;SSD</li>
-<li>/EFI &emsp; 500MB&ensp;SSD</li>
-<li>/ &emsp; &emsp; 剩余SSD</li>
-<li>/home&emsp;&emsp;1T&ensp;HDD<h4 id="2-3-双系统"><a href="#2-3-双系统" class="headerlink" title="2.3. 双系统"></a>2.3. 双系统</h4>若是Windows + Ubuntu 双系统安装，重新启动后，将进入grub引导界面：选中第一个启动选项<code>Ubuntu</code>,按<code>e</code>进入编辑模式，找到”quite splash”，删除其后的一小段文字，空格，键入”nomodeset”，F10保存，进入Ubuntu。<br>若为单系统安装，请忽略此条目。<br>&emsp;<h4 id="3-禁用Nouveau"><a href="#3-禁用Nouveau" class="headerlink" title="3.禁用Nouveau"></a>3.禁用Nouveau</h4>重启后进入登录界面，不要登录，<code>Ctrl+Alt+F2/F3/F4...</code>从图形化界面切换到文本界面（<code>Ctrl+Alt+F1</code>从文本界面切换到图形化界面），输入命令：<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo nano  /etc/modprobe.d/blacklist.conf</span><br></pre></td></tr></table></figure>
-在打开的文件末尾输入”blacklist nouveau” ,<code>Ctrl+x</code>退出,键入<code>y</code>确定更改,回车，返回到了Terminal，并输入：sudo update-initramfs -u使修改生效以禁用Nouveau驱动，然后重启。<br>&emsp;<h2 id="4-安装Nvidia驱动"><a href="#4-安装Nvidia驱动" class="headerlink" title="4.安装Nvidia驱动"></a>4.安装Nvidia驱动</h2><h4 id="emsp-4-1-自动安装驱动"><a href="#emsp-4-1-自动安装驱动" class="headerlink" title="&emsp;4.1 自动安装驱动"></a>&emsp;4.1 自动安装驱动</h4></li>
-<li>找到并打开<code>软件和更新</code>程序，在附加驱动页面，选择第一个选项，<code>应用更改</code>，等待下载安装完毕<br><img src="https://img-blog.csdnimg.cn/20191001095959477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="软件和更新"><h4 id="4-2-手动安装驱动"><a href="#4-2-手动安装驱动" class="headerlink" title="4.2 手动安装驱动"></a>4.2 手动安装驱动</h4>到<a href="https://www.nvidia.com/Download/index.aspx?lang=cn">NVIDIA驱动程序官网</a>，根据显卡的具体型号查找安装包，下载后 sudo chmod 777 xxx.run 给予权限，运行安装,安装过程中会有一些问题，自行查询。<br><img src="https://img-blog.csdnimg.cn/20191017181708295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;</li>
-</ul>
+    <title>树莓派3B+无屏幕和键盘配置WiFi[转]</title>
+    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AEWiFi/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/huryer/article/details/83146721">原文地址</a></p>
+<p>一、WiFi 网络配置<br>用户可以在未启动树莓派的状态下单独修改 /boot/wpa_supplicant.conf 文件配置 WiFi 的 SSID 和密码，这样树莓派启动后会自行读取 wpa_supplicant.conf 配置文件连接 WiFi 设备。</p>
+<p>操作方法简单：将刷好 Raspbian  系统的 SD 卡用电脑读取。在 boot 分区，也就是树莓派的 /boot 目录下新建 wpa_supplicant.conf 文件，按照下面的参考格式填入内容并保存 wpa_supplicant.conf 文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-A&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-B&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;2</span><br><span class="line">scan_ssid&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>说明以及不同安全性的 WiFi 配置示例：<br>#ssid:网络的ssid<br>#psk:密码<br>#priority:连接优先级，数字越大优先级越高（不可以是负数）<br>#scan_ssid:连接隐藏WiFi时需要指定该值为1</p>
+<p>如果你的 WiFi 没有密码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br></pre></td></tr></table></figure>
+<p>如果你的 WiFi 使用WEP加密</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br><span class="line">wep_key0&#x3D;&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果你的 WiFi 使用WPA/WPA2加密</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">psk&#x3D;&quot;你的wifi密码&quot;</span><br></pre></td></tr></table></figure>
+<p>如果你不清楚 WiFi 的加密模式，可以在安卓手机上用 root explorer 打开 /data/misc/wifi/wpa/wpa_supplicant.conf，查看 WiFi 的信息。</p>
 ]]></content>
       <tags>
-        <tag>Ubuntu</tag>
+        <tag>Raspberry</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>文章迁移公告</title>
-    <url>/2021/04/19/%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB%E5%85%AC%E5%91%8A/</url>
-    <content><![CDATA[<p>2021.4.19日及之前日期的博客均迁移自原博客<a href="https://blog.csdn.net/qq_29627051">CSDN</a>，至今日，文章迁移全部完成</p>
-]]></content>
   </entry>
 </search>
