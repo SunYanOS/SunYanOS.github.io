@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。 安装Fcitx框架后，本想使用搜狗输入法，但由于fcitx组件问题，搜狗频频出现候选字乱码甚至没有候选字问题，只好退而其次依次尝试了Sunpinyin和Googlepinyin，然鹅使用体验也不好，缺词库，用了一段时间，最后在昨天决定换回">
+  <meta name="description" content="前言之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 18.04 完美安装搜狗拼音输入法">
 <meta property="og:url" content="http://example.com/2021/04/19/Ubuntu-18-04-%E5%AE%8C%E7%BE%8E%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/index.html">
 <meta property="og:site_name" content="Lxfmly&#39;s Blog">
-<meta property="og:description" content="前言之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。 安装Fcitx框架后，本想使用搜狗输入法，但由于fcitx组件问题，搜狗频频出现候选字乱码甚至没有候选字问题，只好退而其次依次尝试了Sunpinyin和Googlepinyin，然鹅使用体验也不好，缺词库，用了一段时间，最后在昨天决定换回">
+<meta property="og:description" content="前言之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20191108204511178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20191108205749352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70">
@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20191108210650615.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20191108210817961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2021-04-19T09:05:53.000Z">
-<meta property="article:modified_time" content="2021-04-19T09:08:04.245Z">
+<meta property="article:modified_time" content="2021-04-20T01:10:53.925Z">
 <meta property="article:author" content="Lxfmly">
 <meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary">
@@ -227,10 +227,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 17:05:53 / 修改时间：17:08:04" itemprop="dateCreated datePublished" datetime="2021-04-19T17:05:53+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 17:05:53" itemprop="dateCreated datePublished" datetime="2021-04-19T17:05:53+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:10:53" itemprop="dateModified" datetime="2021-04-20T09:10:53+08:00">2021-04-20</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -251,6 +257,8 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。</p>
+<span id="more"></span>
+
 <p>安装Fcitx框架后，本想使用搜狗输入法，但由于fcitx组件问题，搜狗频频出现候选字乱码甚至没有候选字问题，只好退而其次依次尝试了Sunpinyin和Googlepinyin，然鹅使用体验也不好，缺词库，用了一段时间，最后在昨天决定换回搜狗输入法，毕竟搜狗词库和云同步实在太香了。</p>
 <p>搜狗输入法的官方安装包是没有问题的，那么频频出现乱码的原因只能是Fcitx组件的一些误装造成的。</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>

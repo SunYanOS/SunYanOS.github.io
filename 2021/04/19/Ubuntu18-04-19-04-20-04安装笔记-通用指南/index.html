@@ -22,17 +22,17 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="&amp;emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。&amp;emsp;设备配置：&amp;emsp;&amp;emsp;微星 GL62M 7REX-1650CN&amp;emsp;&amp;emsp;CPU  i7-7700HQ&amp;emsp;&amp;emsp;NVID">
+  <meta name="description" content="&amp;emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu18.04&#x2F;19.04&#x2F;20.04安装笔记&amp;&amp;通用指南">
 <meta property="og:url" content="http://example.com/2021/04/19/Ubuntu18-04-19-04-20-04%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0-%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="Lxfmly&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。&amp;emsp;设备配置：&amp;emsp;&amp;emsp;微星 GL62M 7REX-1650CN&amp;emsp;&amp;emsp;CPU  i7-7700HQ&amp;emsp;&amp;emsp;NVID">
+<meta property="og:description" content="&amp;emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20191001095959477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20191017181708295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2021-04-19T08:45:57.000Z">
-<meta property="article:modified_time" content="2021-04-19T09:08:05.202Z">
+<meta property="article:modified_time" content="2021-04-20T01:11:18.887Z">
 <meta property="article:author" content="Lxfmly">
 <meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary">
@@ -222,10 +222,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 16:45:57 / 修改时间：17:08:05" itemprop="dateCreated datePublished" datetime="2021-04-19T16:45:57+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 16:45:57" itemprop="dateCreated datePublished" datetime="2021-04-19T16:45:57+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:11:18" itemprop="dateModified" datetime="2021-04-20T09:11:18+08:00">2021-04-20</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -245,7 +251,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><em>&emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。</em><br>&emsp;<br><strong>设备配置：<br>&emsp;&emsp;微星 GL62M 7REX-1650CN<br>&emsp;&emsp;CPU  i7-7700HQ<br>&emsp;&emsp;NVIDIA GeForce GTX 1050Ti<br>&emsp;&emsp;128SSD+1THDD</strong><br>&emsp;</p>
+        <p><em>&emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。</em></p>
+<span id="more"></span>&emsp;
+<p><strong>设备配置：<br>&emsp;&emsp;微星 GL62M 7REX-1650CN<br>&emsp;&emsp;CPU  i7-7700HQ<br>&emsp;&emsp;NVIDIA GeForce GTX 1050Ti<br>&emsp;&emsp;128SSD+1THDD</strong><br>&emsp;</p>
 <h2 id="1-制作U盘启动盘"><a href="#1-制作U盘启动盘" class="headerlink" title="1.制作U盘启动盘"></a>1.制作U盘启动盘</h2><p>&emsp;&emsp;建议使用<a target="_blank" rel="noopener" href="https://www.balena.io/etcher/">Etcher</a>刷写Linux镜像。<br>&emsp;&emsp;Etcher是一款开源的跨平台的系统级刷写工具，支持Windows，Linux，Mac OS。<br>&emsp;&emsp;使用Etcher将Ubuntu 19.04 Desktop ISO刷写进U盘中<br>&emsp;</p>
 <h2 id="2-安装系统"><a href="#2-安装系统" class="headerlink" title="2. 安装系统"></a>2. 安装系统</h2><h4 id="2-1安装前准备"><a href="#2-1安装前准备" class="headerlink" title="2.1安装前准备"></a>2.1安装前准备</h4><ul>
 <li> 关闭安全启动：Secure Boot设置为<code>Disable</code></li>

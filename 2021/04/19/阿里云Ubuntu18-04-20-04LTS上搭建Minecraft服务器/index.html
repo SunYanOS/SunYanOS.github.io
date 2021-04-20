@@ -31,7 +31,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200727113742684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2021-04-19T12:45:58.000Z">
-<meta property="article:modified_time" content="2021-04-19T13:31:40.780Z">
+<meta property="article:modified_time" content="2021-04-20T01:07:26.076Z">
 <meta property="article:author" content="Lxfmly">
 <meta property="article:tag" content="Ubuntu">
 <meta property="article:tag" content="SSH">
@@ -224,10 +224,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 20:45:58 / 修改时间：21:31:40" itemprop="dateCreated datePublished" datetime="2021-04-19T20:45:58+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 20:45:58" itemprop="dateCreated datePublished" datetime="2021-04-19T20:45:58+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:07:26" itemprop="dateModified" datetime="2021-04-20T09:07:26+08:00">2021-04-20</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -255,8 +261,11 @@
 <li>Ubuntu 18.04LTS </li>
 <li>2核CPU </li>
 <li>4GiB内存 40GiB云盘</li>
-<li>1Mbps带宽<h3 id="配置安全规则"><a href="#配置安全规则" class="headerlink" title="配置安全规则"></a>配置安全规则</h3>如果不进行配置，则无法从MC客户端查找到服务器<br><code>实例xxxxxxxxxxxx(指代ID)</code> -&gt;<code>本实例安全组</code>-&gt;<code>安全组列表</code>-&gt;<code>配置规则</code>-&gt;<code>安全组规则</code>-&gt;<code>入方向</code>-&gt;<code>手动添加</code><br>规则详细如下：<br><img src="https://img-blog.csdnimg.cn/20200727113742684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>1Mbps带宽<h3 id="配置安全规则"><a href="#配置安全规则" class="headerlink" title="配置安全规则"></a>配置安全规则</h3>如果不进行配置，则无法从MC客户端查找到服务器<br><code>实例xxxxxxxxxxxx(指代ID)</code> -&gt;<code>本实例安全组</code>-&gt;<code>安全组列表</code>-&gt;<code>配置规则</code>-&gt;<code>安全组规则</code>-&gt;<code>入方向</code>-&gt;<code>手动添加</code></li>
 </ul>
+<span id="more"></span>
+
+<p>规则详细如下：<br><img src="https://img-blog.csdnimg.cn/20200727113742684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h2 id="配置Java环境"><a href="#配置Java环境" class="headerlink" title="配置Java环境"></a>配置Java环境</h2><h3 id="更新环境"><a href="#更新环境" class="headerlink" title="更新环境"></a>更新环境</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt <span class="literal">-y</span> upgrade </span><br></pre></td></tr></table></figure>
 <h3 id="安装OpenJDK8"><a href="#安装OpenJDK8" class="headerlink" title="安装OpenJDK8"></a>安装OpenJDK8</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openjdk<span class="literal">-8</span><span class="literal">-jdk</span></span><br><span class="line"><span class="comment">## OpenJDK8中不包含客户端需要的OpenJFX，服务器运行不需要OpenJFX，因此在客户端上建议用OracleJDK代替OpenJDK，具体方法如下</span></span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29627051/article/details/107643523">Ubuntu安装OracleJDK8</a></p>

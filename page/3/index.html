@@ -214,10 +214,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 20:37:36 / 修改时间：20:38:28" itemprop="dateCreated datePublished" datetime="2021-04-19T20:37:36+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 20:37:36" itemprop="dateCreated datePublished" datetime="2021-04-19T20:37:36+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:10:02" itemprop="dateModified" datetime="2021-04-20T09:10:02+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -233,106 +239,14 @@
           <p><a target="_blank" rel="noopener" href="https://www.sysgeek.cn/apt-vs-apt-get/">原文地址</a></p>
 <p><img src="https://img.sysgeek.cn/img/logo/linux/linux-2.jpg" alt="img"></p>
 <p>Ubuntu 16.04 发布时，一个引人注目的新特性便是 <strong>apt</strong> 命令的引入。其实早在 2014 年，<strong>apt</strong> 命令就已经发布了第一个稳定版，只是直到 2016 年的 Ubuntu 16.04 系统发布时才开始引人关注。</p>
-<p>随着 <strong>apt install package</strong> 命令的使用频率和普遍性逐步超过 <strong>apt-get install package</strong>，越来越多的其它 Linux 发行版也开始遵循 Ubuntu 的脚步，开始鼓励用户使用 <strong>apt</strong> 而不是 <strong>apt-get</strong>。</p>
-<p>那么，<strong>apt-get</strong> 与 <strong>apt</strong> 命令之间到底有什么区别呢？如果它们有类似的命令结构，为什么还需要新的 <strong>apt</strong> 命令呢？是否 <strong>apt</strong> 真的比 <strong>apt-get</strong> 更好？普通用户应该使用新的 <strong>apt</strong> 命令还是坚持旧有习惯继续使用 <strong>apt-get</strong> 呢？</p>
-<p>系统极客将在本文中解释所有这些问题，我们希望本文结束时，你将会有一个更清晰的了解。</p>
-<h2 id="apt与apt-get"><a href="#apt与apt-get" class="headerlink" title="apt与apt-get"></a>apt与apt-get</h2><p>在开始对比 <strong>apt</strong> 与 <strong>apt-get</strong> 命令的区别之前，我们先来看看这两个命令的背景，以及它们要试图达到的目的。</p>
-<p>Debian 作为 Ubuntu、Linux Mint 和 elementary OS 等 Linux 操作系统的母板，其具有强健的「包管理」系统，它的每个组件和应用程序都内置在系统中安装的软件包中。Debian 使用一套名为 <a target="_blank" rel="noopener" href="https://wiki.debian.org/Apt">Advanced Packaging Tool</a>（APT）的工具来管理这种包系统，不过请不要把它与 <strong>apt</strong> 命令混淆，它们之间是其实不是同一个东西。</p>
-<p>在基于 Debian 的 Linux 发行版中，有各种工具可以与 APT 进行交互，以方便用户安装、删除和管理的软件包。<strong>apt-get</strong> 便是其中一款广受欢迎的命令行工具，另外一款较为流行的是 <a target="_blank" rel="noopener" href="https://wiki.debian.org/Aptitude?action=show&redirect=aptitude">Aptitude</a> 这一命令行与 GUI 兼顾的小工具。</p>
-<p>如果你已阅读过我们的 <a target="_blank" rel="noopener" href="https://www.sysgeek.cn/linux-package-management/">apt-get 命令指南</a>，可能已经遇到过许多类似的命令，如<strong>apt-cache</strong>、<strong>apt-config</strong> 等。如你所见，这些命令都比较低级又包含众多功能，普通的 Linux 用户也许永远都不会使用到。换种说法来说，就是最常用的 Linux 包管理命令都被分散在了 <strong>apt-get</strong>、<strong>apt-cache</strong> 和 <strong>apt-config</strong> 这三条命令当中。</p>
-<p><strong>apt</strong> 命令的引入就是为了解决命令过于分散的问题，它包括了 <strong>apt-get</strong> 命令出现以来使用最广泛的功能选项，以及 <strong>apt-cache</strong> 和 <strong>apt-config</strong> 命令中很少用到的功能。</p>
-<p>在使用 <strong>apt</strong> 命令时，用户不必再由 <strong>apt-get</strong> 转到 <strong>apt-cache</strong> 或 <strong>apt-config</strong>，而且 <strong>apt</strong> 更加结构化，并为用户提供了管理软件包所需的必要选项。</p>
-<blockquote>
-<p>简单来说就是：apt = apt-get、apt-cache 和 apt-config 中最常用命令选项的集合。</p>
-</blockquote>
-<h3 id="apt与apt-get之间的区别"><a href="#apt与apt-get之间的区别" class="headerlink" title="apt与apt-get之间的区别"></a>apt与apt-get之间的区别</h3><p>通过 <strong>apt</strong> 命令，用户可以在同一地方集中得到所有必要的工具，<strong>apt</strong> 的主要目的是提供一种以「让终端用户满意」的方式来处理 Linux 软件包的有效方式。</p>
-<p><strong>apt</strong> 具有更精减但足够的命令选项，而且参数选项的组织方式更为有效。除此之外，它默认启用的几个特性对最终用户也非常有帮助。例如，可以在使用 <strong>apt</strong> 命令安装或删除程序时看到进度条。</p>
-<p><img src="https://img.sysgeek.cn/img/2017/07/apt-vs-apt-get/2.jpg" alt="img"></p>
-<p><strong>apt</strong> 还会在更新存储库数据库时提示用户可升级的软件包个数。</p>
-<p><img src="https://img.sysgeek.cn/img/2017/07/apt-vs-apt-get/3.jpg" alt="img"></p>
-<p>如果你使用 <strong>apt</strong> 的其它命令选项，也可以实现与使用 <strong>apt-get</strong> 时相同的操作。</p>
-<h3 id="apt和apt-get命令之间的区别"><a href="#apt和apt-get命令之间的区别" class="headerlink" title="apt和apt-get命令之间的区别"></a>apt和apt-get命令之间的区别</h3><p>虽然 <strong>apt</strong> 与 <strong>apt-get</strong> 有一些类似的命令选项，但它并不能完全向下兼容 <strong>apt-get</strong> 命令。也就是说，可以用 <strong>apt</strong> 替换部分 <strong>apt-get</strong> 系列命令，但不是全部。</p>
-<table>
-<thead>
-<tr>
-<th align="center">apt 命令</th>
-<th align="center">取代的命令</th>
-<th align="center">命令的功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">apt install</td>
-<td align="center">apt-get install</td>
-<td align="center">安装软件包</td>
-</tr>
-<tr>
-<td align="center">apt remove</td>
-<td align="center">apt-get remove</td>
-<td align="center">移除软件包</td>
-</tr>
-<tr>
-<td align="center">apt purge</td>
-<td align="center">apt-get purge</td>
-<td align="center">移除软件包及配置文件</td>
-</tr>
-<tr>
-<td align="center">apt update</td>
-<td align="center">apt-get update</td>
-<td align="center">刷新存储库索引</td>
-</tr>
-<tr>
-<td align="center">apt upgrade</td>
-<td align="center">apt-get upgrade</td>
-<td align="center">升级所有可升级的软件包</td>
-</tr>
-<tr>
-<td align="center">apt autoremove</td>
-<td align="center">apt-get autoremove</td>
-<td align="center">自动删除不需要的包</td>
-</tr>
-<tr>
-<td align="center">apt full-upgrade</td>
-<td align="center">apt-get dist-upgrade</td>
-<td align="center">在升级软件包时自动处理依赖关系</td>
-</tr>
-<tr>
-<td align="center">apt search</td>
-<td align="center">apt-cache search</td>
-<td align="center">搜索应用程序</td>
-</tr>
-<tr>
-<td align="center">apt show</td>
-<td align="center">apt-cache show</td>
-<td align="center">显示装细节</td>
-</tr>
-</tbody></table>
-<p>当然，apt 还有一些自己的命令：</p>
-<table>
-<thead>
-<tr>
-<th align="center">新的apt命令</th>
-<th align="center">命令的功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">apt list</td>
-<td align="center">列出包含条件的包（已安装，可升级等）</td>
-</tr>
-<tr>
-<td align="center">apt edit-sources</td>
-<td align="center">编辑源列表</td>
-</tr>
-</tbody></table>
-<p>需要大家注意的是：<strong>apt</strong> 命令也还在不断发展， 因此，你可能会在将来的版本中看到新的选项。</p>
-<h2 id="apt-get已弃用？"><a href="#apt-get已弃用？" class="headerlink" title="apt-get已弃用？"></a>apt-get已弃用？</h2><p>目前还没有任何 Linux 发行版官方放出 <strong>apt-get</strong> 将被停用的消息，至少它还有比 <strong>apt</strong> 更多、更细化的操作功能。对于低级操作，仍然需要 <strong>apt-get</strong>。</p>
-<h2 id="我应该使用apt还是apt-get？"><a href="#我应该使用apt还是apt-get？" class="headerlink" title="我应该使用apt还是apt-get？"></a>我应该使用apt还是apt-get？</h2><p>既然两个命令都有用，那么我该使用 <strong>apt</strong> 还是 <strong>apt-get</strong> 呢？作为一个常规 Linux 用户，系统极客建议大家尽快适应并开始首先使用 <strong>apt</strong>。不仅因为广大 Linux 发行商都在推荐 <strong>apt</strong>，更主要的还是它提供了 Linux 包管理的必要选项。</p>
-<p>最重要的是，apt 命令选项更少更易记，因此也更易用，所以没理由继续坚持 <strong>apt-get</strong>。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>最后结大家提供两点使用上的建议：</p>
-<ul>
-<li><strong>apt</strong> 可以看作 <strong>apt-get</strong> 和 <strong>apt-cache</strong> 命令的子集, 可以为包管理提供必要的命令选项。</li>
-<li><strong>apt-get</strong> 虽然没被弃用，但作为普通用户，还是应该首先使用 <strong>apt</strong>。</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Linux%E4%B8%ADapt%E4%B8%8Eapt-get%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%A7%A3%E9%87%8A/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -374,10 +288,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 20:36:09 / 修改时间：20:36:25" itemprop="dateCreated datePublished" datetime="2021-04-19T20:36:09+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 20:36:09" itemprop="dateCreated datePublished" datetime="2021-04-19T20:36:09+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:12:12" itemprop="dateModified" datetime="2021-04-20T09:12:12+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -391,11 +311,14 @@
 
       
           <h5 id="笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘"><a href="#笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘" class="headerlink" title="笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘"></a>笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘</h5><p>查看所有输出设备</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xinput list</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20191231114452245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里本人内置键盘的ID是17<br>然后禁用</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xinput <span class="built_in">set-prop</span> id <span class="string">&quot;Device Enabled&quot;</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20191231114834680.png" alt="在这里插入图片描述"><br>如果重新启用则将0改为1即可</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu%E4%B8%8B%E7%A6%81%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%86%85%E7%BD%AE%E9%94%AE%E7%9B%98/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -437,10 +360,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 20:35:02 / 修改时间：21:33:42" itemprop="dateCreated datePublished" datetime="2021-04-19T20:35:02+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 20:35:02" itemprop="dateCreated datePublished" datetime="2021-04-19T20:35:02+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:12:45" itemprop="dateModified" datetime="2021-04-20T09:12:45+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -454,9 +383,14 @@
 
       
           <p>总是折腾，每次重新配置vim重新写很麻烦，就在此做个备份</p>
-<p>set autoindent “”自动缩进<br>set cindent “”以C语言的方式缩进<br>set shiftwidth=4 “”设置自动缩进的空格数量<br>set softtabstop=4 “”tab键的实际占有空格数，统一缩进<br>set tabstop=4 “”设置tab键的空格数</p>
-<p>set cursorline “”突出当前行<br>syntax on “”语法高亮<br>set nu “”设置行号</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Vim%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -498,10 +432,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 17:10:31 / 修改时间：20:35:15" itemprop="dateCreated datePublished" datetime="2021-04-19T17:10:31+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 17:10:31" itemprop="dateCreated datePublished" datetime="2021-04-19T17:10:31+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:11:48" itemprop="dateModified" datetime="2021-04-20T09:11:48+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -516,31 +456,17 @@
       
           <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/dejunyang/article/details/81437632">原文地址</a></p>
 <ol>
-<li>问题描述：Linux 安装WPS后，启动报错  “系统缺失字体”</li>
-<li>解决方法：</li>
-</ol>
-<p>2.1 下载字体：</p>
-<pre><code>链接: https://pan.baidu.com/s/1yFg7nRafcdPYtnHJk38r1g 密码: 3xqf
-</code></pre>
-<p>2.2 解压：</p>
-<pre><code>unzip wps-symbol-fonts.zip
-</code></pre>
-<p>2.3 进入解压目录：</p>
-<pre><code>cd wps-symbol-fonts
-</code></pre>
-<p>2.4 将目录中的所有文件拷贝到/usr/share/fonts目录中：</p>
-<pre><code>sudo cp * /usr/share/fonts
-</code></pre>
-<p>2.5 生成字体索引信息：</p>
-<pre><code>sudo mkfontscale
-
-sudo mkfontdir
-</code></pre>
-<p>2.5 运行fc-cache命令更新字体缓存：</p>
-<pre><code>sudo fc-cache
-</code></pre>
-<p>2.6 重启wps即可，字体缺失的提示不再出现</p>
-
+<li><p>问题描述：Linux 安装WPS后，启动报错  “系统缺失字体”</p>
+</li>
+<li><p>解决方法：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu%E5%AE%89%E8%A3%85WPS%E5%90%8E%E6%8A%A5%E9%94%99%EF%BC%9A%E7%BC%BA%E5%A4%B1%E5%AD%97%E4%BD%93-%E8%BD%AC/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -582,10 +508,16 @@ sudo mkfontdir
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 17:08:40 / 修改时间：17:09:08" itemprop="dateCreated datePublished" datetime="2021-04-19T17:08:40+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 17:08:40" itemprop="dateCreated datePublished" datetime="2021-04-19T17:08:40+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:11:07" itemprop="dateModified" datetime="2021-04-20T09:11:07+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -598,21 +530,15 @@ sudo mkfontdir
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前总觉得原主题就挺好，看了一些美化教程后自然而然就香了起来，下面是效果图<br><img src="https://img-blog.csdnimg.cn/20191213203229935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="美化准备"><a href="#美化准备" class="headerlink" title="美化准备"></a>美化准备</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-tweaks</span></span><br></pre></td></tr></table></figure>
-<p>安装后打开<strong>Tweaks</strong>，在<strong>拓展栏</strong>启用<code>Ubuntu appindicators</code>和<code>Ubuntu dock</code>,并在<strong>窗口栏</strong>修改<code>标题栏按钮</code>的位置,其他的一些配置根据个人喜好就行<img src="https://img-blog.csdnimg.cn/20191213203418757.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213205443523.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但是如果需要对<strong>Shell</strong>进行美化，则还需要安装一个拓展</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-shell</span><span class="literal">-extensions</span></span><br></pre></td></tr></table></figure>
-<p>打开<strong>Tweaks</strong>在<strong>拓展栏</strong>启用<code>User themes</code><br>&emsp;</p>
-<h2 id="正式美化"><a href="#正式美化" class="headerlink" title="正式美化"></a>正式美化</h2><h3 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h3><p>在<a target="_blank" rel="noopener" href="https://www.pling.com/browse/cat/135/ord/rating/">这里</a>找喜欢的主题,本人用的是<a target="_blank" rel="noopener" href="https://www.pling.com/p/1275087/">McMojave</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/themes**</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/themes</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/2019121321042740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 应用程序</strong>,启用主题美化<br>&emsp;</p>
-<h3 id="Shell美化"><a href="#Shell美化" class="headerlink" title="Shell美化"></a>Shell美化</h3><p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; Shell</strong>,启用Shell美化<br>&emsp;</p>
-<h3 id="图标美化"><a href="#图标美化" class="headerlink" title="图标美化"></a>图标美化</h3><p>在<a target="_blank" rel="noopener" href="https://www.pling.com/s/Gnome/browse/cat/132/order/latest/">这里</a>找喜欢的图标包,本人用的是<a target="_blank" rel="noopener" href="https://www.pling.com/s/Gnome/p/1210856">Mcjave CT icons</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/icons**</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/icons</span><br></pre></td></tr></table></figure>
-<p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 图标</strong>,替换图标<br>&emsp;</p>
-<h3 id="Dash-to-Dock"><a href="#Dash-to-Dock" class="headerlink" title="Dash to Dock"></a>Dash to Dock</h3><p>在<strong>Ubuntu软件</strong>中搜索安装<code>Dash to Dock</code>,设置自定义<br><img src="https://img-blog.csdnimg.cn/20191213211948155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213212123894.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;</p>
-<h3 id="Terminal美化"><a href="#Terminal美化" class="headerlink" title="Terminal美化"></a>Terminal美化</h3><p>这里只改变了窗口的透明度,其他的可自行调整<br><img src="https://img-blog.csdnimg.cn/20191213212257751.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>结束</p>
-
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前总觉得原主题就挺好，看了一些美化教程后自然而然就香了起来，下面是效果图</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu18-04-Mac%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -654,10 +580,16 @@ sudo mkfontdir
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 17:07:42 / 修改时间：17:08:07" itemprop="dateCreated datePublished" datetime="2021-04-19T17:07:42+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 17:07:42" itemprop="dateCreated datePublished" datetime="2021-04-19T17:07:42+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:12:40" itemprop="dateModified" datetime="2021-04-20T09:12:40+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -671,11 +603,14 @@ sudo mkfontdir
 
       
           <p>Ubuntu18.04中已经缺省支持在右键菜单中从当前目录打开终端，但是怎么通过终端打开当前目录的文件夹？<br>看了一些帖子，知道了可以通过<code>nautilus</code>命令解决</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认打开~/目录文件夹</span></span><br><span class="line">nautilus</span><br><span class="line"><span class="comment"># 打开当前目录文件</span></span><br><span class="line">nautilus ./</span><br><span class="line"><span class="comment"># 打开/usr/bin 目录文件夹</span></span><br><span class="line">nautilus /usr/bin</span><br></pre></td></tr></table></figure>
-<p>但是很快我就发现了另一个更方便的解决方案——<code>xdg-open</code>!<br>之前一直用<code>xdg-open</code>命令打开目录、各种文件、网址等等，却没想到用它打开文件路径</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xdg<span class="literal">-open</span> ./</span><br><span class="line">xdg<span class="literal">-open</span> a.jpg</span><br><span class="line">xdg<span class="literal">-open</span>  b.odt</span><br><span class="line">xdg<span class="literal">-open</span> http://www.google.com</span><br></pre></td></tr></table></figure>
-<p><code>gnome-open</code>实现以上需求</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu%E7%BB%88%E7%AB%AF%E5%86%85%E6%89%93%E5%BC%80%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -717,10 +652,16 @@ sudo mkfontdir
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 17:05:53 / 修改时间：17:08:04" itemprop="dateCreated datePublished" datetime="2021-04-19T17:05:53+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 17:05:53" itemprop="dateCreated datePublished" datetime="2021-04-19T17:05:53+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:10:53" itemprop="dateModified" datetime="2021-04-20T09:10:53+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -734,29 +675,14 @@ sudo mkfontdir
 
       
           <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。</p>
-<p>安装Fcitx框架后，本想使用搜狗输入法，但由于fcitx组件问题，搜狗频频出现候选字乱码甚至没有候选字问题，只好退而其次依次尝试了Sunpinyin和Googlepinyin，然鹅使用体验也不好，缺词库，用了一段时间，最后在昨天决定换回搜狗输入法，毕竟搜狗词库和云同步实在太香了。</p>
-<p>搜狗输入法的官方安装包是没有问题的，那么频频出现乱码的原因只能是Fcitx组件的一些误装造成的。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
-<li>首先卸载IBus<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 卸载IBus</span></span><br><span class="line">sudo apt<span class="literal">-get</span> remove ibus</span><br><span class="line"><span class="comment"># 清除IBus配置</span></span><br><span class="line">sudo apt<span class="literal">-get</span> purge ibus</span><br></pre></td></tr></table></figure></li>
-<li>如果曾经安装了Fcitx，彻底卸载掉<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 卸载Fcixt及其组件</span></span><br><span class="line">sudo apt<span class="literal">-get</span> <span class="literal">-y</span>  remove *fcitx*</span><br><span class="line"><span class="comment"># 清除依赖包</span></span><br><span class="line">sudo apt<span class="literal">-get</span> autoremove</span><br></pre></td></tr></table></figure></li>
-<li>最简化安装Fcitx<br>Ubuntu软件中心搜索fcitx，只安装<code>Fcitx</code>和<code>Fcitx配置</code>两项<br><img src="https://img-blog.csdnimg.cn/20191108204511178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li><a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/?r=pinyin">下载</a>安装搜狗拼音输入法<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg <span class="literal">-i</span> sougoupinyin_xxxxxxx_amd64.deb</span><br><span class="line"><span class="comment"># 修复依赖</span></span><br><span class="line">sudo apt<span class="literal">-get</span> install <span class="operator">-f</span></span><br></pre></td></tr></table></figure></li>
-<li>更改输入法框架配置<blockquote>
-<p>设置&gt;&gt;区域与语言&gt;&gt;管理已安装的语言</p>
-</blockquote>
-</li>
-</ol>
-<p>若提示语言不完整，则选择稍后提醒，若选择安装将会开始安装IBus</p>
-<p><img src="https://img-blog.csdnimg.cn/20191108205749352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>在弹出的窗口内将键盘输入法系统从ibus改为fcitx<br><img src="https://img-blog.csdnimg.cn/20191108205951744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ol start="6">
-<li>重启<br>重新启动，而非注销<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo shutdown <span class="literal">-r</span> now</span><br></pre></td></tr></table></figure></li>
-<li>配置搜狗拼音输入法<br>重启后，顶栏右边会出现一个小键盘图标，<img src="https://img-blog.csdnimg.cn/20191108210507108.png" alt="在这里插入图片描述"><br>点击，配置，或者直接搜索打开<code>fcitx配置</code></li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20191108210701996.png" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191108210650615.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191108210817961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>移除搜狗五笔等，只保留这两项输入法<br>使用时，通过<code>shift</code>在两种输入法之间切换，<code>shift</code>是不能在搜狗输入法内切换中英文的。</p>
-<p>通过这种方式安装，再没有出现过乱码现象，账户同步功能也可以正常使用</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu-18-04-%E5%AE%8C%E7%BE%8E%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -798,10 +724,16 @@ sudo mkfontdir
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 16:59:33 / 修改时间：17:08:06" itemprop="dateCreated datePublished" datetime="2021-04-19T16:59:33+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 16:59:33" itemprop="dateCreated datePublished" datetime="2021-04-19T16:59:33+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:11:26" itemprop="dateModified" datetime="2021-04-20T09:11:26+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -815,10 +747,14 @@ sudo mkfontdir
 
       
           <h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install indicator-sysmonitor</span><br></pre></td></tr></table></figure>
-<h5 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">indicator-sysmonitor &amp;</span><br></pre></td></tr></table></figure>
-<h5 id="后台挂起"><a href="#后台挂起" class="headerlink" title="后台挂起"></a>后台挂起</h5><p><code>Ctrl+D</code>后台运行indicator-sysmonitor。</p>
-<h5 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h5><p>右键标题栏上图标，首选项，在弹出的界面选中<code>Run on Startup</code><br>在高级可以自定义显示的内容。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu18-04-20-04LTS%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E7%BD%91%E9%80%9F%E3%80%81CPU%E5%92%8C%E5%86%85%E5%AD%98/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -860,10 +796,16 @@ sudo mkfontdir
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 16:45:57 / 修改时间：17:08:05" itemprop="dateCreated datePublished" datetime="2021-04-19T16:45:57+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 16:45:57" itemprop="dateCreated datePublished" datetime="2021-04-19T16:45:57+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:11:18" itemprop="dateModified" datetime="2021-04-20T09:11:18+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -876,29 +818,15 @@ sudo mkfontdir
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><em>&emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。</em><br>&emsp;<br><strong>设备配置：<br>&emsp;&emsp;微星 GL62M 7REX-1650CN<br>&emsp;&emsp;CPU  i7-7700HQ<br>&emsp;&emsp;NVIDIA GeForce GTX 1050Ti<br>&emsp;&emsp;128SSD+1THDD</strong><br>&emsp;</p>
-<h2 id="1-制作U盘启动盘"><a href="#1-制作U盘启动盘" class="headerlink" title="1.制作U盘启动盘"></a>1.制作U盘启动盘</h2><p>&emsp;&emsp;建议使用<a target="_blank" rel="noopener" href="https://www.balena.io/etcher/">Etcher</a>刷写Linux镜像。<br>&emsp;&emsp;Etcher是一款开源的跨平台的系统级刷写工具，支持Windows，Linux，Mac OS。<br>&emsp;&emsp;使用Etcher将Ubuntu 19.04 Desktop ISO刷写进U盘中<br>&emsp;</p>
-<h2 id="2-安装系统"><a href="#2-安装系统" class="headerlink" title="2. 安装系统"></a>2. 安装系统</h2><h4 id="2-1安装前准备"><a href="#2-1安装前准备" class="headerlink" title="2.1安装前准备"></a>2.1安装前准备</h4><ul>
-<li> 关闭安全启动：Secure Boot设置为<code>Disable</code></li>
-<li>Startup-&gt;设置为Network Boot为<code>USB HDD</code></li>
-<li>启动方式设置为<code>UEFI Only</code></li>
-<li>在Startup Boot中将<code>USB HDD</code>设为第一启动项</li>
-<li>F10保存所有设置并重启，进入U盘安装</li>
-</ul>
-<p>总的来讲，需要禁用安全启动以及在启动电脑时进行U盘启动即可,这一安装步骤仅供参考。</p>
-<h4 id="2-2-安装"><a href="#2-2-安装" class="headerlink" title="2.2. 安装"></a>2.2. 安装</h4><p> 由于安装时缺省使用Canonical提供的Nouveau显卡驱动，这个驱动在很多机器上存在兼容性问题，易卡死在Ubuntu安装界面，因此，首先需要禁用Nouveau，使用机器自带的集成显卡进入安装程序，并在Ubuntu系统内安装并启用Nvidia显卡驱动</p>
-<ul>
-<li>插入U盘，启动电脑，进入grub界面，光标移动到<code>Install Ubuntu</code>条目，键盘按<code>e</code>键进入编辑模式，在”quite splash”后先空格，再键入”nomodeset”，按F10保存，进入Ubuntu19.04安装系统<h4 id="2-3-分区方案"><a href="#2-3-分区方案" class="headerlink" title="2.3. 分区方案"></a>2.3. 分区方案</h4></li>
-<li>本人安装模式为Ubuntu单系统，128SSD+1THDD，8G+8G RAM双通道</li>
-<li> /swap交换空间&emsp;16G(至少为内存的1倍)&ensp;SSD;</li>
-<li>/boot &emsp;500MB&ensp;SSD</li>
-<li>/EFI &emsp; 500MB&ensp;SSD</li>
-<li>/ &emsp; &emsp; 剩余SSD</li>
-<li>/home&emsp;&emsp;1T&ensp;HDD<h4 id="2-3-双系统"><a href="#2-3-双系统" class="headerlink" title="2.3. 双系统"></a>2.3. 双系统</h4>若是Windows + Ubuntu 双系统安装，重新启动后，将进入grub引导界面：选中第一个启动选项<code>Ubuntu</code>,按<code>e</code>进入编辑模式，找到”quite splash”，删除其后的一小段文字，空格，键入”nomodeset”，F10保存，进入Ubuntu。<br>若为单系统安装，请忽略此条目。<br>&emsp;<h4 id="3-禁用Nouveau"><a href="#3-禁用Nouveau" class="headerlink" title="3.禁用Nouveau"></a>3.禁用Nouveau</h4>重启后进入登录界面，不要登录，<code>Ctrl+Alt+F2/F3/F4...</code>从图形化界面切换到文本界面（<code>Ctrl+Alt+F1</code>从文本界面切换到图形化界面），输入命令：<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano  /etc/modprobe.d/blacklist.conf</span><br></pre></td></tr></table></figure>
-在打开的文件末尾输入”blacklist nouveau” ,<code>Ctrl+x</code>退出,键入<code>y</code>确定更改,回车，返回到了Terminal，并输入：sudo update-initramfs -u使修改生效以禁用Nouveau驱动，然后重启。<br>&emsp;<h2 id="4-安装Nvidia驱动"><a href="#4-安装Nvidia驱动" class="headerlink" title="4.安装Nvidia驱动"></a>4.安装Nvidia驱动</h2><h4 id="emsp-4-1-自动安装驱动"><a href="#emsp-4-1-自动安装驱动" class="headerlink" title="&emsp;4.1 自动安装驱动"></a>&emsp;4.1 自动安装驱动</h4></li>
-<li>找到并打开<code>软件和更新</code>程序，在附加驱动页面，选择第一个选项，<code>应用更改</code>，等待下载安装完毕<br><img src="https://img-blog.csdnimg.cn/20191001095959477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="软件和更新"><h4 id="4-2-手动安装驱动"><a href="#4-2-手动安装驱动" class="headerlink" title="4.2 手动安装驱动"></a>4.2 手动安装驱动</h4>到<a target="_blank" rel="noopener" href="https://www.nvidia.com/Download/index.aspx?lang=cn">NVIDIA驱动程序官网</a>，根据显卡的具体型号查找安装包，下载后 sudo chmod 777 xxx.run 给予权限，运行安装,安装过程中会有一些问题，自行查询。<br><img src="https://img-blog.csdnimg.cn/20191017181708295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;</li>
-</ul>
-
+          <p><em>&emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。</em></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu18-04-19-04-20-04%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0-%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

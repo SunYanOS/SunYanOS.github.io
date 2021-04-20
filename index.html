@@ -273,10 +273,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 21:25:09 / 修改时间：21:32:31" itemprop="dateCreated datePublished" datetime="2021-04-19T21:25:09+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 21:25:09" itemprop="dateCreated datePublished" datetime="2021-04-19T21:25:09+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:10:32" itemprop="dateModified" datetime="2021-04-20T09:10:32+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -289,27 +295,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>本人在树莓派3B+上做图像识别的功能，由于手头仅有USB摄像头，便决定使用fswebcam进行抓拍，测试的环境是Ubuntu Desktop 18.04和某杂牌USB摄像头<br>&emsp;</p>
-<h2 id="1-安装fswebcam："><a href="#1-安装fswebcam：" class="headerlink" title="1.安装fswebcam："></a>1.安装fswebcam：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fswebcam</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-查看信息："><a href="#2-查看信息：" class="headerlink" title="2.查看信息："></a>2.查看信息：</h2><p>查看设备信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /dev</span><br></pre></td></tr></table></figure>
-<p>查看摄像头相关信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsusb</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-拍照测试："><a href="#3-拍照测试：" class="headerlink" title="3.拍照测试："></a>3.拍照测试：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fswebcam -d /dev/video0 --no-banner -r 720x480 -S 10 ~/image.jpg</span><br></pre></td></tr></table></figure>
-<p>-d表示调用的设备，-no-banner不加会字体报错,-r是图片分辨率信息，-S表示延时拍照，参数10的实际延时远小于10s</p>
-<p>在实际测试中发现，如果延时参数小于10,拍出的图片总是模糊或全是白色，拍照效果极差，原因未知，或许是使用的USB摄像头的问题，这一点以后有空会再测试补充的</p>
-<p>在Terminal中执行完毕此命令，将在~/文件夹下生成一个图像文件image.jpg</p>
-<h2 id="4-python调用fswebcam"><a href="#4-python调用fswebcam" class="headerlink" title="4.python调用fswebcam"></a>4.python调用fswebcam</h2><p>新建并编写代码：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim camera.py</span><br></pre></td></tr></table></figure>
-<p>文件内容：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">os.system(<span class="string">&quot;fswebcam --no-banner -r 1080x720 -S 10 image.jpg&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>执行文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python camera.py</span><br></pre></td></tr></table></figure>
-
-<p>命令执行完毕，将在当前目录生成image.jpg文件</p>
-
+          <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>本人在树莓派3B+上做图像识别的功能，由于手头仅有USB摄像头，便决定使用fswebcam进行抓拍，测试的环境是Ubuntu Desktop 18.04和某杂牌USB摄像头</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/python%E8%B0%83%E7%94%A8fswbcam%E4%BD%BF%E7%94%A8USB%E6%91%84%E5%83%8F%E5%A4%B4%E5%AE%9E%E7%8E%B0%E6%8A%93%E6%8B%8D/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -351,10 +345,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 21:23:45 / 修改时间：21:33:06" itemprop="dateCreated datePublished" datetime="2021-04-19T21:23:45+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 21:23:45" itemprop="dateCreated datePublished" datetime="2021-04-19T21:23:45+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:11:12" itemprop="dateModified" datetime="2021-04-20T09:11:12+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -370,31 +370,14 @@
           <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/areful/p/11306651.html">原文地址</a></p>
 <p>1.准备工作，安装ssl库：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssl</span><br><span class="line">sudo apt-get install libssl-dev</span><br></pre></td></tr></table></figure>
-<p>2.下载libcurl源代码：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://curl.haxx.se/download/curl-7.65.3.tar.xz</span><br></pre></td></tr></table></figure>
-<p>3.解压并进入源代码目录：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar xf curl-7.65.3.tar.xz</span><br><span class="line"><span class="built_in">cd</span> curl-7.65.3</span><br></pre></td></tr></table></figure>
-<p>4.配置编译选项：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./configure  --prefix=/usr  													\</span><br><span class="line">           				--disable-static 												\</span><br><span class="line">          			    --enable-threaded-resolver						\</span><br><span class="line">       			        --with-ca-path=/etc/ssl/certs</span><br></pre></td></tr></table></figure>
-<p>5.编译：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
-
-<p>6.安装（需要root权限）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">make install &amp;&amp;</span><br><span class="line"></span><br><span class="line">rm -rf docs/examples/.deps &amp;&amp;</span><br><span class="line"></span><br><span class="line">find docs \( -name Makefile\* -o -name \*.1 -o -name \*.3 \) -<span class="built_in">exec</span> rm &#123;&#125; \; &amp;&amp;</span><br><span class="line"></span><br><span class="line">install -v -d -m755 /usr/share/doc/curl-7.65.3 &amp;&amp;</span><br><span class="line">cp -v -R docs/*     /usr/share/doc/curl-7.65.3</span><br></pre></td></tr></table></figure>
-<p>至此，编译安装完成。</p>
-<p>&emsp;<br>&emsp;<br>写代码测试一下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;curl/curl.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  CURL *curl;</span><br><span class="line">  CURLcode res;</span><br><span class="line"> </span><br><span class="line">  curl_global_init(CURL_GLOBAL_DEFAULT);</span><br><span class="line"> </span><br><span class="line">  curl = curl_easy_init();</span><br><span class="line">  <span class="keyword">if</span>(curl) &#123;</span><br><span class="line">    curl_easy_setopt(curl, CURLOPT_URL, <span class="string">&quot;https://www.baidu.com/&quot;</span>);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* Perform the request, res will get the return code */</span></span><br><span class="line">    res = curl_easy_perform(curl);</span><br><span class="line">    <span class="comment">/* Check for errors */</span></span><br><span class="line">    <span class="keyword">if</span>(res != CURLE_OK)</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;curl_easy_perform() failed: %s\n&quot;</span>,</span><br><span class="line">              curl_easy_strerror(res));</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* always cleanup */</span></span><br><span class="line">    curl_easy_cleanup(curl);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  curl_global_cleanup();</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello_https.c -l curl -o hello_https</span><br></pre></td></tr></table></figure>
-
-<p>运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hello_https</span><br></pre></td></tr></table></figure>
-
-<p>运行结果截图：<br><img src="https://img-blog.csdnimg.cn/20191031104423437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> 附 自定义回调处理响应数据代码：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;curl/curl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">size_t</span> <span class="title">write_data</span><span class="params">(<span class="keyword">void</span> *ptr, <span class="keyword">size_t</span> size, <span class="keyword">size_t</span> nmemb, <span class="keyword">void</span> *stream)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(stream == <span class="literal">NULL</span>) </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, ptr);</span><br><span class="line">    <span class="keyword">return</span> size * nmemb;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  CURL *curl;</span><br><span class="line">  CURLcode res;</span><br><span class="line"> </span><br><span class="line">  curl_global_init(CURL_GLOBAL_DEFAULT);</span><br><span class="line"> </span><br><span class="line">  curl = curl_easy_init();</span><br><span class="line">  <span class="keyword">if</span>(curl) &#123;</span><br><span class="line">    curl_easy_setopt(curl, CURLOPT_URL, <span class="string">&quot;https://www.baidu.com/&quot;</span>);</span><br><span class="line">    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* Perform the request, res will get the return code */</span></span><br><span class="line">    res = curl_easy_perform(curl);</span><br><span class="line">    <span class="comment">/* Check for errors */</span></span><br><span class="line">    <span class="keyword">if</span>(res != CURLE_OK)</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;curl_easy_perform() failed: %s\n&quot;</span>,</span><br><span class="line">              curl_easy_strerror(res));</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* always cleanup */</span></span><br><span class="line">    curl_easy_cleanup(curl);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  curl_global_cleanup();</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu18-04-2-amd64%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85libcurl%E6%94%AF%E6%8C%81https-%E8%BD%AC/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -436,10 +419,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 21:22:32 / 修改时间：21:33:15" itemprop="dateCreated datePublished" datetime="2021-04-19T21:22:32+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 21:22:32" itemprop="dateCreated datePublished" datetime="2021-04-19T21:22:32+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:11:30" itemprop="dateModified" datetime="2021-04-20T09:11:30+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -453,9 +442,14 @@
 
       
           <p>调用百度的API时为C++ SDK配置jsoncpp依赖，可用于C++解析json文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libjsoncpp-dev</span><br></pre></td></tr></table></figure>
-<p> 库的头文件安装在/usr/include/jsoncpp中, 库API文档默认在/usr/share/doc/libjsoncpp-dev/jsoncpp-api-html/目录下 </p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;jsoncpp/json/json.h&gt;</span> </span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu18-04%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8jsoncpp%E5%BA%93/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -497,10 +491,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 21:21:08 / 修改时间：21:31:18" itemprop="dateCreated datePublished" datetime="2021-04-19T21:21:08+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 21:21:08" itemprop="dateCreated datePublished" datetime="2021-04-19T21:21:08+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:10:17" itemprop="dateModified" datetime="2021-04-20T09:10:17+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -514,9 +514,15 @@
 
       
           <p><a target="_blank" rel="noopener" href="https://www.jb51.net/article/47727.htm">原文地址</a></p>
-<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：<br>  a)为root用户设置密码<br>  b)删除匿名账号<br>  c)取消root用户远程登录<br>  d)删除test库和对test库的访问权限<br>  e)刷新授权表使修改生效</p>
-<p>通过这几项的设置能够提高mysql库的安全。建议生产环境中mysql安装这完成后一定要运行一次mysql_secure_installation，详细步骤请参看下面的命令:</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment"># mysql_secure_installation</span></span><br><span class="line">NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED <span class="keyword">FOR</span> ALL MySQL</span><br><span class="line">SERVERS <span class="keyword">IN</span> PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!</span><br><span class="line"><span class="keyword">In</span> order to log into MySQL to secure it, we<span class="string">&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user. If you&#x27;</span>ve just installed MySQL, and</span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string">Enter current password for root (enter for none):   																						初次运行直接回车</span></span><br><span class="line"><span class="string">OK, successfully used password, moving on…</span></span><br><span class="line"><span class="string">Setting the root password ensures that nobody can log into the MySQL</span></span><br><span class="line"><span class="string">root user without the proper authorisation.</span></span><br><span class="line"><span class="string">Set root password? [Y/n]																			是否设置root用户密码，输入y并回车或直接回车</span></span><br><span class="line"><span class="string">New password: 																																					设置root用户的密码</span></span><br><span class="line"><span class="string">Re-enter new password: 																															再输入一次你设置的密码</span></span><br><span class="line"><span class="string">Password updated successfully!</span></span><br><span class="line"><span class="string">Reloading privilege tables..</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, a MySQL installation has an anonymous user, allowing anyone</span></span><br><span class="line"><span class="string">to log into MySQL without having to have a user account created for</span></span><br><span class="line"><span class="string">them. This is intended only for testing, and to make the installation</span></span><br><span class="line"><span class="string">go a bit smoother. You should remove them before moving into a</span></span><br><span class="line"><span class="string">production environment.</span></span><br><span class="line"><span class="string">Remove anonymous users? [Y/n] 												 是否删除匿名用户,生产环境建议删除，所以直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Normally, root should only be allowed to connect from &#x27;</span>localhost<span class="string">&#x27;. This</span></span><br><span class="line"><span class="string">ensures that someone cannot guess at the root password from the network.</span></span><br><span class="line"><span class="string">Disallow root login remotely? [Y/n] 						是否禁止root远程登录,根据自己的需求选择Y/n并回车,建议禁止</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, MySQL comes with a database named &#x27;</span>test<span class="string">&#x27; that anyone can</span></span><br><span class="line"><span class="string">access. This is also intended only for testing, and should be removed</span></span><br><span class="line"><span class="string">before moving into a production environment.</span></span><br><span class="line"><span class="string">Remove test database and access to it? [Y/n] 																	 是否删除test数据库,直接回车</span></span><br><span class="line"><span class="string">- Dropping test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">- Removing privileges on test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Reloading the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="string">will take effect immediately.</span></span><br><span class="line"><span class="string">Reload privilege tables now? [Y/n] 																							是否重新加载权限表，直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Cleaning up…</span></span><br><span class="line"><span class="string">All done! If you&#x27;</span>ve completed all of the above steps, your MySQL</span><br><span class="line">installation should now be secure.</span><br><span class="line">Thanks <span class="keyword">for</span> <span class="keyword">using</span> MySQL!</span><br><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/MySQL%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BCmysql-secure-installation%E8%AF%A6%E8%A7%A3/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -617,10 +623,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 21:01:17 / 修改时间：21:14:13" itemprop="dateCreated datePublished" datetime="2021-04-19T21:01:17+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 21:01:17" itemprop="dateCreated datePublished" datetime="2021-04-19T21:01:17+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:08:36" itemprop="dateModified" datetime="2021-04-20T09:08:36+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -636,16 +648,14 @@
           <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/huryer/article/details/83146721">原文地址</a></p>
 <p>一、WiFi 网络配置<br>用户可以在未启动树莓派的状态下单独修改 /boot/wpa_supplicant.conf 文件配置 WiFi 的 SSID 和密码，这样树莓派启动后会自行读取 wpa_supplicant.conf 配置文件连接 WiFi 设备。</p>
 <p>操作方法简单：将刷好 Raspbian  系统的 SD 卡用电脑读取。在 boot 分区，也就是树莓派的 /boot 目录下新建 wpa_supplicant.conf 文件，按照下面的参考格式填入内容并保存 wpa_supplicant.conf 文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-A&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-B&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;2</span><br><span class="line">scan_ssid&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>说明以及不同安全性的 WiFi 配置示例：<br>#ssid:网络的ssid<br>#psk:密码<br>#priority:连接优先级，数字越大优先级越高（不可以是负数）<br>#scan_ssid:连接隐藏WiFi时需要指定该值为1</p>
-<p>如果你的 WiFi 没有密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br></pre></td></tr></table></figure>
-<p>如果你的 WiFi 使用WEP加密</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br><span class="line">wep_key0&#x3D;&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果你的 WiFi 使用WPA/WPA2加密</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">psk&#x3D;&quot;你的wifi密码&quot;</span><br></pre></td></tr></table></figure>
-<p>如果你不清楚 WiFi 的加密模式，可以在安卓手机上用 root explorer 打开 /data/misc/wifi/wpa/wpa_supplicant.conf，查看 WiFi 的信息。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AEWiFi/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -687,10 +697,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 20:58:13 / 修改时间：21:32:04" itemprop="dateCreated datePublished" datetime="2021-04-19T20:58:13+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 20:58:13" itemprop="dateCreated datePublished" datetime="2021-04-19T20:58:13+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:08:52" itemprop="dateModified" datetime="2021-04-20T09:08:52+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -706,32 +722,14 @@
           <p><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_563ac5900102wwxq.html">原文地址</a></p>
 <p>fdisk -l<br>命令查看一下U盘是否有被识别到，及识别的U盘是在哪个位置<br>外接U盘或移动硬盘时，默认不会自动挂载，所以需要用mount 命令挂载。通常我们在/mnt 或/media 目录下新建一个目录作为挂载点。比如：</p>
 <p>sudo mkdir /mnt/1GB_USB_flash<br>sudo mount -o uid=pi,gid=pi /dev/sda1 /mnt/1GB_USB_flash<br>//用完之后卸载<br>sudo umount /mnt/1GB_USB_flash  </p>
-<p>sda1 是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。</p>
-<p>挂载exFAT格式的硬盘<br>FAT 格式U盘mount 本身就能支持，但如果你的U盘或移动硬盘使用的是exFAT 格式，mount会说不支持。没关系，安装 exfat-fuse软件之后 mount就支持了。</p>
-<p>sudo apt-get install exfat-fuse  </p>
-<p>如果想开机自动挂载，而不是每次手工执行，可以编辑 /etc/fstab 文件。比如在末尾添加一行：</p>
-<p>/dev/sda1 /mnt/usbdisk vfat rw,defaults 0 0  </p>
-<p>挂载NTFS格式的硬盘(读写方式挂载)<br>默认挂载NTFS格式的硬盘只有只读权限，需要借助其它工具实现。</p>
-<p>#安装所需软件包  </p>
-<p>sudo apt-get install fuse-utils ntfs-3g  </p>
-<p>#加载内核模块  </p>
-<p>modprobe fuse  </p>
-<p>#编辑fstab让移动硬盘开机自动挂载  </p>
-<p>sudo nano /etc/fstab  </p>
-<p>#在最后一行添加如下内容  </p>
-<p>/dev/sda1 /mnt/myusbdrive ntfs-3g defaults,noatime,umask=0000 0 0  </p>
-<p>#保存重启，即可生效  </p>
-<p>挂载FAT32格式的硬盘</p>
-<p>#创建挂载点  </p>
-<p>sudo mkdir /mnt/myusbdrive  </p>
-<p>#编辑fstab让移动硬盘开机自动挂载  </p>
-<p>sudo nano /etc/fstab  </p>
-<p>#在最后一行添加如下内容  </p>
-<p>/dev/sda1 /mnt/myusbdrive auto defaults,noatime,umask=0000 0 0  </p>
-<p>#保存重启，即可生效  </p>
-<p>说明：<br>sda1是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。<br>umask=0000 0 0<br>前面四个0就是对所有人,可读可写可执行,<br>后面两个0,第一个代表dump,0是不备份<br>第二个代表fsck检查的顺序,0表示不检查<br>卸载：sudo umount /mnt/myusbdrive<br>查看挂载情况可使用以下命令。<br>cd /mnt/myusbdrive  </p>
-<p>ls  </p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -773,10 +771,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 20:55:46 / 修改时间：21:32:38" itemprop="dateCreated datePublished" datetime="2021-04-19T20:55:46+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 20:55:46" itemprop="dateCreated datePublished" datetime="2021-04-19T20:55:46+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:10:44" itemprop="dateModified" datetime="2021-04-20T09:10:44+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -789,22 +793,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="一、刷入系统"><a href="#一、刷入系统" class="headerlink" title="一、刷入系统"></a>一、刷入系统</h2><p>为了节省资源，系统选择的是没有图形界面的<code>raspbian-lite</code><br>使用<code>BalenaEtcher</code>刷入镜像后，在<code>/boot</code>目录新建<code>ssh</code>文件夹，用于ssh连接树莓派<br>如果需要省略低电压警告，在/boot分区的config.txt问价内写入<code>avoid_warnings=1</code>即可</p>
-<h2 id="二、ssh连接"><a href="#二、ssh连接" class="headerlink" title="二、ssh连接"></a>二、ssh连接</h2><p>由于本人是通过网线直连路由器，很简单就能获得树莓派的IP地址<br>在Ubuntu内打开终端，使用ssh连接树莓派</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP</span><br></pre></td></tr></table></figure>
-<p>树莓派初始用户名<code>pi</code>，密码<code>raspberry</code></p>
-<h2 id="三、-安装qbittorrent"><a href="#三、-安装qbittorrent" class="headerlink" title="三、 安装qbittorrent"></a>三、 安装qbittorrent</h2><ol>
-<li>换清华源</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://mirror.tuna.tsinghua.edu.cn/help/raspbian/">清华开源软件镜像站</a></p>
-<ol start="2">
-<li>安装qbittorrent<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装qbittorent</span></span><br><span class="line">sudo apt install qbittorrent<span class="literal">-nox</span></span><br><span class="line"><span class="comment">#启动</span></span><br><span class="line">qbittorrent<span class="literal">-nox</span> <span class="literal">-d</span></span><br></pre></td></tr></table></figure>
-<h2 id="四、-Web远程控制"><a href="#四、-Web远程控制" class="headerlink" title="四、 Web远程控制"></a>四、 Web远程控制</h2>在Ubuntu中打开浏览器，地址栏输入<code>树莓派IP：8080</code>（qbittorent默认端口为8080）<br>qbittorrent初始用户名<code>admin</code>，初始密码<code>adminadmin</code></li>
-</ol>
-<p>开始使用吧！</p>
-<p>密码端口等都是可以自定义修改的，本人也准备找个闲置的u盘/硬盘接到树莓派上，以后就可以在低耗电的情况下</p>
-<h2 id="五、-调整分辨率"><a href="#五、-调整分辨率" class="headerlink" title="五、 调整分辨率"></a>五、 调整分辨率</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dongxiaodong/p/9682311.html">调整VNC连接中图像显示的分辨率</a></p>
-
+          <h2 id="一、刷入系统"><a href="#一、刷入系统" class="headerlink" title="一、刷入系统"></a>一、刷入系统</h2><p>为了节省资源，系统选择的是没有图形界面的<code>raspbian-lite</code><br>使用<code>BalenaEtcher</code>刷入镜像后，在<code>/boot</code>目录新建<code>ssh</code>文件夹，用于ssh连接树莓派</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/qbittorrent-%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B6%E4%BD%9Cbt%E4%B8%8B%E8%BD%BD%E6%9C%BA/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -846,10 +843,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-19 20:54:38 / 修改时间：21:33:32" itemprop="dateCreated datePublished" datetime="2021-04-19T20:54:38+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-19 20:54:38" itemprop="dateCreated datePublished" datetime="2021-04-19T20:54:38+08:00">2021-04-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 09:12:31" itemprop="dateModified" datetime="2021-04-20T09:12:31+08:00">2021-04-20</time>
+              </span>
 
           
 
@@ -864,20 +867,14 @@
       
           <h2 id="1-树莓派开启VNC服务"><a href="#1-树莓派开启VNC服务" class="headerlink" title="1. 树莓派开启VNC服务"></a>1. 树莓派开启VNC服务</h2><p>因为本人有块显示器，故将树莓派连接键盘鼠标显示器，树莓派开机，打开终端，输入命令:</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo raspi<span class="literal">-config</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20191205125516966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>Interfacig Option</code>项，回车<br><img src="https://img-blog.csdnimg.cn/2019120512575512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>VNC</code>项，回车，等待安装启用完成，若VNC成功启动，则会在屏幕右上角出现VNC图标<br><img src="https://img-blog.csdnimg.cn/20191205125958956.png" alt="在这里插入图片描述"></p>
-<h2 id="2-树莓派开启SSH服务"><a href="#2-树莓派开启SSH服务" class="headerlink" title="2. 树莓派开启SSH服务"></a>2. 树莓派开启SSH服务</h2><p>详细步骤和开启VNC服务相同，只是在<code>raspi-config</code>的次级菜单中要选中<code>SSH</code><br>或者在tf卡刷入系统之后，在<code>/boot</code>目录下新建<code>/ssh</code>空文件夹<br>Ubuntu内终端输入<code>ssh pi@树莓派的IP</code>，初始密码是<code>raspberry</code></p>
-<h2 id="3-使用Filezilla连接树莓派"><a href="#3-使用Filezilla连接树莓派" class="headerlink" title="3. 使用Filezilla连接树莓派"></a>3. 使用Filezilla连接树莓派</h2><h6 id="前提条件："><a href="#前提条件：" class="headerlink" title="前提条件："></a>前提条件：</h6><pre><code>1.树莓派和Ubuntu设备处于同一局域网下
-2.树莓派已开启SSH服务
-3.已知树莓派当前IP
-</code></pre>
-<p>安装Filezilla：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install filezilla</span><br></pre></td></tr></table></figure>
-<p>安装后打开，连接<br><img src="https://img-blog.csdnimg.cn/20191205130741840.png" alt="在这里插入图片描述"><br>主机：<code>sftps://</code>+<code>树莓派IP</code>，用户名和密码依树莓派的照实填写就好</p>
-<h2 id="4-Shell下SSH连接树莓派"><a href="#4-Shell下SSH连接树莓派" class="headerlink" title="4. Shell下SSH连接树莓派"></a>4. Shell下SSH连接树莓派</h2><p>Ubuntu下打开终端，输入：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP地址</span><br></pre></td></tr></table></figure>
-<p>比如这里我的IP是192.168.1.5<br><img src="https://img-blog.csdnimg.cn/20191205131352347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>连接树莓派成功后，键入<code>exit</code>可以断开连接：<br><img src="https://img-blog.csdnimg.cn/2019120513154890.png" alt="在这里插入图片描述"></p>
-<h2 id="5-VNC连接树莓派"><a href="#5-VNC连接树莓派" class="headerlink" title="5. VNC连接树莓派"></a>5. VNC连接树莓派</h2><p>在Ubuntu上安装Raspberry官方推荐的跨平台解决方案——<a target="_blank" rel="noopener" href="https://www.realvnc.com/en/connect/download/viewer/">RealVNC</a>，支持Windows，Linux，macOS等众多平台。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/19/Ubuntu%E4%B8%8B%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE3B-SSH-VNC-Filezilla/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
