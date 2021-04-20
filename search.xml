@@ -797,4 +797,15 @@ sudo mkfontdir
         <tag>Raspberry</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Hexo建站参考资料</title>
+    <url>/2021/04/20/Hexo%E5%BB%BA%E7%AB%99%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/</url>
+    <content><![CDATA[<p>本次建站主要参考了以下两篇博文</p>
+<p><a href="https://mupceet.com/2019/08/build-blog-based-on-hexo/">Hexo 博客搭建与主题配置（零基础版）</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/129644138">hexo+next个性化配置</a></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
 </search>
