@@ -19,13 +19,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"sunyanos.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="原文地址 fdisk -l命令查看一下U盘是否有被识别到，及识别的U盘是在哪个位置外接U盘或移动硬盘时，默认不会自动挂载，所以需要用mount 命令挂载。通常我们在&#x2F;mnt 或&#x2F;media 目录下新建一个目录作为挂载点。比如： sudo mkdir &#x2F;mnt&#x2F;1GB_USB_flashsudo mount -o uid&#x3D;pi,gid&#x3D;pi &#x2F;dev&#x2F;sda1 &#x2F;mnt&#x2F;1GB_USB_flash&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派3B+自动挂载移动硬盘或U盘[转]">
-<meta property="og:url" content="http://example.com/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/index.html">
+<meta property="og:url" content="http://sunyanos.github.io/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/index.html">
 <meta property="og:site_name" content="Lxfmly&#39;s Blog">
 <meta property="og:description" content="原文地址 fdisk -l命令查看一下U盘是否有被识别到，及识别的U盘是在哪个位置外接U盘或移动硬盘时，默认不会自动挂载，所以需要用mount 命令挂载。通常我们在&#x2F;mnt 或&#x2F;media 目录下新建一个目录作为挂载点。比如： sudo mkdir &#x2F;mnt&#x2F;1GB_USB_flashsudo mount -o uid&#x3D;pi,gid&#x3D;pi &#x2F;dev&#x2F;sda1 &#x2F;mnt&#x2F;1GB_USB_flash&#x2F;">
 <meta property="og:locale" content="zh_CN">
@@ -36,7 +36,7 @@
 <meta property="article:tag" content="Raspbian">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/">
+<link rel="canonical" href="http://sunyanos.github.io/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/">
 
 
 <script id="page-configurations">
@@ -198,7 +198,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/">
+    <link itemprop="mainEntityOfPage" href="http://sunyanos.github.io/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
