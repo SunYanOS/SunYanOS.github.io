@@ -133,18 +133,36 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL安全配置向导mysql_secure_installation详解</title>
-    <url>/2021/04/19/MySQL%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BCmysql-secure-installation%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p><a href="https://www.jb51.net/article/47727.htm">原文地址</a></p>
-<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：</p>
+    <title>Ubuntu 18.04 完美安装搜狗拼音输入法</title>
+    <url>/2021/04/19/Ubuntu-18-04-%E5%AE%8C%E7%BE%8E%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。</p>
 <span id="more"></span>
 
-<p>  a)为root用户设置密码<br>  b)删除匿名账号<br>  c)取消root用户远程登录<br>  d)删除test库和对test库的访问权限<br>  e)刷新授权表使修改生效</p>
-<p>通过这几项的设置能够提高mysql库的安全。建议生产环境中mysql安装这完成后一定要运行一次mysql_secure_installation，详细步骤请参看下面的命令:</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment"># mysql_secure_installation</span></span><br><span class="line">NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED <span class="keyword">FOR</span> ALL MySQL</span><br><span class="line">SERVERS <span class="keyword">IN</span> PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!</span><br><span class="line"><span class="keyword">In</span> order to log into MySQL to secure it, we<span class="string">&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user. If you&#x27;</span>ve just installed MySQL, and</span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string">Enter current password for root (enter for none):   																						初次运行直接回车</span></span><br><span class="line"><span class="string">OK, successfully used password, moving on…</span></span><br><span class="line"><span class="string">Setting the root password ensures that nobody can log into the MySQL</span></span><br><span class="line"><span class="string">root user without the proper authorisation.</span></span><br><span class="line"><span class="string">Set root password? [Y/n]																			是否设置root用户密码，输入y并回车或直接回车</span></span><br><span class="line"><span class="string">New password: 																																					设置root用户的密码</span></span><br><span class="line"><span class="string">Re-enter new password: 																															再输入一次你设置的密码</span></span><br><span class="line"><span class="string">Password updated successfully!</span></span><br><span class="line"><span class="string">Reloading privilege tables..</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, a MySQL installation has an anonymous user, allowing anyone</span></span><br><span class="line"><span class="string">to log into MySQL without having to have a user account created for</span></span><br><span class="line"><span class="string">them. This is intended only for testing, and to make the installation</span></span><br><span class="line"><span class="string">go a bit smoother. You should remove them before moving into a</span></span><br><span class="line"><span class="string">production environment.</span></span><br><span class="line"><span class="string">Remove anonymous users? [Y/n] 												 是否删除匿名用户,生产环境建议删除，所以直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Normally, root should only be allowed to connect from &#x27;</span>localhost<span class="string">&#x27;. This</span></span><br><span class="line"><span class="string">ensures that someone cannot guess at the root password from the network.</span></span><br><span class="line"><span class="string">Disallow root login remotely? [Y/n] 						是否禁止root远程登录,根据自己的需求选择Y/n并回车,建议禁止</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, MySQL comes with a database named &#x27;</span>test<span class="string">&#x27; that anyone can</span></span><br><span class="line"><span class="string">access. This is also intended only for testing, and should be removed</span></span><br><span class="line"><span class="string">before moving into a production environment.</span></span><br><span class="line"><span class="string">Remove test database and access to it? [Y/n] 																	 是否删除test数据库,直接回车</span></span><br><span class="line"><span class="string">- Dropping test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">- Removing privileges on test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Reloading the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="string">will take effect immediately.</span></span><br><span class="line"><span class="string">Reload privilege tables now? [Y/n] 																							是否重新加载权限表，直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Cleaning up…</span></span><br><span class="line"><span class="string">All done! If you&#x27;</span>ve completed all of the above steps, your MySQL</span><br><span class="line">installation should now be secure.</span><br><span class="line">Thanks <span class="keyword">for</span> <span class="keyword">using</span> MySQL!</span><br><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>]]></content>
+<p>安装Fcitx框架后，本想使用搜狗输入法，但由于fcitx组件问题，搜狗频频出现候选字乱码甚至没有候选字问题，只好退而其次依次尝试了Sunpinyin和Googlepinyin，然鹅使用体验也不好，缺词库，用了一段时间，最后在昨天决定换回搜狗输入法，毕竟搜狗词库和云同步实在太香了。</p>
+<p>搜狗输入法的官方安装包是没有问题的，那么频频出现乱码的原因只能是Fcitx组件的一些误装造成的。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
+<li>首先卸载IBus<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载IBus</span></span><br><span class="line">sudo apt<span class="literal">-get</span> remove ibus</span><br><span class="line"><span class="comment"># 清除IBus配置</span></span><br><span class="line">sudo apt<span class="literal">-get</span> purge ibus</span><br></pre></td></tr></table></figure></li>
+<li>如果曾经安装了Fcitx，彻底卸载掉<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载Fcixt及其组件</span></span><br><span class="line">sudo apt<span class="literal">-get</span> <span class="literal">-y</span>  remove *fcitx*</span><br><span class="line"><span class="comment"># 清除依赖包</span></span><br><span class="line">sudo apt<span class="literal">-get</span> autoremove</span><br></pre></td></tr></table></figure></li>
+<li>最简化安装Fcitx<br>Ubuntu软件中心搜索fcitx，只安装<code>Fcitx</code>和<code>Fcitx配置</code>两项<br><img src="https://img-blog.csdnimg.cn/20191108204511178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li><a href="https://pinyin.sogou.com/linux/?r=pinyin">下载</a>安装搜狗拼音输入法<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo dpkg <span class="literal">-i</span> sougoupinyin_xxxxxxx_amd64.deb</span><br><span class="line"><span class="comment"># 修复依赖</span></span><br><span class="line">sudo apt<span class="literal">-get</span> install <span class="operator">-f</span></span><br></pre></td></tr></table></figure></li>
+<li>更改输入法框架配置<blockquote>
+<p>设置&gt;&gt;区域与语言&gt;&gt;管理已安装的语言</p>
+</blockquote>
+</li>
+</ol>
+<p>若提示语言不完整，则选择稍后提醒，若选择安装将会开始安装IBus</p>
+<p><img src="https://img-blog.csdnimg.cn/20191108205749352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>在弹出的窗口内将键盘输入法系统从ibus改为fcitx<br><img src="https://img-blog.csdnimg.cn/20191108205951744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol start="6">
+<li>重启<br>重新启动，而非注销<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo shutdown <span class="literal">-r</span> now</span><br></pre></td></tr></table></figure></li>
+<li>配置搜狗拼音输入法<br>重启后，顶栏右边会出现一个小键盘图标，<img src="https://img-blog.csdnimg.cn/20191108210507108.png" alt="在这里插入图片描述"><br>点击，配置，或者直接搜索打开<code>fcitx配置</code></li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20191108210701996.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191108210650615.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191108210817961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>移除搜狗五笔等，只保留这两项输入法<br>使用时，通过<code>shift</code>在两种输入法之间切换，<code>shift</code>是不能在搜狗输入法内切换中英文的。</p>
+<p>通过这种方式安装，再没有出现过乱码现象，账户同步功能也可以正常使用</p>
+]]></content>
       <tags>
         <tag>Ubuntu</tag>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -204,48 +222,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu 20.04LTS下安装pip</title>
-    <url>/2021/04/19/Ubuntu-20-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85pip/</url>
-    <content><![CDATA[<p><a href="https://www.itcoder.tech/posts/how-to-install-pip-on-ubuntu-20.04/">ITCoder</a></p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu 18.04 完美安装搜狗拼音输入法</title>
-    <url>/2021/04/19/Ubuntu-18-04-%E5%AE%8C%E7%BE%8E%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。</p>
-<span id="more"></span>
-
-<p>安装Fcitx框架后，本想使用搜狗输入法，但由于fcitx组件问题，搜狗频频出现候选字乱码甚至没有候选字问题，只好退而其次依次尝试了Sunpinyin和Googlepinyin，然鹅使用体验也不好，缺词库，用了一段时间，最后在昨天决定换回搜狗输入法，毕竟搜狗词库和云同步实在太香了。</p>
-<p>搜狗输入法的官方安装包是没有问题的，那么频频出现乱码的原因只能是Fcitx组件的一些误装造成的。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
-<li>首先卸载IBus<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载IBus</span></span><br><span class="line">sudo apt<span class="literal">-get</span> remove ibus</span><br><span class="line"><span class="comment"># 清除IBus配置</span></span><br><span class="line">sudo apt<span class="literal">-get</span> purge ibus</span><br></pre></td></tr></table></figure></li>
-<li>如果曾经安装了Fcitx，彻底卸载掉<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载Fcixt及其组件</span></span><br><span class="line">sudo apt<span class="literal">-get</span> <span class="literal">-y</span>  remove *fcitx*</span><br><span class="line"><span class="comment"># 清除依赖包</span></span><br><span class="line">sudo apt<span class="literal">-get</span> autoremove</span><br></pre></td></tr></table></figure></li>
-<li>最简化安装Fcitx<br>Ubuntu软件中心搜索fcitx，只安装<code>Fcitx</code>和<code>Fcitx配置</code>两项<br><img src="https://img-blog.csdnimg.cn/20191108204511178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li><a href="https://pinyin.sogou.com/linux/?r=pinyin">下载</a>安装搜狗拼音输入法<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo dpkg <span class="literal">-i</span> sougoupinyin_xxxxxxx_amd64.deb</span><br><span class="line"><span class="comment"># 修复依赖</span></span><br><span class="line">sudo apt<span class="literal">-get</span> install <span class="operator">-f</span></span><br></pre></td></tr></table></figure></li>
-<li>更改输入法框架配置<blockquote>
-<p>设置&gt;&gt;区域与语言&gt;&gt;管理已安装的语言</p>
-</blockquote>
-</li>
-</ol>
-<p>若提示语言不完整，则选择稍后提醒，若选择安装将会开始安装IBus</p>
-<p><img src="https://img-blog.csdnimg.cn/20191108205749352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>在弹出的窗口内将键盘输入法系统从ibus改为fcitx<br><img src="https://img-blog.csdnimg.cn/20191108205951744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ol start="6">
-<li>重启<br>重新启动，而非注销<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo shutdown <span class="literal">-r</span> now</span><br></pre></td></tr></table></figure></li>
-<li>配置搜狗拼音输入法<br>重启后，顶栏右边会出现一个小键盘图标，<img src="https://img-blog.csdnimg.cn/20191108210507108.png" alt="在这里插入图片描述"><br>点击，配置，或者直接搜索打开<code>fcitx配置</code></li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20191108210701996.png" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191108210650615.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191108210817961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>移除搜狗五笔等，只保留这两项输入法<br>使用时，通过<code>shift</code>在两种输入法之间切换，<code>shift</code>是不能在搜狗输入法内切换中英文的。</p>
-<p>通过这种方式安装，再没有出现过乱码现象，账户同步功能也可以正常使用</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu18.04.2 amd64编译安装libcurl支持https[转]</title>
     <url>/2021/04/19/Ubuntu18-04-2-amd64%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85libcurl%E6%94%AF%E6%8C%81https-%E8%BD%AC/</url>
     <content><![CDATA[<p><a href="https://www.cnblogs.com/areful/p/11306651.html">原文地址</a></p>
@@ -281,6 +257,21 @@
       <tags>
         <tag>Ubuntu</tag>
         <tag>图像识别</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL安全配置向导mysql_secure_installation详解</title>
+    <url>/2021/04/19/MySQL%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BCmysql-secure-installation%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p><a href="https://www.jb51.net/article/47727.htm">原文地址</a></p>
+<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：</p>
+<span id="more"></span>
+
+<p>  a)为root用户设置密码<br>  b)删除匿名账号<br>  c)取消root用户远程登录<br>  d)删除test库和对test库的访问权限<br>  e)刷新授权表使修改生效</p>
+<p>通过这几项的设置能够提高mysql库的安全。建议生产环境中mysql安装这完成后一定要运行一次mysql_secure_installation，详细步骤请参看下面的命令:</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment"># mysql_secure_installation</span></span><br><span class="line">NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED <span class="keyword">FOR</span> ALL MySQL</span><br><span class="line">SERVERS <span class="keyword">IN</span> PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!</span><br><span class="line"><span class="keyword">In</span> order to log into MySQL to secure it, we<span class="string">&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user. If you&#x27;</span>ve just installed MySQL, and</span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string">Enter current password for root (enter for none):   																						初次运行直接回车</span></span><br><span class="line"><span class="string">OK, successfully used password, moving on…</span></span><br><span class="line"><span class="string">Setting the root password ensures that nobody can log into the MySQL</span></span><br><span class="line"><span class="string">root user without the proper authorisation.</span></span><br><span class="line"><span class="string">Set root password? [Y/n]																			是否设置root用户密码，输入y并回车或直接回车</span></span><br><span class="line"><span class="string">New password: 																																					设置root用户的密码</span></span><br><span class="line"><span class="string">Re-enter new password: 																															再输入一次你设置的密码</span></span><br><span class="line"><span class="string">Password updated successfully!</span></span><br><span class="line"><span class="string">Reloading privilege tables..</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, a MySQL installation has an anonymous user, allowing anyone</span></span><br><span class="line"><span class="string">to log into MySQL without having to have a user account created for</span></span><br><span class="line"><span class="string">them. This is intended only for testing, and to make the installation</span></span><br><span class="line"><span class="string">go a bit smoother. You should remove them before moving into a</span></span><br><span class="line"><span class="string">production environment.</span></span><br><span class="line"><span class="string">Remove anonymous users? [Y/n] 												 是否删除匿名用户,生产环境建议删除，所以直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Normally, root should only be allowed to connect from &#x27;</span>localhost<span class="string">&#x27;. This</span></span><br><span class="line"><span class="string">ensures that someone cannot guess at the root password from the network.</span></span><br><span class="line"><span class="string">Disallow root login remotely? [Y/n] 						是否禁止root远程登录,根据自己的需求选择Y/n并回车,建议禁止</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, MySQL comes with a database named &#x27;</span>test<span class="string">&#x27; that anyone can</span></span><br><span class="line"><span class="string">access. This is also intended only for testing, and should be removed</span></span><br><span class="line"><span class="string">before moving into a production environment.</span></span><br><span class="line"><span class="string">Remove test database and access to it? [Y/n] 																	 是否删除test数据库,直接回车</span></span><br><span class="line"><span class="string">- Dropping test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">- Removing privileges on test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Reloading the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="string">will take effect immediately.</span></span><br><span class="line"><span class="string">Reload privilege tables now? [Y/n] 																							是否重新加载权限表，直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Cleaning up…</span></span><br><span class="line"><span class="string">All done! If you&#x27;</span>ve completed all of the above steps, your MySQL</span><br><span class="line">installation should now be secure.</span><br><span class="line">Thanks <span class="keyword">for</span> <span class="keyword">using</span> MySQL!</span><br><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -323,29 +314,12 @@
       </tags>
   </entry>
   <entry>
-    <title>Audacity简单使用体验</title>
-    <url>/2021/04/19/Audacity%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<p><code>Audacity</code>的安装非常简单，直接用apt管理器安装即可</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install audacity</span><br></pre></td></tr></table></figure>
-<p>以前没怎么剪辑过音频，这次安装<code>Audacity</code>是为了剪辑一首歌的纯音乐部分，可以说本人在剪辑方面就是完全的小白，但是在使用<code>Audacity</code>的时候仍然感觉十分舒服，用了一小会就能简单使用，布局和操作都非常人性化</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/20200323223858575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>后来在win上使用，依然是很棒的音频剪辑软件</p>
+    <title>Ubuntu 20.04LTS下安装pip</title>
+    <url>/2021/04/19/Ubuntu-20-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85pip/</url>
+    <content><![CDATA[<p><a href="https://www.itcoder.tech/posts/how-to-install-pip-on-ubuntu-20.04/">ITCoder</a></p>
 ]]></content>
       <tags>
         <tag>Ubuntu</tag>
-        <tag>Music</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu20.04LTS安装Mysql8.0.21[转]</title>
-    <url>/2021/04/19/Ubuntu20-04LTS%E5%AE%89%E8%A3%85Mysql8-0-21/</url>
-    <content><![CDATA[<p><a href="https://ywnz.com/linuxysjk/4123.html">原文地址</a></p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -375,20 +349,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu18.04安装使用jsoncpp库</title>
-    <url>/2021/04/19/Ubuntu18-04%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8jsoncpp%E5%BA%93/</url>
-    <content><![CDATA[<p>调用百度的API时为C++ SDK配置jsoncpp依赖，可用于C++解析json文件</p>
-<span id="more"></span>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libjsoncpp-dev</span><br></pre></td></tr></table></figure>
-<p> 库的头文件安装在/usr/include/jsoncpp中, 库API文档默认在/usr/share/doc/libjsoncpp-dev/jsoncpp-api-html/目录下 </p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;jsoncpp/json/json.h&gt;</span> </span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>C++</tag>
-        <tag>图像识别</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu下Windows文件名乱码[转]</title>
     <url>/2021/04/19/Ubuntu%E4%B8%8BWindows%E6%96%87%E4%BB%B6%E5%90%8D%E4%B9%B1%E7%A0%81/</url>
     <content><![CDATA[<p><a href="https://www.jianshu.com/p/52f4df9dd4c8">原文链接</a></p>
@@ -409,30 +369,32 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu下局域网内访问树莓派3B+---SSH,VNC,Filezilla</title>
-    <url>/2021/04/19/Ubuntu%E4%B8%8B%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE3B-SSH-VNC-Filezilla/</url>
-    <content><![CDATA[<h2 id="1-树莓派开启VNC服务"><a href="#1-树莓派开启VNC服务" class="headerlink" title="1. 树莓派开启VNC服务"></a>1. 树莓派开启VNC服务</h2><p>因为本人有块显示器，故将树莓派连接键盘鼠标显示器，树莓派开机，打开终端，输入命令:</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo raspi<span class="literal">-config</span></span><br></pre></td></tr></table></figure>
+    <title>Ubuntu18.04安装使用jsoncpp库</title>
+    <url>/2021/04/19/Ubuntu18-04%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8jsoncpp%E5%BA%93/</url>
+    <content><![CDATA[<p>调用百度的API时为C++ SDK配置jsoncpp依赖，可用于C++解析json文件</p>
 <span id="more"></span>
 
-<p><img src="https://img-blog.csdnimg.cn/20191205125516966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>Interfacig Option</code>项，回车<br><img src="https://img-blog.csdnimg.cn/2019120512575512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>VNC</code>项，回车，等待安装启用完成，若VNC成功启动，则会在屏幕右上角出现VNC图标<br><img src="https://img-blog.csdnimg.cn/20191205125958956.png" alt="在这里插入图片描述"></p>
-<h2 id="2-树莓派开启SSH服务"><a href="#2-树莓派开启SSH服务" class="headerlink" title="2. 树莓派开启SSH服务"></a>2. 树莓派开启SSH服务</h2><p>详细步骤和开启VNC服务相同，只是在<code>raspi-config</code>的次级菜单中要选中<code>SSH</code><br>或者在tf卡刷入系统之后，在<code>/boot</code>目录下新建<code>/ssh</code>空文件夹<br>Ubuntu内终端输入<code>ssh pi@树莓派的IP</code>，初始密码是<code>raspberry</code></p>
-<h2 id="3-使用Filezilla连接树莓派"><a href="#3-使用Filezilla连接树莓派" class="headerlink" title="3. 使用Filezilla连接树莓派"></a>3. 使用Filezilla连接树莓派</h2><h6 id="前提条件："><a href="#前提条件：" class="headerlink" title="前提条件："></a>前提条件：</h6><pre><code>1.树莓派和Ubuntu设备处于同一局域网下
-2.树莓派已开启SSH服务
-3.已知树莓派当前IP
-</code></pre>
-<p>安装Filezilla：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install filezilla</span><br></pre></td></tr></table></figure>
-<p>安装后打开，连接<br><img src="https://img-blog.csdnimg.cn/20191205130741840.png" alt="在这里插入图片描述"><br>主机：<code>sftps://</code>+<code>树莓派IP</code>，用户名和密码依树莓派的照实填写就好</p>
-<h2 id="4-Shell下SSH连接树莓派"><a href="#4-Shell下SSH连接树莓派" class="headerlink" title="4. Shell下SSH连接树莓派"></a>4. Shell下SSH连接树莓派</h2><p>Ubuntu下打开终端，输入：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP地址</span><br></pre></td></tr></table></figure>
-<p>比如这里我的IP是192.168.1.5<br><img src="https://img-blog.csdnimg.cn/20191205131352347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>连接树莓派成功后，键入<code>exit</code>可以断开连接：<br><img src="https://img-blog.csdnimg.cn/2019120513154890.png" alt="在这里插入图片描述"></p>
-<h2 id="5-VNC连接树莓派"><a href="#5-VNC连接树莓派" class="headerlink" title="5. VNC连接树莓派"></a>5. VNC连接树莓派</h2><p>在Ubuntu上安装Raspberry官方推荐的跨平台解决方案——<a href="https://www.realvnc.com/en/connect/download/viewer/">RealVNC</a>，支持Windows，Linux，macOS等众多平台。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libjsoncpp-dev</span><br></pre></td></tr></table></figure>
+<p> 库的头文件安装在/usr/include/jsoncpp中, 库API文档默认在/usr/share/doc/libjsoncpp-dev/jsoncpp-api-html/目录下 </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;jsoncpp/json/json.h&gt;</span> </span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>C++</tag>
+        <tag>图像识别</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu下禁用笔记本内置键盘</title>
+    <url>/2021/04/19/Ubuntu%E4%B8%8B%E7%A6%81%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%86%85%E7%BD%AE%E9%94%AE%E7%9B%98/</url>
+    <content><![CDATA[<h5 id="笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘"><a href="#笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘" class="headerlink" title="笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘"></a>笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘</h5><p>查看所有输出设备</p>
+<span id="more"></span>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xinput list</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20191231114452245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里本人内置键盘的ID是17<br>然后禁用</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xinput <span class="built_in">set-prop</span> id <span class="string">&quot;Device Enabled&quot;</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20191231114834680.png" alt="在这里插入图片描述"><br>如果重新启用则将0改为1即可</p>
 ]]></content>
       <tags>
         <tag>Ubuntu</tag>
-        <tag>Raspberry</tag>
-        <tag>SSH</tag>
       </tags>
   </entry>
   <entry>
@@ -487,41 +449,71 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>python调用fswbcam使用USB摄像头实现抓拍</title>
-    <url>/2021/04/19/python%E8%B0%83%E7%94%A8fswbcam%E4%BD%BF%E7%94%A8USB%E6%91%84%E5%83%8F%E5%A4%B4%E5%AE%9E%E7%8E%B0%E6%8A%93%E6%8B%8D/</url>
-    <content><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>本人在树莓派3B+上做图像识别的功能，由于手头仅有USB摄像头，便决定使用fswebcam进行抓拍，测试的环境是Ubuntu Desktop 18.04和某杂牌USB摄像头</p>
-<span id="more"></span>&emsp;
+    <title>Ubuntu下局域网内访问树莓派3B+---SSH,VNC,Filezilla</title>
+    <url>/2021/04/19/Ubuntu%E4%B8%8B%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE3B-SSH-VNC-Filezilla/</url>
+    <content><![CDATA[<h2 id="1-树莓派开启VNC服务"><a href="#1-树莓派开启VNC服务" class="headerlink" title="1. 树莓派开启VNC服务"></a>1. 树莓派开启VNC服务</h2><p>因为本人有块显示器，故将树莓派连接键盘鼠标显示器，树莓派开机，打开终端，输入命令:</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo raspi<span class="literal">-config</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 
-<h2 id="1-安装fswebcam："><a href="#1-安装fswebcam：" class="headerlink" title="1.安装fswebcam："></a>1.安装fswebcam：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install fswebcam</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-查看信息："><a href="#2-查看信息：" class="headerlink" title="2.查看信息："></a>2.查看信息：</h2><p>查看设备信息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls /dev</span><br></pre></td></tr></table></figure>
-<p>查看摄像头相关信息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsusb</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-拍照测试："><a href="#3-拍照测试：" class="headerlink" title="3.拍照测试："></a>3.拍照测试：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fswebcam -d /dev/video0 --no-banner -r 720x480 -S 10 ~/image.jpg</span><br></pre></td></tr></table></figure>
-<p>-d表示调用的设备，-no-banner不加会字体报错,-r是图片分辨率信息，-S表示延时拍照，参数10的实际延时远小于10s</p>
-<p>在实际测试中发现，如果延时参数小于10,拍出的图片总是模糊或全是白色，拍照效果极差，原因未知，或许是使用的USB摄像头的问题，这一点以后有空会再测试补充的</p>
-<p>在Terminal中执行完毕此命令，将在~/文件夹下生成一个图像文件image.jpg</p>
-<h2 id="4-python调用fswebcam"><a href="#4-python调用fswebcam" class="headerlink" title="4.python调用fswebcam"></a>4.python调用fswebcam</h2><p>新建并编写代码：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim camera.py</span><br></pre></td></tr></table></figure>
-<p>文件内容：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">os.system(<span class="string">&quot;fswebcam --no-banner -r 1080x720 -S 10 image.jpg&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>执行文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python camera.py</span><br></pre></td></tr></table></figure>
-
-<p>命令执行完毕，将在当前目录生成image.jpg文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20191205125516966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>Interfacig Option</code>项，回车<br><img src="https://img-blog.csdnimg.cn/2019120512575512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>VNC</code>项，回车，等待安装启用完成，若VNC成功启动，则会在屏幕右上角出现VNC图标<br><img src="https://img-blog.csdnimg.cn/20191205125958956.png" alt="在这里插入图片描述"></p>
+<h2 id="2-树莓派开启SSH服务"><a href="#2-树莓派开启SSH服务" class="headerlink" title="2. 树莓派开启SSH服务"></a>2. 树莓派开启SSH服务</h2><p>详细步骤和开启VNC服务相同，只是在<code>raspi-config</code>的次级菜单中要选中<code>SSH</code><br>或者在tf卡刷入系统之后，在<code>/boot</code>目录下新建<code>/ssh</code>空文件夹<br>Ubuntu内终端输入<code>ssh pi@树莓派的IP</code>，初始密码是<code>raspberry</code></p>
+<h2 id="3-使用Filezilla连接树莓派"><a href="#3-使用Filezilla连接树莓派" class="headerlink" title="3. 使用Filezilla连接树莓派"></a>3. 使用Filezilla连接树莓派</h2><h6 id="前提条件："><a href="#前提条件：" class="headerlink" title="前提条件："></a>前提条件：</h6><pre><code>1.树莓派和Ubuntu设备处于同一局域网下
+2.树莓派已开启SSH服务
+3.已知树莓派当前IP
+</code></pre>
+<p>安装Filezilla：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install filezilla</span><br></pre></td></tr></table></figure>
+<p>安装后打开，连接<br><img src="https://img-blog.csdnimg.cn/20191205130741840.png" alt="在这里插入图片描述"><br>主机：<code>sftps://</code>+<code>树莓派IP</code>，用户名和密码依树莓派的照实填写就好</p>
+<h2 id="4-Shell下SSH连接树莓派"><a href="#4-Shell下SSH连接树莓派" class="headerlink" title="4. Shell下SSH连接树莓派"></a>4. Shell下SSH连接树莓派</h2><p>Ubuntu下打开终端，输入：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP地址</span><br></pre></td></tr></table></figure>
+<p>比如这里我的IP是192.168.1.5<br><img src="https://img-blog.csdnimg.cn/20191205131352347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>连接树莓派成功后，键入<code>exit</code>可以断开连接：<br><img src="https://img-blog.csdnimg.cn/2019120513154890.png" alt="在这里插入图片描述"></p>
+<h2 id="5-VNC连接树莓派"><a href="#5-VNC连接树莓派" class="headerlink" title="5. VNC连接树莓派"></a>5. VNC连接树莓派</h2><p>在Ubuntu上安装Raspberry官方推荐的跨平台解决方案——<a href="https://www.realvnc.com/en/connect/download/viewer/">RealVNC</a>，支持Windows，Linux，macOS等众多平台。</p>
 ]]></content>
       <tags>
         <tag>Ubuntu</tag>
-        <tag>Python</tag>
+        <tag>Raspberry</tag>
+        <tag>SSH</tag>
       </tags>
   </entry>
   <entry>
-    <title>firt_blog</title>
-    <url>/2021/04/01/firt-blog/</url>
-    <content><![CDATA[<p>I’m so happy to build and own the first blog by myself  : )! And thanks to Hexo help me achieve this plan !</p>
+    <title>Audacity简单使用体验</title>
+    <url>/2021/04/19/Audacity%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<p><code>Audacity</code>的安装非常简单，直接用apt管理器安装即可</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install audacity</span><br></pre></td></tr></table></figure>
+<p>以前没怎么剪辑过音频，这次安装<code>Audacity</code>是为了剪辑一首歌的纯音乐部分，可以说本人在剪辑方面就是完全的小白，但是在使用<code>Audacity</code>的时候仍然感觉十分舒服，用了一小会就能简单使用，布局和操作都非常人性化</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/20200323223858575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>后来在win上使用，依然是很棒的音频剪辑软件</p>
 ]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Music</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu20.04LTS安装Mysql8.0.21[转]</title>
+    <url>/2021/04/19/Ubuntu20-04LTS%E5%AE%89%E8%A3%85Mysql8-0-21/</url>
+    <content><![CDATA[<p><a href="https://ywnz.com/linuxysjk/4123.html">原文地址</a></p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vim简单配置</title>
+    <url>/2021/04/19/Vim%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>总是折腾，每次重新配置vim重新写很麻烦，就在此做个备份</p>
+<span id="more"></span>
+
+<p>set autoindent “”自动缩进<br>set cindent “”以C语言的方式缩进<br>set shiftwidth=4 “”设置自动缩进的空格数量<br>set softtabstop=4 “”tab键的实际占有空格数，统一缩进<br>set tabstop=4 “”设置tab键的空格数</p>
+<p>set cursorline “”突出当前行<br>syntax on “”语法高亮<br>set nu “”设置行号</p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Vim</tag>
+      </tags>
   </entry>
   <entry>
     <title>Windows安装GCC</title>
@@ -545,6 +537,12 @@ sudo mkfontdir
       <tags>
         <tag>Gcc</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>firt_blog</title>
+    <url>/2021/04/01/firt-blog/</url>
+    <content><![CDATA[<p>I’m so happy to build and own the first blog by myself  : )! And thanks to Hexo help me achieve this plan !</p>
+]]></content>
   </entry>
   <entry>
     <title>qbittorrent+树莓派3B+制作bt下载机</title>
@@ -605,25 +603,34 @@ sudo mkfontdir
 ]]></content>
   </entry>
   <entry>
-    <title>树莓派3B+无屏幕和键盘配置WiFi[转]</title>
-    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AEWiFi/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/huryer/article/details/83146721">原文地址</a></p>
-<p>一、WiFi 网络配置<br>用户可以在未启动树莓派的状态下单独修改 /boot/wpa_supplicant.conf 文件配置 WiFi 的 SSID 和密码，这样树莓派启动后会自行读取 wpa_supplicant.conf 配置文件连接 WiFi 设备。</p>
-<p>操作方法简单：将刷好 Raspbian  系统的 SD 卡用电脑读取。在 boot 分区，也就是树莓派的 /boot 目录下新建 wpa_supplicant.conf 文件，按照下面的参考格式填入内容并保存 wpa_supplicant.conf 文件。</p>
-<span id="more"></span>
+    <title>python调用fswbcam使用USB摄像头实现抓拍</title>
+    <url>/2021/04/19/python%E8%B0%83%E7%94%A8fswbcam%E4%BD%BF%E7%94%A8USB%E6%91%84%E5%83%8F%E5%A4%B4%E5%AE%9E%E7%8E%B0%E6%8A%93%E6%8B%8D/</url>
+    <content><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>本人在树莓派3B+上做图像识别的功能，由于手头仅有USB摄像头，便决定使用fswebcam进行抓拍，测试的环境是Ubuntu Desktop 18.04和某杂牌USB摄像头</p>
+<span id="more"></span>&emsp;
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-A&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-B&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;2</span><br><span class="line">scan_ssid&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>说明以及不同安全性的 WiFi 配置示例：<br>#ssid:网络的ssid<br>#psk:密码<br>#priority:连接优先级，数字越大优先级越高（不可以是负数）<br>#scan_ssid:连接隐藏WiFi时需要指定该值为1</p>
-<p>如果你的 WiFi 没有密码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br></pre></td></tr></table></figure>
-<p>如果你的 WiFi 使用WEP加密</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br><span class="line">wep_key0&#x3D;&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果你的 WiFi 使用WPA/WPA2加密</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">psk&#x3D;&quot;你的wifi密码&quot;</span><br></pre></td></tr></table></figure>
-<p>如果你不清楚 WiFi 的加密模式，可以在安卓手机上用 root explorer 打开 /data/misc/wifi/wpa/wpa_supplicant.conf，查看 WiFi 的信息。</p>
+<h2 id="1-安装fswebcam："><a href="#1-安装fswebcam：" class="headerlink" title="1.安装fswebcam："></a>1.安装fswebcam：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install fswebcam</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-查看信息："><a href="#2-查看信息：" class="headerlink" title="2.查看信息："></a>2.查看信息：</h2><p>查看设备信息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls /dev</span><br></pre></td></tr></table></figure>
+<p>查看摄像头相关信息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsusb</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-拍照测试："><a href="#3-拍照测试：" class="headerlink" title="3.拍照测试："></a>3.拍照测试：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fswebcam -d /dev/video0 --no-banner -r 720x480 -S 10 ~/image.jpg</span><br></pre></td></tr></table></figure>
+<p>-d表示调用的设备，-no-banner不加会字体报错,-r是图片分辨率信息，-S表示延时拍照，参数10的实际延时远小于10s</p>
+<p>在实际测试中发现，如果延时参数小于10,拍出的图片总是模糊或全是白色，拍照效果极差，原因未知，或许是使用的USB摄像头的问题，这一点以后有空会再测试补充的</p>
+<p>在Terminal中执行完毕此命令，将在~/文件夹下生成一个图像文件image.jpg</p>
+<h2 id="4-python调用fswebcam"><a href="#4-python调用fswebcam" class="headerlink" title="4.python调用fswebcam"></a>4.python调用fswebcam</h2><p>新建并编写代码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim camera.py</span><br></pre></td></tr></table></figure>
+<p>文件内容：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">os.system(<span class="string">&quot;fswebcam --no-banner -r 1080x720 -S 10 image.jpg&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>执行文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python camera.py</span><br></pre></td></tr></table></figure>
+
+<p>命令执行完毕，将在当前目录生成image.jpg文件</p>
 ]]></content>
       <tags>
-        <tag>Raspberry</tag>
+        <tag>Ubuntu</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -769,32 +776,25 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>Vim简单配置</title>
-    <url>/2021/04/19/Vim%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>总是折腾，每次重新配置vim重新写很麻烦，就在此做个备份</p>
+    <title>树莓派3B+无屏幕和键盘配置WiFi[转]</title>
+    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AEWiFi/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/huryer/article/details/83146721">原文地址</a></p>
+<p>一、WiFi 网络配置<br>用户可以在未启动树莓派的状态下单独修改 /boot/wpa_supplicant.conf 文件配置 WiFi 的 SSID 和密码，这样树莓派启动后会自行读取 wpa_supplicant.conf 配置文件连接 WiFi 设备。</p>
+<p>操作方法简单：将刷好 Raspbian  系统的 SD 卡用电脑读取。在 boot 分区，也就是树莓派的 /boot 目录下新建 wpa_supplicant.conf 文件，按照下面的参考格式填入内容并保存 wpa_supplicant.conf 文件。</p>
 <span id="more"></span>
 
-<p>set autoindent “”自动缩进<br>set cindent “”以C语言的方式缩进<br>set shiftwidth=4 “”设置自动缩进的空格数量<br>set softtabstop=4 “”tab键的实际占有空格数，统一缩进<br>set tabstop=4 “”设置tab键的空格数</p>
-<p>set cursorline “”突出当前行<br>syntax on “”语法高亮<br>set nu “”设置行号</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-A&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-B&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;2</span><br><span class="line">scan_ssid&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>说明以及不同安全性的 WiFi 配置示例：<br>#ssid:网络的ssid<br>#psk:密码<br>#priority:连接优先级，数字越大优先级越高（不可以是负数）<br>#scan_ssid:连接隐藏WiFi时需要指定该值为1</p>
+<p>如果你的 WiFi 没有密码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br></pre></td></tr></table></figure>
+<p>如果你的 WiFi 使用WEP加密</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br><span class="line">wep_key0&#x3D;&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果你的 WiFi 使用WPA/WPA2加密</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">psk&#x3D;&quot;你的wifi密码&quot;</span><br></pre></td></tr></table></figure>
+<p>如果你不清楚 WiFi 的加密模式，可以在安卓手机上用 root explorer 打开 /data/misc/wifi/wpa/wpa_supplicant.conf，查看 WiFi 的信息。</p>
 ]]></content>
       <tags>
-        <tag>Ubuntu</tag>
-        <tag>Vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu下禁用笔记本内置键盘</title>
-    <url>/2021/04/19/Ubuntu%E4%B8%8B%E7%A6%81%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%86%85%E7%BD%AE%E9%94%AE%E7%9B%98/</url>
-    <content><![CDATA[<h5 id="笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘"><a href="#笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘" class="headerlink" title="笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘"></a>笔记本一直连着外接键盘，把书本放在内置键盘上总是造成误触，所以决定禁用内置键盘</h5><p>查看所有输出设备</p>
-<span id="more"></span>
-
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xinput list</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20191231114452245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里本人内置键盘的ID是17<br>然后禁用</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xinput <span class="built_in">set-prop</span> id <span class="string">&quot;Device Enabled&quot;</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20191231114834680.png" alt="在这里插入图片描述"><br>如果重新启用则将0改为1即可</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
+        <tag>Raspberry</tag>
       </tags>
   </entry>
 </search>
