@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sunyanos.github.io/2021/04/21/%E8%BF%9C%E4%B8%BA%E8%A7%82%E4%B9%8B/</loc>
+    
+    <lastmod>2021-04-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sunyanos.github.io/2021/04/19/Ubuntu18-04-19-04-20-04%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0-%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
+    
+    <lastmod>2021-04-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sunyanos.github.io/2021/04/20/Hexo%E5%BB%BA%E7%AB%99%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/</loc>
     
     <lastmod>2021-04-20</lastmod>
@@ -80,13 +94,6 @@
   
   <url>
     <loc>http://sunyanos.github.io/2021/04/19/Ubuntu18-04-20-04LTS%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E7%BD%91%E9%80%9F%E3%80%81CPU%E5%92%8C%E5%86%85%E5%AD%98/</loc>
-    
-    <lastmod>2021-04-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sunyanos.github.io/2021/04/19/Ubuntu18-04-19-04-20-04%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0-%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2021-04-20</lastmod>
     
@@ -242,7 +249,7 @@
 
   <url>
     <loc>http://sunyanos.github.io/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -250,123 +257,137 @@
   
   <url>
     <loc>http://sunyanos.github.io/tags/Ubuntu/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Vim/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/C/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Qt/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/MySQL/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Raspberry/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/SSH/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Music/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Gcc/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Raspbian/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Bt/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Python/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/%E9%A5%A5%E8%8D%92/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Minecraft/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sunyanos.github.io/tags/Hexo/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
 
+  
+  <url>
+    <loc>http://sunyanos.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://sunyanos.github.io/categories/Life/</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>

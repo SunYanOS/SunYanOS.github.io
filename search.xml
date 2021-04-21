@@ -217,6 +217,9 @@
 <li>找到并打开<code>软件和更新</code>程序，在附加驱动页面，选择第一个选项，<code>应用更改</code>，等待下载安装完毕<br><img src="https://img-blog.csdnimg.cn/20191001095959477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="软件和更新"><h4 id="4-2-手动安装驱动"><a href="#4-2-手动安装驱动" class="headerlink" title="4.2 手动安装驱动"></a>4.2 手动安装驱动</h4>到<a href="https://www.nvidia.com/Download/index.aspx?lang=cn">NVIDIA驱动程序官网</a>，根据显卡的具体型号查找安装包，下载后 sudo chmod 777 xxx.run 给予权限，运行安装,安装过程中会有一些问题，自行查询。<br><img src="https://img-blog.csdnimg.cn/20191017181708295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
       <tags>
         <tag>Ubuntu</tag>
       </tags>
@@ -807,5 +810,18 @@ sudo mkfontdir
       <tags>
         <tag>Hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>远为观止</title>
+    <url>/2021/04/21/%E8%BF%9C%E4%B8%BA%E8%A7%82%E4%B9%8B/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>如果想戒掉某种习惯，某种东西，某个人，那么，就不要去做任何的接触</p>
+<p>不要去想，不要去看，不要去触摸</p>
+<p>一旦触及到，一种名为瘾的东西就会发作，无法遏止，之前做的努力就会大打折扣</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
   </entry>
 </search>
