@@ -21,6 +21,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo建站参考资料</title>
+    <url>/2021/04/20/Hexo%E5%BB%BA%E7%AB%99%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/</url>
+    <content><![CDATA[<p>本次建站主要参考了以下两篇博文</p>
+<p><a href="https://mupceet.com/2019/08/build-blog-based-on-hexo/">Hexo 博客搭建与主题配置（零基础版）</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/129644138">hexo+next个性化配置</a></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Audacity简单使用体验</title>
+    <url>/2021/04/19/Audacity%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<p><code>Audacity</code>的安装非常简单，直接用apt管理器安装即可</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install audacity</span><br></pre></td></tr></table></figure>
+<p>以前没怎么剪辑过音频，这次安装<code>Audacity</code>是为了剪辑一首歌的纯音乐部分，可以说本人在剪辑方面就是完全的小白，但是在使用<code>Audacity</code>的时候仍然感觉十分舒服，用了一小会就能简单使用，布局和操作都非常人性化</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/20200323223858575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>后来在win上使用，依然是很棒的音频剪辑软件</p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Music</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux中apt与apt-get命令的区别与解释[转]</title>
     <url>/2021/04/19/Linux%E4%B8%ADapt%E4%B8%8Eapt-get%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%A7%A3%E9%87%8A/</url>
     <content><![CDATA[<p><a href="https://www.sysgeek.cn/apt-vs-apt-get/">原文地址</a></p>
@@ -133,6 +160,45 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL安全配置向导mysql_secure_installation详解</title>
+    <url>/2021/04/19/MySQL%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BCmysql-secure-installation%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p><a href="https://www.jb51.net/article/47727.htm">原文地址</a></p>
+<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：</p>
+<span id="more"></span>
+
+<p>  a)为root用户设置密码<br>  b)删除匿名账号<br>  c)取消root用户远程登录<br>  d)删除test库和对test库的访问权限<br>  e)刷新授权表使修改生效</p>
+<p>通过这几项的设置能够提高mysql库的安全。建议生产环境中mysql安装这完成后一定要运行一次mysql_secure_installation，详细步骤请参看下面的命令:</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment"># mysql_secure_installation</span></span><br><span class="line">NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED <span class="keyword">FOR</span> ALL MySQL</span><br><span class="line">SERVERS <span class="keyword">IN</span> PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!</span><br><span class="line"><span class="keyword">In</span> order to log into MySQL to secure it, we<span class="string">&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user. If you&#x27;</span>ve just installed MySQL, and</span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string">Enter current password for root (enter for none):   																						初次运行直接回车</span></span><br><span class="line"><span class="string">OK, successfully used password, moving on…</span></span><br><span class="line"><span class="string">Setting the root password ensures that nobody can log into the MySQL</span></span><br><span class="line"><span class="string">root user without the proper authorisation.</span></span><br><span class="line"><span class="string">Set root password? [Y/n]																			是否设置root用户密码，输入y并回车或直接回车</span></span><br><span class="line"><span class="string">New password: 																																					设置root用户的密码</span></span><br><span class="line"><span class="string">Re-enter new password: 																															再输入一次你设置的密码</span></span><br><span class="line"><span class="string">Password updated successfully!</span></span><br><span class="line"><span class="string">Reloading privilege tables..</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, a MySQL installation has an anonymous user, allowing anyone</span></span><br><span class="line"><span class="string">to log into MySQL without having to have a user account created for</span></span><br><span class="line"><span class="string">them. This is intended only for testing, and to make the installation</span></span><br><span class="line"><span class="string">go a bit smoother. You should remove them before moving into a</span></span><br><span class="line"><span class="string">production environment.</span></span><br><span class="line"><span class="string">Remove anonymous users? [Y/n] 												 是否删除匿名用户,生产环境建议删除，所以直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Normally, root should only be allowed to connect from &#x27;</span>localhost<span class="string">&#x27;. This</span></span><br><span class="line"><span class="string">ensures that someone cannot guess at the root password from the network.</span></span><br><span class="line"><span class="string">Disallow root login remotely? [Y/n] 						是否禁止root远程登录,根据自己的需求选择Y/n并回车,建议禁止</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, MySQL comes with a database named &#x27;</span>test<span class="string">&#x27; that anyone can</span></span><br><span class="line"><span class="string">access. This is also intended only for testing, and should be removed</span></span><br><span class="line"><span class="string">before moving into a production environment.</span></span><br><span class="line"><span class="string">Remove test database and access to it? [Y/n] 																	 是否删除test数据库,直接回车</span></span><br><span class="line"><span class="string">- Dropping test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">- Removing privileges on test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Reloading the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="string">will take effect immediately.</span></span><br><span class="line"><span class="string">Reload privilege tables now? [Y/n] 																							是否重新加载权限表，直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Cleaning up…</span></span><br><span class="line"><span class="string">All done! If you&#x27;</span>ve completed all of the above steps, your MySQL</span><br><span class="line">installation should now be secure.</span><br><span class="line">Thanks <span class="keyword">for</span> <span class="keyword">using</span> MySQL!</span><br><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shell编写“Hello Qt”Qt程序</title>
+    <url>/2021/04/19/Shell%E7%BC%96%E5%86%99%E2%80%9CHello-Qt%E2%80%9DQt%E7%A8%8B%E5%BA%8F/</url>
+    <content><![CDATA[<p>首先在~/qt目录下新建prac文件夹，在prac文件夹内编写c++源代码程序</p>
+<span id="more"></span>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> ~/qt/prac</span><br><span class="line"><span class="variable">$</span> vim prac.cpp</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QApplication&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QLabel&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">int</span> argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">QApplication</span>(argc, argv);</span><br><span class="line">	QLabel *label = <span class="keyword">new</span> <span class="built_in">QLabel</span>(<span class="string">&quot;Hello Qt!&quot;</span>);</span><br><span class="line">	label-&gt;<span class="built_in">show</span>();</span><br><span class="line">	<span class="keyword">return</span> app.<span class="built_in">exec</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输入以下命令，生成一个与平台无关的项目文件prac.pro</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">qmake <span class="literal">-project</span></span><br></pre></td></tr></table></figure>
+<p>编辑生成的prac.pro文件，添加语句<code>greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</code>或<code>QT += widgets</code>，为了保持与Qt4的兼容性，建议使用前者</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vim prac.pro</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">######################################################################</span><br><span class="line"># <span class="function">Automatically generated by <span class="title">qmake</span> <span class="params">(<span class="number">3.1</span>)</span> Thu Nov 14 20:<span class="number">22</span>:<span class="number">38</span> <span class="number">2019</span></span></span><br><span class="line"><span class="function">######################################################################</span></span><br><span class="line"><span class="function">TEMPLATE =</span> app</span><br><span class="line">TARGET = prac</span><br><span class="line">INCLUDEPATH += .</span><br><span class="line"></span><br><span class="line"># You can make your code fail to compile <span class="keyword">if</span> you use deprecated APIs.</span><br><span class="line"># In order to <span class="keyword">do</span> so, uncomment the following line.</span><br><span class="line"># Please consult the documentation of the deprecated API in order to know</span><br><span class="line"><span class="meta"># how to port your code away from it.</span></span><br><span class="line"># You can also select to disable deprecated APIs only up to a certain version of Q    t.</span><br><span class="line">#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=<span class="number">0x060000</span>    <span class="meta"># disables all the APIs depre    cated before Qt 6.0.0</span></span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">SOURCES += prac.cpp</span><br><span class="line"></span><br><span class="line"><span class="built_in">greaterThan</span>(QT_MAJOR_VERSION,<span class="number">4</span>):QT += widgets                                     </span><br><span class="line">                                                </span><br></pre></td></tr></table></figure>
+<p>保存退出，然后输入以下命令，从这个项目文件生成一个与平台相关的makefile文件：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">qmake prac.pro</span><br></pre></td></tr></table></figure>
+<p>键入<code>make</code>命令就可以构建该程序，然后就可以执行生成的可执行文件了</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">./prac</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20191114204646688.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Qt</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu 18.04 完美安装搜狗拼音输入法</title>
     <url>/2021/04/19/Ubuntu-18-04-%E5%AE%8C%E7%BE%8E%E5%AE%89%E8%A3%85%E6%90%9C%E7%8B%97%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前写过一篇为IBus导入搜狗词库的博客，过了不久IBus就炸了，事实上在导入词库之前也炸过，IBus的可用行实在差强人意，诡异的词库和稳定性最终把我劝退。</p>
@@ -166,30 +232,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Shell编写“Hello Qt”Qt程序</title>
-    <url>/2021/04/19/Shell%E7%BC%96%E5%86%99%E2%80%9CHello-Qt%E2%80%9DQt%E7%A8%8B%E5%BA%8F/</url>
-    <content><![CDATA[<p>首先在~/qt目录下新建prac文件夹，在prac文件夹内编写c++源代码程序</p>
-<span id="more"></span>
-
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> ~/qt/prac</span><br><span class="line"><span class="variable">$</span> vim prac.cpp</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QApplication&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QLabel&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">int</span> argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">QApplication</span>(argc, argv);</span><br><span class="line">	QLabel *label = <span class="keyword">new</span> <span class="built_in">QLabel</span>(<span class="string">&quot;Hello Qt!&quot;</span>);</span><br><span class="line">	label-&gt;<span class="built_in">show</span>();</span><br><span class="line">	<span class="keyword">return</span> app.<span class="built_in">exec</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输入以下命令，生成一个与平台无关的项目文件prac.pro</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">qmake <span class="literal">-project</span></span><br></pre></td></tr></table></figure>
-<p>编辑生成的prac.pro文件，添加语句<code>greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</code>或<code>QT += widgets</code>，为了保持与Qt4的兼容性，建议使用前者</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vim prac.pro</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">######################################################################</span><br><span class="line"># <span class="function">Automatically generated by <span class="title">qmake</span> <span class="params">(<span class="number">3.1</span>)</span> Thu Nov 14 20:<span class="number">22</span>:<span class="number">38</span> <span class="number">2019</span></span></span><br><span class="line"><span class="function">######################################################################</span></span><br><span class="line"><span class="function">TEMPLATE =</span> app</span><br><span class="line">TARGET = prac</span><br><span class="line">INCLUDEPATH += .</span><br><span class="line"></span><br><span class="line"># You can make your code fail to compile <span class="keyword">if</span> you use deprecated APIs.</span><br><span class="line"># In order to <span class="keyword">do</span> so, uncomment the following line.</span><br><span class="line"># Please consult the documentation of the deprecated API in order to know</span><br><span class="line"><span class="meta"># how to port your code away from it.</span></span><br><span class="line"># You can also select to disable deprecated APIs only up to a certain version of Q    t.</span><br><span class="line">#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=<span class="number">0x060000</span>    <span class="meta"># disables all the APIs depre    cated before Qt 6.0.0</span></span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">SOURCES += prac.cpp</span><br><span class="line"></span><br><span class="line"><span class="built_in">greaterThan</span>(QT_MAJOR_VERSION,<span class="number">4</span>):QT += widgets                                     </span><br><span class="line">                                                </span><br></pre></td></tr></table></figure>
-<p>保存退出，然后输入以下命令，从这个项目文件生成一个与平台相关的makefile文件：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">qmake prac.pro</span><br></pre></td></tr></table></figure>
-<p>键入<code>make</code>命令就可以构建该程序，然后就可以执行生成的可执行文件了</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">./prac</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20191114204646688.png" alt="在这里插入图片描述"></p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>Qt</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu18.04/19.04/20.04安装笔记&amp;&amp;通用指南</title>
     <url>/2021/04/19/Ubuntu18-04-19-04-20-04%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0-%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p><em>&emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。</em></p>
@@ -220,6 +262,15 @@
       <categories>
         <category>技术</category>
       </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu 20.04LTS下安装pip</title>
+    <url>/2021/04/19/Ubuntu-20-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85pip/</url>
+    <content><![CDATA[<p><a href="https://www.itcoder.tech/posts/how-to-install-pip-on-ubuntu-20.04/">ITCoder</a></p>
+]]></content>
       <tags>
         <tag>Ubuntu</tag>
       </tags>
@@ -263,21 +314,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL安全配置向导mysql_secure_installation详解</title>
-    <url>/2021/04/19/MySQL%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BCmysql-secure-installation%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p><a href="https://www.jb51.net/article/47727.htm">原文地址</a></p>
-<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：</p>
-<span id="more"></span>
-
-<p>  a)为root用户设置密码<br>  b)删除匿名账号<br>  c)取消root用户远程登录<br>  d)删除test库和对test库的访问权限<br>  e)刷新授权表使修改生效</p>
-<p>通过这几项的设置能够提高mysql库的安全。建议生产环境中mysql安装这完成后一定要运行一次mysql_secure_installation，详细步骤请参看下面的命令:</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment"># mysql_secure_installation</span></span><br><span class="line">NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED <span class="keyword">FOR</span> ALL MySQL</span><br><span class="line">SERVERS <span class="keyword">IN</span> PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!</span><br><span class="line"><span class="keyword">In</span> order to log into MySQL to secure it, we<span class="string">&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user. If you&#x27;</span>ve just installed MySQL, and</span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string">Enter current password for root (enter for none):   																						初次运行直接回车</span></span><br><span class="line"><span class="string">OK, successfully used password, moving on…</span></span><br><span class="line"><span class="string">Setting the root password ensures that nobody can log into the MySQL</span></span><br><span class="line"><span class="string">root user without the proper authorisation.</span></span><br><span class="line"><span class="string">Set root password? [Y/n]																			是否设置root用户密码，输入y并回车或直接回车</span></span><br><span class="line"><span class="string">New password: 																																					设置root用户的密码</span></span><br><span class="line"><span class="string">Re-enter new password: 																															再输入一次你设置的密码</span></span><br><span class="line"><span class="string">Password updated successfully!</span></span><br><span class="line"><span class="string">Reloading privilege tables..</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, a MySQL installation has an anonymous user, allowing anyone</span></span><br><span class="line"><span class="string">to log into MySQL without having to have a user account created for</span></span><br><span class="line"><span class="string">them. This is intended only for testing, and to make the installation</span></span><br><span class="line"><span class="string">go a bit smoother. You should remove them before moving into a</span></span><br><span class="line"><span class="string">production environment.</span></span><br><span class="line"><span class="string">Remove anonymous users? [Y/n] 												 是否删除匿名用户,生产环境建议删除，所以直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Normally, root should only be allowed to connect from &#x27;</span>localhost<span class="string">&#x27;. This</span></span><br><span class="line"><span class="string">ensures that someone cannot guess at the root password from the network.</span></span><br><span class="line"><span class="string">Disallow root login remotely? [Y/n] 						是否禁止root远程登录,根据自己的需求选择Y/n并回车,建议禁止</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, MySQL comes with a database named &#x27;</span>test<span class="string">&#x27; that anyone can</span></span><br><span class="line"><span class="string">access. This is also intended only for testing, and should be removed</span></span><br><span class="line"><span class="string">before moving into a production environment.</span></span><br><span class="line"><span class="string">Remove test database and access to it? [Y/n] 																	 是否删除test数据库,直接回车</span></span><br><span class="line"><span class="string">- Dropping test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">- Removing privileges on test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Reloading the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="string">will take effect immediately.</span></span><br><span class="line"><span class="string">Reload privilege tables now? [Y/n] 																							是否重新加载权限表，直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Cleaning up…</span></span><br><span class="line"><span class="string">All done! If you&#x27;</span>ve completed all of the above steps, your MySQL</span><br><span class="line">installation should now be secure.</span><br><span class="line">Thanks <span class="keyword">for</span> <span class="keyword">using</span> MySQL!</span><br><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu18.04/20.04LTS实时监控网速、CPU和内存</title>
     <url>/2021/04/19/Ubuntu18-04-20-04LTS%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E7%BD%91%E9%80%9F%E3%80%81CPU%E5%92%8C%E5%86%85%E5%AD%98/</url>
     <content><![CDATA[<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install indicator-sysmonitor</span><br></pre></td></tr></table></figure>
@@ -317,9 +353,44 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu 20.04LTS下安装pip</title>
-    <url>/2021/04/19/Ubuntu-20-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85pip/</url>
-    <content><![CDATA[<p><a href="https://www.itcoder.tech/posts/how-to-install-pip-on-ubuntu-20.04/">ITCoder</a></p>
+    <title>Ubuntu18.04安装使用jsoncpp库</title>
+    <url>/2021/04/19/Ubuntu18-04%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8jsoncpp%E5%BA%93/</url>
+    <content><![CDATA[<p>调用百度的API时为C++ SDK配置jsoncpp依赖，可用于C++解析json文件</p>
+<span id="more"></span>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libjsoncpp-dev</span><br></pre></td></tr></table></figure>
+<p> 库的头文件安装在/usr/include/jsoncpp中, 库API文档默认在/usr/share/doc/libjsoncpp-dev/jsoncpp-api-html/目录下 </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;jsoncpp/json/json.h&gt;</span> </span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>C++</tag>
+        <tag>图像识别</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu20.04LTS安装Mysql8.0.21[转]</title>
+    <url>/2021/04/19/Ubuntu20-04LTS%E5%AE%89%E8%A3%85Mysql8-0-21/</url>
+    <content><![CDATA[<p><a href="https://ywnz.com/linuxysjk/4123.html">原文地址</a></p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu下Windows文件名乱码[转]</title>
+    <url>/2021/04/19/Ubuntu%E4%B8%8BWindows%E6%96%87%E4%BB%B6%E5%90%8D%E4%B9%B1%E7%A0%81/</url>
+    <content><![CDATA[<p><a href="https://www.jianshu.com/p/52f4df9dd4c8">原文链接</a></p>
+<p>把一些Windows上创建的文件发送到Ubuntu后，这些文件（文件夹、压缩包等）的文件名会乱码，原因为windows下的文件名以GBK编码，而Ubuntu下的文件 名为utf-8编码。</p>
+<span id="more"></span>
+
+<h1 id="convmv"><a href="#convmv" class="headerlink" title="convmv"></a>convmv</h1><p><code>convmv</code>就是更改文件名编码方式的一个工具。比如</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo convmv <span class="operator">-f</span> gbk <span class="literal">-t</span> utf<span class="literal">-8</span> <span class="literal">-r</span> –notest /home</span><br></pre></td></tr></table></figure>
+
+<p>就是将/home目录下原来文件名是gbk编码方式的全部改为utf-8格式的。这里 -f 后面为原来的编码方式，-t 后面是要更改为的编码方式， -r 表示递归形式处理这个目录下面的所有文件， –notest 表示马上执行，而不是仅仅测试而已。另外这命令好像要root才能执行，因此要加上 sudo。</p>
+<h1 id="iconv"><a href="#iconv" class="headerlink" title="iconv"></a>iconv</h1><p><code>iconv</code>是更改文件编码方式的一个工具：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo iconv <span class="operator">-f</span> gbk <span class="literal">-t</span> utf<span class="literal">-8</span> <span class="literal">-o</span> outfile infile</span><br></pre></td></tr></table></figure>
+<p>-f为原来的编码方式，-t 为输出文件的编码方式， -o表示输出文件名，这利用outfile表示，最后跟上要更改编码方式的文件名sourcefile 。</p>
+<p>很多时候用这两种方式也无法解决乱码问题，令人无奈</p>
 ]]></content>
       <tags>
         <tag>Ubuntu</tag>
@@ -352,37 +423,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu下Windows文件名乱码[转]</title>
-    <url>/2021/04/19/Ubuntu%E4%B8%8BWindows%E6%96%87%E4%BB%B6%E5%90%8D%E4%B9%B1%E7%A0%81/</url>
-    <content><![CDATA[<p><a href="https://www.jianshu.com/p/52f4df9dd4c8">原文链接</a></p>
-<p>把一些Windows上创建的文件发送到Ubuntu后，这些文件（文件夹、压缩包等）的文件名会乱码，原因为windows下的文件名以GBK编码，而Ubuntu下的文件 名为utf-8编码。</p>
+    <title>Ubuntu下局域网内访问树莓派3B+---SSH,VNC,Filezilla</title>
+    <url>/2021/04/19/Ubuntu%E4%B8%8B%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE3B-SSH-VNC-Filezilla/</url>
+    <content><![CDATA[<h2 id="1-树莓派开启VNC服务"><a href="#1-树莓派开启VNC服务" class="headerlink" title="1. 树莓派开启VNC服务"></a>1. 树莓派开启VNC服务</h2><p>因为本人有块显示器，故将树莓派连接键盘鼠标显示器，树莓派开机，打开终端，输入命令:</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo raspi<span class="literal">-config</span></span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 
-<h1 id="convmv"><a href="#convmv" class="headerlink" title="convmv"></a>convmv</h1><p><code>convmv</code>就是更改文件名编码方式的一个工具。比如</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo convmv <span class="operator">-f</span> gbk <span class="literal">-t</span> utf<span class="literal">-8</span> <span class="literal">-r</span> –notest /home</span><br></pre></td></tr></table></figure>
-
-<p>就是将/home目录下原来文件名是gbk编码方式的全部改为utf-8格式的。这里 -f 后面为原来的编码方式，-t 后面是要更改为的编码方式， -r 表示递归形式处理这个目录下面的所有文件， –notest 表示马上执行，而不是仅仅测试而已。另外这命令好像要root才能执行，因此要加上 sudo。</p>
-<h1 id="iconv"><a href="#iconv" class="headerlink" title="iconv"></a>iconv</h1><p><code>iconv</code>是更改文件编码方式的一个工具：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo iconv <span class="operator">-f</span> gbk <span class="literal">-t</span> utf<span class="literal">-8</span> <span class="literal">-o</span> outfile infile</span><br></pre></td></tr></table></figure>
-<p>-f为原来的编码方式，-t 为输出文件的编码方式， -o表示输出文件名，这利用outfile表示，最后跟上要更改编码方式的文件名sourcefile 。</p>
-<p>很多时候用这两种方式也无法解决乱码问题，令人无奈</p>
+<p><img src="https://img-blog.csdnimg.cn/20191205125516966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>Interfacig Option</code>项，回车<br><img src="https://img-blog.csdnimg.cn/2019120512575512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>VNC</code>项，回车，等待安装启用完成，若VNC成功启动，则会在屏幕右上角出现VNC图标<br><img src="https://img-blog.csdnimg.cn/20191205125958956.png" alt="在这里插入图片描述"></p>
+<h2 id="2-树莓派开启SSH服务"><a href="#2-树莓派开启SSH服务" class="headerlink" title="2. 树莓派开启SSH服务"></a>2. 树莓派开启SSH服务</h2><p>详细步骤和开启VNC服务相同，只是在<code>raspi-config</code>的次级菜单中要选中<code>SSH</code><br>或者在tf卡刷入系统之后，在<code>/boot</code>目录下新建<code>/ssh</code>空文件夹<br>Ubuntu内终端输入<code>ssh pi@树莓派的IP</code>，初始密码是<code>raspberry</code></p>
+<h2 id="3-使用Filezilla连接树莓派"><a href="#3-使用Filezilla连接树莓派" class="headerlink" title="3. 使用Filezilla连接树莓派"></a>3. 使用Filezilla连接树莓派</h2><h6 id="前提条件："><a href="#前提条件：" class="headerlink" title="前提条件："></a>前提条件：</h6><pre><code>1.树莓派和Ubuntu设备处于同一局域网下
+2.树莓派已开启SSH服务
+3.已知树莓派当前IP
+</code></pre>
+<p>安装Filezilla：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install filezilla</span><br></pre></td></tr></table></figure>
+<p>安装后打开，连接<br><img src="https://img-blog.csdnimg.cn/20191205130741840.png" alt="在这里插入图片描述"><br>主机：<code>sftps://</code>+<code>树莓派IP</code>，用户名和密码依树莓派的照实填写就好</p>
+<h2 id="4-Shell下SSH连接树莓派"><a href="#4-Shell下SSH连接树莓派" class="headerlink" title="4. Shell下SSH连接树莓派"></a>4. Shell下SSH连接树莓派</h2><p>Ubuntu下打开终端，输入：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP地址</span><br></pre></td></tr></table></figure>
+<p>比如这里我的IP是192.168.1.5<br><img src="https://img-blog.csdnimg.cn/20191205131352347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>连接树莓派成功后，键入<code>exit</code>可以断开连接：<br><img src="https://img-blog.csdnimg.cn/2019120513154890.png" alt="在这里插入图片描述"></p>
+<h2 id="5-VNC连接树莓派"><a href="#5-VNC连接树莓派" class="headerlink" title="5. VNC连接树莓派"></a>5. VNC连接树莓派</h2><p>在Ubuntu上安装Raspberry官方推荐的跨平台解决方案——<a href="https://www.realvnc.com/en/connect/download/viewer/">RealVNC</a>，支持Windows，Linux，macOS等众多平台。</p>
 ]]></content>
       <tags>
         <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu18.04安装使用jsoncpp库</title>
-    <url>/2021/04/19/Ubuntu18-04%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8jsoncpp%E5%BA%93/</url>
-    <content><![CDATA[<p>调用百度的API时为C++ SDK配置jsoncpp依赖，可用于C++解析json文件</p>
-<span id="more"></span>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libjsoncpp-dev</span><br></pre></td></tr></table></figure>
-<p> 库的头文件安装在/usr/include/jsoncpp中, 库API文档默认在/usr/share/doc/libjsoncpp-dev/jsoncpp-api-html/目录下 </p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;jsoncpp/json/json.h&gt;</span> </span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>C++</tag>
-        <tag>图像识别</tag>
+        <tag>Raspberry</tag>
+        <tag>SSH</tag>
       </tags>
   </entry>
   <entry>
@@ -395,6 +459,21 @@
 <p><img src="https://img-blog.csdnimg.cn/20191231114452245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里本人内置键盘的ID是17<br>然后禁用</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xinput <span class="built_in">set-prop</span> id <span class="string">&quot;Device Enabled&quot;</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/20191231114834680.png" alt="在这里插入图片描述"><br>如果重新启用则将0改为1即可</p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu终端内打开当前目录文件夹图形界面</title>
+    <url>/2021/04/19/Ubuntu%E7%BB%88%E7%AB%AF%E5%86%85%E6%89%93%E5%BC%80%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/</url>
+    <content><![CDATA[<p>Ubuntu18.04中已经缺省支持在右键菜单中从当前目录打开终端，但是怎么通过终端打开当前目录的文件夹？<br>看了一些帖子，知道了可以通过<code>nautilus</code>命令解决</p>
+<span id="more"></span>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 默认打开~/目录文件夹</span></span><br><span class="line">nautilus</span><br><span class="line"><span class="comment"># 打开当前目录文件</span></span><br><span class="line">nautilus ./</span><br><span class="line"><span class="comment"># 打开/usr/bin 目录文件夹</span></span><br><span class="line">nautilus /usr/bin</span><br></pre></td></tr></table></figure>
+<p>但是很快我就发现了另一个更方便的解决方案——<code>xdg-open</code>!<br>之前一直用<code>xdg-open</code>命令打开目录、各种文件、网址等等，却没想到用它打开文件路径</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xdg<span class="literal">-open</span> ./</span><br><span class="line">xdg<span class="literal">-open</span> a.jpg</span><br><span class="line">xdg<span class="literal">-open</span>  b.odt</span><br><span class="line">xdg<span class="literal">-open</span> http://www.google.com</span><br></pre></td></tr></table></figure>
+<p><code>gnome-open</code>实现以上需求</p>
 ]]></content>
       <tags>
         <tag>Ubuntu</tag>
@@ -437,88 +516,6 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu终端内打开当前目录文件夹图形界面</title>
-    <url>/2021/04/19/Ubuntu%E7%BB%88%E7%AB%AF%E5%86%85%E6%89%93%E5%BC%80%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/</url>
-    <content><![CDATA[<p>Ubuntu18.04中已经缺省支持在右键菜单中从当前目录打开终端，但是怎么通过终端打开当前目录的文件夹？<br>看了一些帖子，知道了可以通过<code>nautilus</code>命令解决</p>
-<span id="more"></span>
-
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 默认打开~/目录文件夹</span></span><br><span class="line">nautilus</span><br><span class="line"><span class="comment"># 打开当前目录文件</span></span><br><span class="line">nautilus ./</span><br><span class="line"><span class="comment"># 打开/usr/bin 目录文件夹</span></span><br><span class="line">nautilus /usr/bin</span><br></pre></td></tr></table></figure>
-<p>但是很快我就发现了另一个更方便的解决方案——<code>xdg-open</code>!<br>之前一直用<code>xdg-open</code>命令打开目录、各种文件、网址等等，却没想到用它打开文件路径</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xdg<span class="literal">-open</span> ./</span><br><span class="line">xdg<span class="literal">-open</span> a.jpg</span><br><span class="line">xdg<span class="literal">-open</span>  b.odt</span><br><span class="line">xdg<span class="literal">-open</span> http://www.google.com</span><br></pre></td></tr></table></figure>
-<p><code>gnome-open</code>实现以上需求</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu下局域网内访问树莓派3B+---SSH,VNC,Filezilla</title>
-    <url>/2021/04/19/Ubuntu%E4%B8%8B%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE3B-SSH-VNC-Filezilla/</url>
-    <content><![CDATA[<h2 id="1-树莓派开启VNC服务"><a href="#1-树莓派开启VNC服务" class="headerlink" title="1. 树莓派开启VNC服务"></a>1. 树莓派开启VNC服务</h2><p>因为本人有块显示器，故将树莓派连接键盘鼠标显示器，树莓派开机，打开终端，输入命令:</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo raspi<span class="literal">-config</span></span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/20191205125516966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>Interfacig Option</code>项，回车<br><img src="https://img-blog.csdnimg.cn/2019120512575512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中<code>VNC</code>项，回车，等待安装启用完成，若VNC成功启动，则会在屏幕右上角出现VNC图标<br><img src="https://img-blog.csdnimg.cn/20191205125958956.png" alt="在这里插入图片描述"></p>
-<h2 id="2-树莓派开启SSH服务"><a href="#2-树莓派开启SSH服务" class="headerlink" title="2. 树莓派开启SSH服务"></a>2. 树莓派开启SSH服务</h2><p>详细步骤和开启VNC服务相同，只是在<code>raspi-config</code>的次级菜单中要选中<code>SSH</code><br>或者在tf卡刷入系统之后，在<code>/boot</code>目录下新建<code>/ssh</code>空文件夹<br>Ubuntu内终端输入<code>ssh pi@树莓派的IP</code>，初始密码是<code>raspberry</code></p>
-<h2 id="3-使用Filezilla连接树莓派"><a href="#3-使用Filezilla连接树莓派" class="headerlink" title="3. 使用Filezilla连接树莓派"></a>3. 使用Filezilla连接树莓派</h2><h6 id="前提条件："><a href="#前提条件：" class="headerlink" title="前提条件："></a>前提条件：</h6><pre><code>1.树莓派和Ubuntu设备处于同一局域网下
-2.树莓派已开启SSH服务
-3.已知树莓派当前IP
-</code></pre>
-<p>安装Filezilla：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install filezilla</span><br></pre></td></tr></table></figure>
-<p>安装后打开，连接<br><img src="https://img-blog.csdnimg.cn/20191205130741840.png" alt="在这里插入图片描述"><br>主机：<code>sftps://</code>+<code>树莓派IP</code>，用户名和密码依树莓派的照实填写就好</p>
-<h2 id="4-Shell下SSH连接树莓派"><a href="#4-Shell下SSH连接树莓派" class="headerlink" title="4. Shell下SSH连接树莓派"></a>4. Shell下SSH连接树莓派</h2><p>Ubuntu下打开终端，输入：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP地址</span><br></pre></td></tr></table></figure>
-<p>比如这里我的IP是192.168.1.5<br><img src="https://img-blog.csdnimg.cn/20191205131352347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>连接树莓派成功后，键入<code>exit</code>可以断开连接：<br><img src="https://img-blog.csdnimg.cn/2019120513154890.png" alt="在这里插入图片描述"></p>
-<h2 id="5-VNC连接树莓派"><a href="#5-VNC连接树莓派" class="headerlink" title="5. VNC连接树莓派"></a>5. VNC连接树莓派</h2><p>在Ubuntu上安装Raspberry官方推荐的跨平台解决方案——<a href="https://www.realvnc.com/en/connect/download/viewer/">RealVNC</a>，支持Windows，Linux，macOS等众多平台。</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>Raspberry</tag>
-        <tag>SSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Audacity简单使用体验</title>
-    <url>/2021/04/19/Audacity%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<p><code>Audacity</code>的安装非常简单，直接用apt管理器安装即可</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install audacity</span><br></pre></td></tr></table></figure>
-<p>以前没怎么剪辑过音频，这次安装<code>Audacity</code>是为了剪辑一首歌的纯音乐部分，可以说本人在剪辑方面就是完全的小白，但是在使用<code>Audacity</code>的时候仍然感觉十分舒服，用了一小会就能简单使用，布局和操作都非常人性化</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/20200323223858575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>后来在win上使用，依然是很棒的音频剪辑软件</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>Music</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu20.04LTS安装Mysql8.0.21[转]</title>
-    <url>/2021/04/19/Ubuntu20-04LTS%E5%AE%89%E8%A3%85Mysql8-0-21/</url>
-    <content><![CDATA[<p><a href="https://ywnz.com/linuxysjk/4123.html">原文地址</a></p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vim简单配置</title>
-    <url>/2021/04/19/Vim%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>总是折腾，每次重新配置vim重新写很麻烦，就在此做个备份</p>
-<span id="more"></span>
-
-<p>set autoindent “”自动缩进<br>set cindent “”以C语言的方式缩进<br>set shiftwidth=4 “”设置自动缩进的空格数量<br>set softtabstop=4 “”tab键的实际占有空格数，统一缩进<br>set tabstop=4 “”设置tab键的空格数</p>
-<p>set cursorline “”突出当前行<br>syntax on “”语法高亮<br>set nu “”设置行号</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>Vim</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows安装GCC</title>
     <url>/2021/04/19/Windows%E5%AE%89%E8%A3%85GCC/</url>
     <content><![CDATA[<blockquote>
@@ -542,68 +539,18 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>firt_blog</title>
-    <url>/2021/04/01/firt-blog/</url>
-    <content><![CDATA[<p>I’m so happy to build and own the first blog by myself  : )! And thanks to Hexo help me achieve this plan !</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>qbittorrent+树莓派3B+制作bt下载机</title>
-    <url>/2021/04/19/qbittorrent-%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B6%E4%BD%9Cbt%E4%B8%8B%E8%BD%BD%E6%9C%BA/</url>
-    <content><![CDATA[<h2 id="一、刷入系统"><a href="#一、刷入系统" class="headerlink" title="一、刷入系统"></a>一、刷入系统</h2><p>为了节省资源，系统选择的是没有图形界面的<code>raspbian-lite</code><br>使用<code>BalenaEtcher</code>刷入镜像后，在<code>/boot</code>目录新建<code>ssh</code>文件夹，用于ssh连接树莓派</p>
+    <title>Vim简单配置</title>
+    <url>/2021/04/19/Vim%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>总是折腾，每次重新配置vim重新写很麻烦，就在此做个备份</p>
 <span id="more"></span>
 
-<p>如果需要省略低电压警告，在/boot分区的config.txt问价内写入<code>avoid_warnings=1</code>即可</p>
-<h2 id="二、ssh连接"><a href="#二、ssh连接" class="headerlink" title="二、ssh连接"></a>二、ssh连接</h2><p>由于本人是通过网线直连路由器，很简单就能获得树莓派的IP地址<br>在Ubuntu内打开终端，使用ssh连接树莓派</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP</span><br></pre></td></tr></table></figure>
-<p>树莓派初始用户名<code>pi</code>，密码<code>raspberry</code></p>
-<h2 id="三、-安装qbittorrent"><a href="#三、-安装qbittorrent" class="headerlink" title="三、 安装qbittorrent"></a>三、 安装qbittorrent</h2><ol>
-<li>换清华源</li>
-</ol>
-<p><a href="https://mirror.tuna.tsinghua.edu.cn/help/raspbian/">清华开源软件镜像站</a></p>
-<ol start="2">
-<li>安装qbittorrent<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装qbittorent</span></span><br><span class="line">sudo apt install qbittorrent<span class="literal">-nox</span></span><br><span class="line"><span class="comment">#启动</span></span><br><span class="line">qbittorrent<span class="literal">-nox</span> <span class="literal">-d</span></span><br></pre></td></tr></table></figure>
-<h2 id="四、-Web远程控制"><a href="#四、-Web远程控制" class="headerlink" title="四、 Web远程控制"></a>四、 Web远程控制</h2>在Ubuntu中打开浏览器，地址栏输入<code>树莓派IP：8080</code>（qbittorent默认端口为8080）<br>qbittorrent初始用户名<code>admin</code>，初始密码<code>adminadmin</code></li>
-</ol>
-<p>开始使用吧！</p>
-<p>密码端口等都是可以自定义修改的，本人也准备找个闲置的u盘/硬盘接到树莓派上，以后就可以在低耗电的情况下</p>
-<h2 id="五、-调整分辨率"><a href="#五、-调整分辨率" class="headerlink" title="五、 调整分辨率"></a>五、 调整分辨率</h2><p><a href="https://www.cnblogs.com/dongxiaodong/p/9682311.html">调整VNC连接中图像显示的分辨率</a></p>
+<p>set autoindent “”自动缩进<br>set cindent “”以C语言的方式缩进<br>set shiftwidth=4 “”设置自动缩进的空格数量<br>set softtabstop=4 “”tab键的实际占有空格数，统一缩进<br>set tabstop=4 “”设置tab键的空格数</p>
+<p>set cursorline “”突出当前行<br>syntax on “”语法高亮<br>set nu “”设置行号</p>
 ]]></content>
       <tags>
-        <tag>Raspberry</tag>
-        <tag>Raspbian</tag>
-        <tag>Bt</tag>
+        <tag>Ubuntu</tag>
+        <tag>Vim</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>初次使用Qt时遇到的几个坑</title>
-    <url>/2021/04/19/%E5%88%9D%E6%AC%A1%E4%BD%BF%E7%94%A8Qt%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91/</url>
-    <content><![CDATA[<h2 id="1-error-cannot-find-lGL"><a href="#1-error-cannot-find-lGL" class="headerlink" title="1.　error:cannot find -lGL"></a>1.　error:cannot find -lGL</h2><p>原因分析: 在已经安装openGL库的前提下出现这种错误，是因为libGL没有正确链接:</p>
-<span id="more"></span>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:/opt/busybox-1.31.0$ locate libGL</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGL.so.1</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGL.so.1.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_indirect.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0</span><br><span class="line">/usr/lib/libGL.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGL.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGL.so.1.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLU.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLU.so.1.3.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX.so.0.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_indirect.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_mesa.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_mesa.so.0.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLdispatch.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLdispatch.so.0.0.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.la</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so.1</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so.1.7.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1.0.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1.2.0</span><br></pre></td></tr></table></figure>
-<p>这里有很多libGL的路径，随便找一个链接就可以</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:/opt/busybox-1.31.0$ sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1</span><br></pre></td></tr></table></figure>
-<h2 id="２．qmake-could-not-exec-＇-usr-lib-x86-64-linux-gnu-qt5-bin-qmake＇-No-such-file-or-directory"><a href="#２．qmake-could-not-exec-＇-usr-lib-x86-64-linux-gnu-qt5-bin-qmake＇-No-such-file-or-directory" class="headerlink" title="２．qmake: could not exec ＇/usr/lib/x86_64-linux-gnu/qt5/bin/qmake＇: No such file or directory"></a>２．qmake: could not exec ＇/usr/lib/x86_64-linux-gnu/qt5/bin/qmake＇: No such file or directory</h2><p>原因：qtchooser默认选择路径中没有指向qmake路径</p>
-<p>修改配置文件，修改为Qt路径：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:~$ sudo vim /usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf</span><br></pre></td></tr></table></figure>
-<p>将default.conf的内容删除并键入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/Qt5.13.1/5.13.1/gcc_64/bin</span><br><span class="line">/opt/Qt5.13.1/5.13.1</span><br></pre></td></tr></table></figure>
-<p>保存退出后，进行测试：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:~$ qmake -v</span><br><span class="line">QMake version 3.1</span><br><span class="line">Using Qt version 5.13.1 <span class="keyword">in</span> /opt/Qt5.13.1/5.13.1/gcc_64/lib</span><br></pre></td></tr></table></figure>
-<p>配置成功</p>
-<h2 id="3-fatal-error-QApplication-No-such-file-or-directory"><a href="#3-fatal-error-QApplication-No-such-file-or-directory" class="headerlink" title="3. fatal error: QApplication:No such file or directory"></a>3. fatal error: QApplication:No such file or directory</h2><p>在使用make构建程序时报错<br><img src="https://img-blog.csdnimg.cn/20191028162701793.png" alt="在这里插入图片描述"><br>原因：Qt5将大部分桌面部件移到了Qt Widgets模块中，即QApplication已经从原来的&lt;QtGui/QApplication&gt;移动到&lt;QtWidgets/QApplication&gt;</p>
-<p>解决方案：修改.pro文件,加入一段代码:<code>greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</code><br><img src="https://img-blog.csdnimg.cn/20191028163900357.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-]]></content>
-      <tags>
-        <tag>Qt</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文章迁移公告</title>
-    <url>/2021/04/19/%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB%E5%85%AC%E5%91%8A/</url>
-    <content><![CDATA[<p>2021.4.19日及之前日期的博客均迁移自原博客<a href="https://blog.csdn.net/qq_29627051">CSDN</a>，至今日，文章迁移全部完成</p>
-]]></content>
   </entry>
   <entry>
     <title>python调用fswbcam使用USB摄像头实现抓拍</title>
@@ -637,88 +584,98 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>树莓派3B+自动挂载移动硬盘或U盘[转]</title>
-    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/</url>
-    <content><![CDATA[<p><a href="http://blog.sina.com.cn/s/blog_563ac5900102wwxq.html">原文地址</a></p>
-<p>fdisk -l<br>命令查看一下U盘是否有被识别到，及识别的U盘是在哪个位置<br>外接U盘或移动硬盘时，默认不会自动挂载，所以需要用mount 命令挂载。通常我们在/mnt 或/media 目录下新建一个目录作为挂载点。比如：</p>
-<p>sudo mkdir /mnt/1GB_USB_flash<br>sudo mount -o uid=pi,gid=pi /dev/sda1 /mnt/1GB_USB_flash<br>//用完之后卸载<br>sudo umount /mnt/1GB_USB_flash  </p>
+    <title>qbittorrent+树莓派3B+制作bt下载机</title>
+    <url>/2021/04/19/qbittorrent-%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B6%E4%BD%9Cbt%E4%B8%8B%E8%BD%BD%E6%9C%BA/</url>
+    <content><![CDATA[<h2 id="一、刷入系统"><a href="#一、刷入系统" class="headerlink" title="一、刷入系统"></a>一、刷入系统</h2><p>为了节省资源，系统选择的是没有图形界面的<code>raspbian-lite</code><br>使用<code>BalenaEtcher</code>刷入镜像后，在<code>/boot</code>目录新建<code>ssh</code>文件夹，用于ssh连接树莓派</p>
 <span id="more"></span>
 
-<p>sda1 是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。</p>
-<p>挂载exFAT格式的硬盘<br>FAT 格式U盘mount 本身就能支持，但如果你的U盘或移动硬盘使用的是exFAT 格式，mount会说不支持。没关系，安装 exfat-fuse软件之后 mount就支持了。</p>
-<p>sudo apt-get install exfat-fuse  </p>
-<p>如果想开机自动挂载，而不是每次手工执行，可以编辑 /etc/fstab 文件。比如在末尾添加一行：</p>
-<p>/dev/sda1 /mnt/usbdisk vfat rw,defaults 0 0  </p>
-<p>挂载NTFS格式的硬盘(读写方式挂载)<br>默认挂载NTFS格式的硬盘只有只读权限，需要借助其它工具实现。</p>
-<p>#安装所需软件包  </p>
-<p>sudo apt-get install fuse-utils ntfs-3g  </p>
-<p>#加载内核模块  </p>
-<p>modprobe fuse  </p>
-<p>#编辑fstab让移动硬盘开机自动挂载  </p>
-<p>sudo nano /etc/fstab  </p>
-<p>#在最后一行添加如下内容  </p>
-<p>/dev/sda1 /mnt/myusbdrive ntfs-3g defaults,noatime,umask=0000 0 0  </p>
-<p>#保存重启，即可生效  </p>
-<p>挂载FAT32格式的硬盘</p>
-<p>#创建挂载点  </p>
-<p>sudo mkdir /mnt/myusbdrive  </p>
-<p>#编辑fstab让移动硬盘开机自动挂载  </p>
-<p>sudo nano /etc/fstab  </p>
-<p>#在最后一行添加如下内容  </p>
-<p>/dev/sda1 /mnt/myusbdrive auto defaults,noatime,umask=0000 0 0  </p>
-<p>#保存重启，即可生效  </p>
-<p>说明：<br>sda1是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。<br>umask=0000 0 0<br>前面四个0就是对所有人,可读可写可执行,<br>后面两个0,第一个代表dump,0是不备份<br>第二个代表fsck检查的顺序,0表示不检查<br>卸载：sudo umount /mnt/myusbdrive<br>查看挂载情况可使用以下命令。<br>cd /mnt/myusbdrive  </p>
-<p>ls  </p>
+<p>如果需要省略低电压警告，在/boot分区的config.txt问价内写入<code>avoid_warnings=1</code>即可</p>
+<h2 id="二、ssh连接"><a href="#二、ssh连接" class="headerlink" title="二、ssh连接"></a>二、ssh连接</h2><p>由于本人是通过网线直连路由器，很简单就能获得树莓派的IP地址<br>在Ubuntu内打开终端，使用ssh连接树莓派</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh pi<span class="selector-tag">@</span>树莓派IP</span><br></pre></td></tr></table></figure>
+<p>树莓派初始用户名<code>pi</code>，密码<code>raspberry</code></p>
+<h2 id="三、-安装qbittorrent"><a href="#三、-安装qbittorrent" class="headerlink" title="三、 安装qbittorrent"></a>三、 安装qbittorrent</h2><ol>
+<li>换清华源</li>
+</ol>
+<p><a href="https://mirror.tuna.tsinghua.edu.cn/help/raspbian/">清华开源软件镜像站</a></p>
+<ol start="2">
+<li>安装qbittorrent<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装qbittorent</span></span><br><span class="line">sudo apt install qbittorrent<span class="literal">-nox</span></span><br><span class="line"><span class="comment">#启动</span></span><br><span class="line">qbittorrent<span class="literal">-nox</span> <span class="literal">-d</span></span><br></pre></td></tr></table></figure>
+<h2 id="四、-Web远程控制"><a href="#四、-Web远程控制" class="headerlink" title="四、 Web远程控制"></a>四、 Web远程控制</h2>在Ubuntu中打开浏览器，地址栏输入<code>树莓派IP：8080</code>（qbittorent默认端口为8080）<br>qbittorrent初始用户名<code>admin</code>，初始密码<code>adminadmin</code></li>
+</ol>
+<p>开始使用吧！</p>
+<p>密码端口等都是可以自定义修改的，本人也准备找个闲置的u盘/硬盘接到树莓派上，以后就可以在低耗电的情况下</p>
+<h2 id="五、-调整分辨率"><a href="#五、-调整分辨率" class="headerlink" title="五、 调整分辨率"></a>五、 调整分辨率</h2><p><a href="https://www.cnblogs.com/dongxiaodong/p/9682311.html">调整VNC连接中图像显示的分辨率</a></p>
 ]]></content>
       <tags>
         <tag>Raspberry</tag>
         <tag>Raspbian</tag>
+        <tag>Bt</tag>
       </tags>
   </entry>
   <entry>
-    <title>阿里云Ubuntu搭建Steam饥荒联机版服务器</title>
-    <url>/2021/04/19/%E9%98%BF%E9%87%8C%E4%BA%91Ubuntu%E6%90%AD%E5%BB%BASteam%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p>@<a href="">TOC</a></p>
-<h2 id="一、安装依赖"><a href="#一、安装依赖" class="headerlink" title="一、安装依赖"></a>一、安装依赖</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install libstdc++<span class="number">6</span>:i386 libgcc1:i386 libcurl4<span class="literal">-gnutls</span><span class="literal">-dev</span>:i386 lib32gcc1</span><br></pre></td></tr></table></figure>
-<h2 id="二、安装SteamCMD"><a href="#二、安装SteamCMD" class="headerlink" title="二、安装SteamCMD"></a>二、安装SteamCMD</h2><p>新建目录并进入，安装steamcmd</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">mkdir ~/steamcmd</span><br><span class="line"><span class="built_in">cd</span> steamcmd</span><br></pre></td></tr></table></figure>
-<p>安装SteamCMD</p>
+    <title>firt_blog</title>
+    <url>/2021/04/01/firt-blog/</url>
+    <content><![CDATA[<p>I’m so happy to build and own the first blog by myself  : )! And thanks to Hexo help me achieve this plan !</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>初次使用Qt时遇到的几个坑</title>
+    <url>/2021/04/19/%E5%88%9D%E6%AC%A1%E4%BD%BF%E7%94%A8Qt%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91/</url>
+    <content><![CDATA[<h2 id="1-error-cannot-find-lGL"><a href="#1-error-cannot-find-lGL" class="headerlink" title="1.　error:cannot find -lGL"></a>1.　error:cannot find -lGL</h2><p>原因分析: 在已经安装openGL库的前提下出现这种错误，是因为libGL没有正确链接:</p>
 <span id="more"></span>
 
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 下载安装文件</span></span><br><span class="line"><span class="built_in">wget</span> https://steamcdn<span class="literal">-a</span>.akamaihd.net/client/installer/steamcmd_linux.tar.gz</span><br><span class="line"><span class="comment">## 解压并删除</span></span><br><span class="line">tar <span class="literal">-xvzf</span> ~/steamcmd/steamcmd_linux.tar.gz</span><br><span class="line"><span class="built_in">rm</span> steamcmd_linux.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="三、安装DST服务端"><a href="#三、安装DST服务端" class="headerlink" title="三、安装DST服务端"></a>三、安装DST服务端</h2><p>启动steamcmd</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">./steamcmd.sh</span><br></pre></td></tr></table></figure>
-<p>使用公共账号登录steam</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">login anonymous</span><br></pre></td></tr></table></figure>
-<p>指定DST安装目录</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">force_install_dir ../myDSTserver</span><br></pre></td></tr></table></figure>
-<p>安装DST服务端</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">app_update <span class="number">343050</span> validate</span><br></pre></td></tr></table></figure>
-<p>当出现<code>Success! App &#39;343050&#39; fully installed.</code>的时候表示安装成功<br>安装完成后退出steamcmd</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure>
-<h2 id="四、配置DST服务端"><a href="#四、配置DST服务端" class="headerlink" title="四、配置DST服务端"></a>四、配置DST服务端</h2><h4 id="1-生成其余配置文件"><a href="#1-生成其余配置文件" class="headerlink" title="1. 生成其余配置文件"></a>1. 生成其余配置文件</h4><p>进入DST的安装目录的bin文件夹，运行<code>dontstarve_dedicated_server_nullrenderer</code>生成<code>.klei</code>等目录和文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;myDSTserver&#x2F;bin</span><br><span class="line">.&#x2F;dontstarve_dedicated_server_nullrenderer</span><br></pre></td></tr></table></figure>
-<h4 id="2-目录结构"><a href="#2-目录结构" class="headerlink" title="2. 目录结构"></a>2. 目录结构</h4><p><code>/root/.klei</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── Agreements</span><br><span class="line">│   └── DoNotStarveTogether</span><br><span class="line">│       └── agreements.ini</span><br><span class="line">└── DoNotStarveTogether</span><br><span class="line">    ├── Cluster_1</span><br><span class="line">    │   └── Master</span><br><span class="line">    └── MyDediServer</span><br><span class="line">        ├── Caves</span><br><span class="line">        ├── Master</span><br><span class="line">        ├── adminlist.txt</span><br><span class="line">        ├── cluster.ini</span><br><span class="line">        └── cluster_token.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><code>/root/myDSTserver</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── bin</span><br><span class="line">│   ├── dontstarve</span><br><span class="line">│   ├── dontstarve.xpm</span><br><span class="line">│   ├── dontstarve_dedicated_server_nullrenderer</span><br><span class="line">│   ├── lib32</span><br><span class="line">│   ├── scripts</span><br><span class="line">│   └── steam_appid.txt</span><br><span class="line">├── data</span><br><span class="line">│   ├── anim</span><br><span class="line">│   ├── bigportraits</span><br><span class="line">│   ├── databundles</span><br><span class="line">│   ├── fx</span><br><span class="line">│   ├── images</span><br><span class="line">│   ├── levels</span><br><span class="line">│   ├── minimap</span><br><span class="line">│   ├── movies</span><br><span class="line">│   ├── scripts_readme.txt</span><br><span class="line">│   └── sound</span><br><span class="line">├── dontstarve.xpm</span><br><span class="line">├── mods</span><br><span class="line">│   ├── INSTALLING_MODS.txt</span><br><span class="line">│   ├── MAKING_MODS.txt</span><br><span class="line">│   ├── dedicated_server_mods_setup.lua</span><br><span class="line">│   └── modsettings.lua</span><br><span class="line">├── steamapps</span><br><span class="line">│   ├── appmanifest_343050.acf</span><br><span class="line">│   ├── downloading</span><br><span class="line">│   ├── libraryfolders.vdf</span><br><span class="line">│   ├── shadercache</span><br><span class="line">│   └── temp</span><br><span class="line">└── version.txt</span><br></pre></td></tr></table></figure>
-<h4 id="3-获取服务器配置文件"><a href="#3-获取服务器配置文件" class="headerlink" title="3. 获取服务器配置文件"></a>3. 获取服务器配置文件</h4><p><a href="https://accounts.klei.com/account/game/servers?game=DontStarveTogether">官网创建并下载配置文件</a><br>(MyDediServer.zip)<br>把服务器配置压缩包远程传输到服务器上</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scp <span class="literal">-r</span> MyDediServer.zip username@<span class="number">192.168</span>.<span class="number">0.1</span>:/home/username/</span><br></pre></td></tr></table></figure>
-<h4 id="4-替换服务器配置文件"><a href="#4-替换服务器配置文件" class="headerlink" title="4. 替换服务器配置文件"></a>4. 替换服务器配置文件</h4><p>在服务器内把压缩包解压，替换掉默认存档</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unzip MyDediServer.zip</span><br><span class="line">rm -r ~&#x2F;.klei&#x2F;DoNotStarveTogether&#x2F;Cluster_1</span><br><span class="line">mv MyDediServer ~&#x2F;.klei&#x2F;DoNotStarveTogether</span><br></pre></td></tr></table></figure>
-<h4 id="5-添加管理员"><a href="#5-添加管理员" class="headerlink" title="5. 添加管理员"></a>5. 添加管理员</h4><p>在存档目录下建立<code>adminlist.txt</code>文件，将需要的UserID输入即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;.klei&#x2F;DoNotStarveTogether&#x2F;MyDediServer</span><br><span class="line">touch adminlist.txt</span><br><span class="line">vim adminlist.txt     ## 写入UserID即可</span><br></pre></td></tr></table></figure>
-<h2 id="五、添加Mod"><a href="#五、添加Mod" class="headerlink" title="五、添加Mod"></a>五、添加Mod</h2><p>修改<code>dedicated_server_mods_setup.lua</code>文件可以让服务器每次启动的时候自动加载和更新mod，该文件位于<code>~/myDSTserver/mods</code>文件夹。向下面这样添加，数字为创意工坊中mod的编号。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ServerModSetup(&quot;345692228&quot;)</span><br><span class="line">ServerModSetup(&quot;346968521&quot;)</span><br><span class="line">ServerModSetup(&quot;352373173&quot;)</span><br><span class="line">ServerModCollectionSetup(&quot;379114180&quot;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="六、启动脚本"><a href="#六、启动脚本" class="headerlink" title="六、启动脚本"></a>六、启动脚本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">steamcmd_dir&#x3D;&quot;$HOME&#x2F;steamcmd&quot;</span><br><span class="line">install_dir&#x3D;&quot;$HOME&#x2F;myDSTserver&quot;</span><br><span class="line">cluster_name&#x3D;&quot;MyDediServer&quot;</span><br><span class="line">dontstarve_dir&#x3D;&quot;$HOME&#x2F;.klei&#x2F;DoNotStarveTogether&quot;</span><br><span class="line">cd &quot;$steamcmd_dir&quot;</span><br><span class="line">cd &quot;$install_dir&#x2F;bin&quot;</span><br><span class="line">run_shared&#x3D;(.&#x2F;dontstarve_dedicated_server_nullrenderer)</span><br><span class="line">run_shared+&#x3D;(-console)</span><br><span class="line">run_shared+&#x3D;(-cluster &quot;$cluster_name&quot;)</span><br><span class="line">run_shared+&#x3D;(-monitor_parent_process $$)</span><br><span class="line">run_shared+&#x3D;(-shard)</span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; Caves  | sed &#39;s&#x2F;^&#x2F;Caves: &#x2F;&#39; &amp;</span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; Master | sed &#39;s&#x2F;^&#x2F;Master: &#x2F;&#39;</span><br></pre></td></tr></table></figure>
-<h2 id="验证服务器运行"><a href="#验证服务器运行" class="headerlink" title="验证服务器运行"></a>验证服务器运行</h2><p><a href="https://dstserverlist.appspot.com/">在线验证服务器运行</a></p>
-<h2 id="六、后台运行服务器"><a href="#六、后台运行服务器" class="headerlink" title="六、后台运行服务器"></a>六、后台运行服务器</h2><p>screen常用命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 列出当前所有screen</span><br><span class="line">screen -ls</span><br><span class="line"></span><br><span class="line"># 创建一个名为server的screen</span><br><span class="line">screen -S server</span><br><span class="line"></span><br><span class="line"># 切换到server的screen</span><br><span class="line">screen -r server</span><br><span class="line"></span><br><span class="line"># 杀死一个名为server的screen</span><br><span class="line">screen -S server -X quit</span><br><span class="line"></span><br><span class="line"># 退出该screen(会继续执行）</span><br><span class="line">ctrl+a+d</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:/opt/busybox-1.31.0$ locate libGL</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGL.so.1</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGL.so.1.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_indirect.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0</span><br><span class="line">/snap/gnome-3-28-1804/91/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0</span><br><span class="line">/usr/lib/libGL.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGL.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGL.so.1.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLU.so.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLU.so.1.3.1</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX.so.0.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_indirect.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_mesa.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLX_mesa.so.0.0.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLdispatch.so.0</span><br><span class="line">/usr/lib/i386-linux-gnu/libGLdispatch.so.0.0.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.la</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so.1</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGL.so.1.7.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1.0.0</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libGLESv1_CM.so.1.2.0</span><br></pre></td></tr></table></figure>
+<p>这里有很多libGL的路径，随便找一个链接就可以</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:/opt/busybox-1.31.0$ sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1</span><br></pre></td></tr></table></figure>
+<h2 id="２．qmake-could-not-exec-＇-usr-lib-x86-64-linux-gnu-qt5-bin-qmake＇-No-such-file-or-directory"><a href="#２．qmake-could-not-exec-＇-usr-lib-x86-64-linux-gnu-qt5-bin-qmake＇-No-such-file-or-directory" class="headerlink" title="２．qmake: could not exec ＇/usr/lib/x86_64-linux-gnu/qt5/bin/qmake＇: No such file or directory"></a>２．qmake: could not exec ＇/usr/lib/x86_64-linux-gnu/qt5/bin/qmake＇: No such file or directory</h2><p>原因：qtchooser默认选择路径中没有指向qmake路径</p>
+<p>修改配置文件，修改为Qt路径：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:~$ sudo vim /usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf</span><br></pre></td></tr></table></figure>
+<p>将default.conf的内容删除并键入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/Qt5.13.1/5.13.1/gcc_64/bin</span><br><span class="line">/opt/Qt5.13.1/5.13.1</span><br></pre></td></tr></table></figure>
+<p>保存退出后，进行测试：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sun@sun-msi:~$ qmake -v</span><br><span class="line">QMake version 3.1</span><br><span class="line">Using Qt version 5.13.1 <span class="keyword">in</span> /opt/Qt5.13.1/5.13.1/gcc_64/lib</span><br></pre></td></tr></table></figure>
+<p>配置成功</p>
+<h2 id="3-fatal-error-QApplication-No-such-file-or-directory"><a href="#3-fatal-error-QApplication-No-such-file-or-directory" class="headerlink" title="3. fatal error: QApplication:No such file or directory"></a>3. fatal error: QApplication:No such file or directory</h2><p>在使用make构建程序时报错<br><img src="https://img-blog.csdnimg.cn/20191028162701793.png" alt="在这里插入图片描述"><br>原因：Qt5将大部分桌面部件移到了Qt Widgets模块中，即QApplication已经从原来的&lt;QtGui/QApplication&gt;移动到&lt;QtWidgets/QApplication&gt;</p>
+<p>解决方案：修改.pro文件,加入一段代码:<code>greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</code><br><img src="https://img-blog.csdnimg.cn/20191028163900357.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
       <tags>
-        <tag>Ubuntu</tag>
-        <tag>云服务器</tag>
-        <tag>饥荒</tag>
+        <tag>Qt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>摩摩餐厅菜品数据简单归档与升级简要分析</title>
+    <url>/2021/04/23/%E6%91%A9%E6%91%A9%E9%A4%90%E5%8E%85%E8%8F%9C%E5%93%81%E6%95%B0%E6%8D%AE%E7%AE%80%E5%8D%95%E5%BD%92%E6%A1%A3%E4%B8%8E%E5%8D%87%E7%BA%A7%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p>[TOC]</p>
+<h1 id="餐厅玩法方向"><a href="#餐厅玩法方向" class="headerlink" title="餐厅玩法方向"></a>餐厅玩法方向</h1><h2 id="五星厨神"><a href="#五星厨神" class="headerlink" title="五星厨神"></a>五星厨神</h2><h3 id="1-5"><a href="#1-5" class="headerlink" title="1~5"></a>1~5</h3><h3 id="6-34"><a href="#6-34" class="headerlink" title="6~34"></a>6~34</h3><h3 id="35-47"><a href="#35-47" class="headerlink" title="35~47"></a>35~47</h3><h3 id="48-60"><a href="#48-60" class="headerlink" title="48~60"></a>48~60</h3><h2 id="快速升级"><a href="#快速升级" class="headerlink" title="快速升级"></a>快速升级</h2><h2 id="随缘佛系"><a href="#随缘佛系" class="headerlink" title="随缘佛系"></a>随缘佛系</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <tags>
+        <tag>摩尔庄园</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章迁移公告</title>
+    <url>/2021/04/19/%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB%E5%85%AC%E5%91%8A/</url>
+    <content><![CDATA[<p>2021.4.19日及之前日期的博客均迁移自原博客<a href="https://blog.csdn.net/qq_29627051">CSDN</a>，至今日，文章迁移全部完成</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>树莓派3B+无屏幕和键盘配置WiFi[转]</title>
+    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AEWiFi/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/huryer/article/details/83146721">原文地址</a></p>
+<p>一、WiFi 网络配置<br>用户可以在未启动树莓派的状态下单独修改 /boot/wpa_supplicant.conf 文件配置 WiFi 的 SSID 和密码，这样树莓派启动后会自行读取 wpa_supplicant.conf 配置文件连接 WiFi 设备。</p>
+<p>操作方法简单：将刷好 Raspbian  系统的 SD 卡用电脑读取。在 boot 分区，也就是树莓派的 /boot 目录下新建 wpa_supplicant.conf 文件，按照下面的参考格式填入内容并保存 wpa_supplicant.conf 文件。</p>
+<span id="more"></span>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-A&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-B&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;2</span><br><span class="line">scan_ssid&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>说明以及不同安全性的 WiFi 配置示例：<br>#ssid:网络的ssid<br>#psk:密码<br>#priority:连接优先级，数字越大优先级越高（不可以是负数）<br>#scan_ssid:连接隐藏WiFi时需要指定该值为1</p>
+<p>如果你的 WiFi 没有密码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br></pre></td></tr></table></figure>
+<p>如果你的 WiFi 使用WEP加密</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br><span class="line">wep_key0&#x3D;&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果你的 WiFi 使用WPA/WPA2加密</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">psk&#x3D;&quot;你的wifi密码&quot;</span><br></pre></td></tr></table></figure>
+<p>如果你不清楚 WiFi 的加密模式，可以在安卓手机上用 root explorer 打开 /data/misc/wifi/wpa/wpa_supplicant.conf，查看 WiFi 的信息。</p>
+]]></content>
+      <tags>
+        <tag>Raspberry</tag>
       </tags>
   </entry>
   <entry>
@@ -779,36 +736,42 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>树莓派3B+无屏幕和键盘配置WiFi[转]</title>
-    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AEWiFi/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/huryer/article/details/83146721">原文地址</a></p>
-<p>一、WiFi 网络配置<br>用户可以在未启动树莓派的状态下单独修改 /boot/wpa_supplicant.conf 文件配置 WiFi 的 SSID 和密码，这样树莓派启动后会自行读取 wpa_supplicant.conf 配置文件连接 WiFi 设备。</p>
-<p>操作方法简单：将刷好 Raspbian  系统的 SD 卡用电脑读取。在 boot 分区，也就是树莓派的 /boot 目录下新建 wpa_supplicant.conf 文件，按照下面的参考格式填入内容并保存 wpa_supplicant.conf 文件。</p>
+    <title>树莓派3B+自动挂载移动硬盘或U盘[转]</title>
+    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/</url>
+    <content><![CDATA[<p><a href="http://blog.sina.com.cn/s/blog_563ac5900102wwxq.html">原文地址</a></p>
+<p>fdisk -l<br>命令查看一下U盘是否有被识别到，及识别的U盘是在哪个位置<br>外接U盘或移动硬盘时，默认不会自动挂载，所以需要用mount 命令挂载。通常我们在/mnt 或/media 目录下新建一个目录作为挂载点。比如：</p>
+<p>sudo mkdir /mnt/1GB_USB_flash<br>sudo mount -o uid=pi,gid=pi /dev/sda1 /mnt/1GB_USB_flash<br>//用完之后卸载<br>sudo umount /mnt/1GB_USB_flash  </p>
 <span id="more"></span>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-A&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-B&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;2</span><br><span class="line">scan_ssid&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>说明以及不同安全性的 WiFi 配置示例：<br>#ssid:网络的ssid<br>#psk:密码<br>#priority:连接优先级，数字越大优先级越高（不可以是负数）<br>#scan_ssid:连接隐藏WiFi时需要指定该值为1</p>
-<p>如果你的 WiFi 没有密码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br></pre></td></tr></table></figure>
-<p>如果你的 WiFi 使用WEP加密</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;NONE</span><br><span class="line">wep_key0&#x3D;&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果你的 WiFi 使用WPA/WPA2加密</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">psk&#x3D;&quot;你的wifi密码&quot;</span><br></pre></td></tr></table></figure>
-<p>如果你不清楚 WiFi 的加密模式，可以在安卓手机上用 root explorer 打开 /data/misc/wifi/wpa/wpa_supplicant.conf，查看 WiFi 的信息。</p>
+<p>sda1 是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。</p>
+<p>挂载exFAT格式的硬盘<br>FAT 格式U盘mount 本身就能支持，但如果你的U盘或移动硬盘使用的是exFAT 格式，mount会说不支持。没关系，安装 exfat-fuse软件之后 mount就支持了。</p>
+<p>sudo apt-get install exfat-fuse  </p>
+<p>如果想开机自动挂载，而不是每次手工执行，可以编辑 /etc/fstab 文件。比如在末尾添加一行：</p>
+<p>/dev/sda1 /mnt/usbdisk vfat rw,defaults 0 0  </p>
+<p>挂载NTFS格式的硬盘(读写方式挂载)<br>默认挂载NTFS格式的硬盘只有只读权限，需要借助其它工具实现。</p>
+<p>#安装所需软件包  </p>
+<p>sudo apt-get install fuse-utils ntfs-3g  </p>
+<p>#加载内核模块  </p>
+<p>modprobe fuse  </p>
+<p>#编辑fstab让移动硬盘开机自动挂载  </p>
+<p>sudo nano /etc/fstab  </p>
+<p>#在最后一行添加如下内容  </p>
+<p>/dev/sda1 /mnt/myusbdrive ntfs-3g defaults,noatime,umask=0000 0 0  </p>
+<p>#保存重启，即可生效  </p>
+<p>挂载FAT32格式的硬盘</p>
+<p>#创建挂载点  </p>
+<p>sudo mkdir /mnt/myusbdrive  </p>
+<p>#编辑fstab让移动硬盘开机自动挂载  </p>
+<p>sudo nano /etc/fstab  </p>
+<p>#在最后一行添加如下内容  </p>
+<p>/dev/sda1 /mnt/myusbdrive auto defaults,noatime,umask=0000 0 0  </p>
+<p>#保存重启，即可生效  </p>
+<p>说明：<br>sda1是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。<br>umask=0000 0 0<br>前面四个0就是对所有人,可读可写可执行,<br>后面两个0,第一个代表dump,0是不备份<br>第二个代表fsck检查的顺序,0表示不检查<br>卸载：sudo umount /mnt/myusbdrive<br>查看挂载情况可使用以下命令。<br>cd /mnt/myusbdrive  </p>
+<p>ls  </p>
 ]]></content>
       <tags>
         <tag>Raspberry</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo建站参考资料</title>
-    <url>/2021/04/20/Hexo%E5%BB%BA%E7%AB%99%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/</url>
-    <content><![CDATA[<p>本次建站主要参考了以下两篇博文</p>
-<p><a href="https://mupceet.com/2019/08/build-blog-based-on-hexo/">Hexo 博客搭建与主题配置（零基础版）</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/129644138">hexo+next个性化配置</a></p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
+        <tag>Raspbian</tag>
       </tags>
   </entry>
   <entry>
@@ -824,5 +787,51 @@ sudo mkfontdir
       <categories>
         <category>Life</category>
       </categories>
+  </entry>
+  <entry>
+    <title>阿里云Ubuntu搭建Steam饥荒联机版服务器</title>
+    <url>/2021/04/19/%E9%98%BF%E9%87%8C%E4%BA%91Ubuntu%E6%90%AD%E5%BB%BASteam%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p>@<a href="">TOC</a></p>
+<h2 id="一、安装依赖"><a href="#一、安装依赖" class="headerlink" title="一、安装依赖"></a>一、安装依赖</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install libstdc++<span class="number">6</span>:i386 libgcc1:i386 libcurl4<span class="literal">-gnutls</span><span class="literal">-dev</span>:i386 lib32gcc1</span><br></pre></td></tr></table></figure>
+<h2 id="二、安装SteamCMD"><a href="#二、安装SteamCMD" class="headerlink" title="二、安装SteamCMD"></a>二、安装SteamCMD</h2><p>新建目录并进入，安装steamcmd</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">mkdir ~/steamcmd</span><br><span class="line"><span class="built_in">cd</span> steamcmd</span><br></pre></td></tr></table></figure>
+<p>安装SteamCMD</p>
+<span id="more"></span>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 下载安装文件</span></span><br><span class="line"><span class="built_in">wget</span> https://steamcdn<span class="literal">-a</span>.akamaihd.net/client/installer/steamcmd_linux.tar.gz</span><br><span class="line"><span class="comment">## 解压并删除</span></span><br><span class="line">tar <span class="literal">-xvzf</span> ~/steamcmd/steamcmd_linux.tar.gz</span><br><span class="line"><span class="built_in">rm</span> steamcmd_linux.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="三、安装DST服务端"><a href="#三、安装DST服务端" class="headerlink" title="三、安装DST服务端"></a>三、安装DST服务端</h2><p>启动steamcmd</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">./steamcmd.sh</span><br></pre></td></tr></table></figure>
+<p>使用公共账号登录steam</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">login anonymous</span><br></pre></td></tr></table></figure>
+<p>指定DST安装目录</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">force_install_dir ../myDSTserver</span><br></pre></td></tr></table></figure>
+<p>安装DST服务端</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">app_update <span class="number">343050</span> validate</span><br></pre></td></tr></table></figure>
+<p>当出现<code>Success! App &#39;343050&#39; fully installed.</code>的时候表示安装成功<br>安装完成后退出steamcmd</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure>
+<h2 id="四、配置DST服务端"><a href="#四、配置DST服务端" class="headerlink" title="四、配置DST服务端"></a>四、配置DST服务端</h2><h4 id="1-生成其余配置文件"><a href="#1-生成其余配置文件" class="headerlink" title="1. 生成其余配置文件"></a>1. 生成其余配置文件</h4><p>进入DST的安装目录的bin文件夹，运行<code>dontstarve_dedicated_server_nullrenderer</code>生成<code>.klei</code>等目录和文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;myDSTserver&#x2F;bin</span><br><span class="line">.&#x2F;dontstarve_dedicated_server_nullrenderer</span><br></pre></td></tr></table></figure>
+<h4 id="2-目录结构"><a href="#2-目录结构" class="headerlink" title="2. 目录结构"></a>2. 目录结构</h4><p><code>/root/.klei</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── Agreements</span><br><span class="line">│   └── DoNotStarveTogether</span><br><span class="line">│       └── agreements.ini</span><br><span class="line">└── DoNotStarveTogether</span><br><span class="line">    ├── Cluster_1</span><br><span class="line">    │   └── Master</span><br><span class="line">    └── MyDediServer</span><br><span class="line">        ├── Caves</span><br><span class="line">        ├── Master</span><br><span class="line">        ├── adminlist.txt</span><br><span class="line">        ├── cluster.ini</span><br><span class="line">        └── cluster_token.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><code>/root/myDSTserver</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── bin</span><br><span class="line">│   ├── dontstarve</span><br><span class="line">│   ├── dontstarve.xpm</span><br><span class="line">│   ├── dontstarve_dedicated_server_nullrenderer</span><br><span class="line">│   ├── lib32</span><br><span class="line">│   ├── scripts</span><br><span class="line">│   └── steam_appid.txt</span><br><span class="line">├── data</span><br><span class="line">│   ├── anim</span><br><span class="line">│   ├── bigportraits</span><br><span class="line">│   ├── databundles</span><br><span class="line">│   ├── fx</span><br><span class="line">│   ├── images</span><br><span class="line">│   ├── levels</span><br><span class="line">│   ├── minimap</span><br><span class="line">│   ├── movies</span><br><span class="line">│   ├── scripts_readme.txt</span><br><span class="line">│   └── sound</span><br><span class="line">├── dontstarve.xpm</span><br><span class="line">├── mods</span><br><span class="line">│   ├── INSTALLING_MODS.txt</span><br><span class="line">│   ├── MAKING_MODS.txt</span><br><span class="line">│   ├── dedicated_server_mods_setup.lua</span><br><span class="line">│   └── modsettings.lua</span><br><span class="line">├── steamapps</span><br><span class="line">│   ├── appmanifest_343050.acf</span><br><span class="line">│   ├── downloading</span><br><span class="line">│   ├── libraryfolders.vdf</span><br><span class="line">│   ├── shadercache</span><br><span class="line">│   └── temp</span><br><span class="line">└── version.txt</span><br></pre></td></tr></table></figure>
+<h4 id="3-获取服务器配置文件"><a href="#3-获取服务器配置文件" class="headerlink" title="3. 获取服务器配置文件"></a>3. 获取服务器配置文件</h4><p><a href="https://accounts.klei.com/account/game/servers?game=DontStarveTogether">官网创建并下载配置文件</a><br>(MyDediServer.zip)<br>把服务器配置压缩包远程传输到服务器上</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scp <span class="literal">-r</span> MyDediServer.zip username@<span class="number">192.168</span>.<span class="number">0.1</span>:/home/username/</span><br></pre></td></tr></table></figure>
+<h4 id="4-替换服务器配置文件"><a href="#4-替换服务器配置文件" class="headerlink" title="4. 替换服务器配置文件"></a>4. 替换服务器配置文件</h4><p>在服务器内把压缩包解压，替换掉默认存档</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unzip MyDediServer.zip</span><br><span class="line">rm -r ~&#x2F;.klei&#x2F;DoNotStarveTogether&#x2F;Cluster_1</span><br><span class="line">mv MyDediServer ~&#x2F;.klei&#x2F;DoNotStarveTogether</span><br></pre></td></tr></table></figure>
+<h4 id="5-添加管理员"><a href="#5-添加管理员" class="headerlink" title="5. 添加管理员"></a>5. 添加管理员</h4><p>在存档目录下建立<code>adminlist.txt</code>文件，将需要的UserID输入即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;.klei&#x2F;DoNotStarveTogether&#x2F;MyDediServer</span><br><span class="line">touch adminlist.txt</span><br><span class="line">vim adminlist.txt     ## 写入UserID即可</span><br></pre></td></tr></table></figure>
+<h2 id="五、添加Mod"><a href="#五、添加Mod" class="headerlink" title="五、添加Mod"></a>五、添加Mod</h2><p>修改<code>dedicated_server_mods_setup.lua</code>文件可以让服务器每次启动的时候自动加载和更新mod，该文件位于<code>~/myDSTserver/mods</code>文件夹。向下面这样添加，数字为创意工坊中mod的编号。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ServerModSetup(&quot;345692228&quot;)</span><br><span class="line">ServerModSetup(&quot;346968521&quot;)</span><br><span class="line">ServerModSetup(&quot;352373173&quot;)</span><br><span class="line">ServerModCollectionSetup(&quot;379114180&quot;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、启动脚本"><a href="#六、启动脚本" class="headerlink" title="六、启动脚本"></a>六、启动脚本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">steamcmd_dir&#x3D;&quot;$HOME&#x2F;steamcmd&quot;</span><br><span class="line">install_dir&#x3D;&quot;$HOME&#x2F;myDSTserver&quot;</span><br><span class="line">cluster_name&#x3D;&quot;MyDediServer&quot;</span><br><span class="line">dontstarve_dir&#x3D;&quot;$HOME&#x2F;.klei&#x2F;DoNotStarveTogether&quot;</span><br><span class="line">cd &quot;$steamcmd_dir&quot;</span><br><span class="line">cd &quot;$install_dir&#x2F;bin&quot;</span><br><span class="line">run_shared&#x3D;(.&#x2F;dontstarve_dedicated_server_nullrenderer)</span><br><span class="line">run_shared+&#x3D;(-console)</span><br><span class="line">run_shared+&#x3D;(-cluster &quot;$cluster_name&quot;)</span><br><span class="line">run_shared+&#x3D;(-monitor_parent_process $$)</span><br><span class="line">run_shared+&#x3D;(-shard)</span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; Caves  | sed &#39;s&#x2F;^&#x2F;Caves: &#x2F;&#39; &amp;</span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; Master | sed &#39;s&#x2F;^&#x2F;Master: &#x2F;&#39;</span><br></pre></td></tr></table></figure>
+<h2 id="验证服务器运行"><a href="#验证服务器运行" class="headerlink" title="验证服务器运行"></a>验证服务器运行</h2><p><a href="https://dstserverlist.appspot.com/">在线验证服务器运行</a></p>
+<h2 id="六、后台运行服务器"><a href="#六、后台运行服务器" class="headerlink" title="六、后台运行服务器"></a>六、后台运行服务器</h2><p>screen常用命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 列出当前所有screen</span><br><span class="line">screen -ls</span><br><span class="line"></span><br><span class="line"># 创建一个名为server的screen</span><br><span class="line">screen -S server</span><br><span class="line"></span><br><span class="line"># 切换到server的screen</span><br><span class="line">screen -r server</span><br><span class="line"></span><br><span class="line"># 杀死一个名为server的screen</span><br><span class="line">screen -S server -X quit</span><br><span class="line"></span><br><span class="line"># 退出该screen(会继续执行）</span><br><span class="line">ctrl+a+d</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>云服务器</tag>
+        <tag>饥荒</tag>
+      </tags>
   </entry>
 </search>

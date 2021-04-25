@@ -22,23 +22,20 @@
     var CONFIG = {"hostname":"sunyanos.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="写这篇文章的初心是因为实验室的普及授课，要求提前安装好gcc，但是受限于某科技大学大学生们的水平，本人只好写一篇细到不能再细的教程本文大体上和别的教程都差不多，有很多借鉴重合的地方">
+  <meta name="description" content="[TOC] 餐厅玩法方向五星厨神1~56~3435~4748~60快速升级随缘佛系">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows安装GCC">
-<meta property="og:url" content="http://sunyanos.github.io/2021/04/19/Windows%E5%AE%89%E8%A3%85GCC/index.html">
+<meta property="og:title" content="摩摩餐厅菜品数据简单归档与升级简要分析">
+<meta property="og:url" content="http://sunyanos.github.io/2021/04/23/%E6%91%A9%E6%91%A9%E9%A4%90%E5%8E%85%E8%8F%9C%E5%93%81%E6%95%B0%E6%8D%AE%E7%AE%80%E5%8D%95%E5%BD%92%E6%A1%A3%E4%B8%8E%E5%8D%87%E7%BA%A7%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Lxfmly&#39;s Blog">
-<meta property="og:description" content="写这篇文章的初心是因为实验室的普及授课，要求提前安装好gcc，但是受限于某科技大学大学生们的水平，本人只好写一篇细到不能再细的教程本文大体上和别的教程都差不多，有很多借鉴重合的地方">
+<meta property="og:description" content="[TOC] 餐厅玩法方向五星厨神1~56~3435~4748~60快速升级随缘佛系">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20201015143953210.png#pic_center">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20201015144205537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70#pic_center">
-<meta property="article:published_time" content="2021-04-19T12:53:33.000Z">
-<meta property="article:modified_time" content="2021-04-20T01:12:57.060Z">
+<meta property="article:published_time" content="2021-04-23T08:45:11.000Z">
+<meta property="article:modified_time" content="2021-04-23T08:50:30.167Z">
 <meta property="article:author" content="Lxfmly">
-<meta property="article:tag" content="Gcc">
+<meta property="article:tag" content="摩尔庄园">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201015143953210.png#pic_center">
 
-<link rel="canonical" href="http://sunyanos.github.io/2021/04/19/Windows%E5%AE%89%E8%A3%85GCC/">
+<link rel="canonical" href="http://sunyanos.github.io/2021/04/23/%E6%91%A9%E6%91%A9%E9%A4%90%E5%8E%85%E8%8F%9C%E5%93%81%E6%95%B0%E6%8D%AE%E7%AE%80%E5%8D%95%E5%BD%92%E6%A1%A3%E4%B8%8E%E5%8D%87%E7%BA%A7%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90/">
 
 
 <script id="page-configurations">
@@ -51,7 +48,7 @@
   };
 </script>
 
-  <title>Windows安装GCC | Lxfmly's Blog</title>
+  <title>摩摩餐厅菜品数据简单归档与升级简要分析 | Lxfmly's Blog</title>
   
 
 
@@ -200,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://sunyanos.github.io/2021/04/19/Windows%E5%AE%89%E8%A3%85GCC/">
+    <link itemprop="mainEntityOfPage" href="http://sunyanos.github.io/2021/04/23/%E6%91%A9%E6%91%A9%E9%A4%90%E5%8E%85%E8%8F%9C%E5%93%81%E6%95%B0%E6%8D%AE%E7%AE%80%E5%8D%95%E5%BD%92%E6%A1%A3%E4%B8%8E%E5%8D%87%E7%BA%A7%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -213,7 +210,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Windows安装GCC
+          摩摩餐厅菜品数据简单归档与升级简要分析
         </h1>
 
         <div class="post-meta">
@@ -222,16 +219,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-04-19 20:53:33" itemprop="dateCreated datePublished" datetime="2021-04-19T20:53:33+08:00">2021-04-19</time>
+              <time title="创建时间：2021-04-23 16:45:11 / 修改时间：16:50:30" itemprop="dateCreated datePublished" datetime="2021-04-23T16:45:11+08:00">2021-04-23</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-20 09:12:57" itemprop="dateModified" datetime="2021-04-20T09:12:57+08:00">2021-04-20</time>
-              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -251,22 +242,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p>写这篇文章的初心是因为实验室的普及授课，要求提前安装好gcc，但是受限于某科技大学大学生们的水平，本人只好写一篇细到不能再细的教程<br>本文大体上和别的教程都差不多，有很多借鉴重合的地方</p>
-</blockquote>
-<span id="more"></span>
-
-<p>@<a href="Windows%E4%B8%8B%E5%AE%89%E8%A3%85gcc">TOC</a></p>
-<h1 id="安装MinGW"><a href="#安装MinGW" class="headerlink" title="安装MinGW"></a>安装MinGW</h1><p><a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw/files/">下载链接</a></p>
-<p>双击安装程序，选择合适的安装目录，并记下这个安装目录</p>
-<h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><p> <em><strong>选择计算机 –&gt; 属性 –&gt; 高级系统设置 –&gt; 环境变量</strong></em></p>
-<p> 在下方的<code>系统变量</code>栏中找到 <code>Path</code> 变量，单击<code>Path</code>条目，单击右下角的<code>编辑</code>按钮<br> <img src="https://img-blog.csdnimg.cn/20201015143953210.png#pic_center" alt="在这里插入图片描述"><br>在新弹出的窗口内，单击右边的<code>新建</code>按钮，将之前<strong>mingw的安装目录路径</strong>写入，比如我的路径就是<code>C:\MinGW\bin</code><br><img src="https://img-blog.csdnimg.cn/20201015144205537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>打开<code>cmd/powershell</code>，输入<code>mingw-get</code>并回车，弹出以下窗口，表示环境变量配置成功</p>
-<h1 id="安装GCC"><a href="#安装GCC" class="headerlink" title="安装GCC"></a>安装GCC</h1><p>打开<code>cmd\powershell</code>，输入<code>mingw-get install gcc</code>并回车即可安装gcc，安装g++同理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mingw-get install gcc</span><br></pre></td></tr></table></figure>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在任意文件夹下写好一个c源代码文件，如<code>hi.c</code>在该文件夹空白处，按住<code>shift</code>并鼠标右键，点击右键菜单中的选项，打开<code>powershell</code>,输入以下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hi.c -o hi.exe</span><br></pre></td></tr></table></figure>
-<p>即可编译c源代码为可执行文件</p>
-
+        <p>[TOC]</p>
+<h1 id="餐厅玩法方向"><a href="#餐厅玩法方向" class="headerlink" title="餐厅玩法方向"></a>餐厅玩法方向</h1><h2 id="五星厨神"><a href="#五星厨神" class="headerlink" title="五星厨神"></a>五星厨神</h2><h3 id="1-5"><a href="#1-5" class="headerlink" title="1~5"></a>1~5</h3><h3 id="6-34"><a href="#6-34" class="headerlink" title="6~34"></a>6~34</h3><h3 id="35-47"><a href="#35-47" class="headerlink" title="35~47"></a>35~47</h3><h3 id="48-60"><a href="#48-60" class="headerlink" title="48~60"></a>48~60</h3><h2 id="快速升级"><a href="#快速升级" class="headerlink" title="快速升级"></a>快速升级</h2><h2 id="随缘佛系"><a href="#随缘佛系" class="headerlink" title="随缘佛系"></a>随缘佛系</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
     </div>
 
     
@@ -275,7 +252,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Gcc/" rel="tag"># Gcc</a>
+              <a href="/tags/%E6%91%A9%E5%B0%94%E5%BA%84%E5%9B%AD/" rel="tag"># 摩尔庄园</a>
           </div>
 
         
@@ -284,13 +261,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/19/Shell%E7%BC%96%E5%86%99%E2%80%9CHello-Qt%E2%80%9DQt%E7%A8%8B%E5%BA%8F/" rel="prev" title="Shell编写“Hello Qt”Qt程序">
-      <i class="fa fa-chevron-left"></i> Shell编写“Hello Qt”Qt程序
+    <a href="/2021/04/21/%E8%BF%9C%E4%B8%BA%E8%A7%82%E4%B9%8B/" rel="prev" title="远为观止">
+      <i class="fa fa-chevron-left"></i> 远为观止
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/04/19/Ubuntu%E4%B8%8B%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%AE%BF%E9%97%AE%E6%A0%91%E8%8E%93%E6%B4%BE3B-SSH-VNC-Filezilla/" rel="next" title="Ubuntu下局域网内访问树莓派3B+---SSH,VNC,Filezilla">
-      Ubuntu下局域网内访问树莓派3B+---SSH,VNC,Filezilla <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -349,7 +323,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85MinGW"><span class="nav-number">1.</span> <span class="nav-text">安装MinGW</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85GCC"><span class="nav-number">3.</span> <span class="nav-text">安装GCC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A4%90%E5%8E%85%E7%8E%A9%E6%B3%95%E6%96%B9%E5%90%91"><span class="nav-number">1.</span> <span class="nav-text">餐厅玩法方向</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E6%98%9F%E5%8E%A8%E7%A5%9E"><span class="nav-number">1.1.</span> <span class="nav-text">五星厨神</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5"><span class="nav-number">1.1.1.</span> <span class="nav-text">1~5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-34"><span class="nav-number">1.1.2.</span> <span class="nav-text">6~34</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#35-47"><span class="nav-number">1.1.3.</span> <span class="nav-text">35~47</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#48-60"><span class="nav-number">1.1.4.</span> <span class="nav-text">48~60</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%8D%87%E7%BA%A7"><span class="nav-number">1.2.</span> <span class="nav-text">快速升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E7%BC%98%E4%BD%9B%E7%B3%BB"><span class="nav-number">1.3.</span> <span class="nav-text">随缘佛系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
