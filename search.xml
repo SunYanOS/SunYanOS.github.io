@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Audacity简单使用体验</title>
+    <url>/2021/04/19/Audacity%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<p><code>Audacity</code>的安装非常简单，直接用apt管理器安装即可</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install audacity</span><br></pre></td></tr></table></figure>
+<p>以前没怎么剪辑过音频，这次安装<code>Audacity</code>是为了剪辑一首歌的纯音乐部分，可以说本人在剪辑方面就是完全的小白，但是在使用<code>Audacity</code>的时候仍然感觉十分舒服，用了一小会就能简单使用，布局和操作都非常人性化</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/20200323223858575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>后来在win上使用，依然是很棒的音频剪辑软件</p>
+]]></content>
+      <tags>
+        <tag>Music</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C/C++编程YouCompleteMe报错：RuntimeError: No completions found； errors in the file?</title>
     <url>/2021/04/19/C-C-%E7%BC%96%E7%A8%8BYouCompleteMe%E6%8A%A5%E9%94%99%EF%BC%9ARuntimeError-No-completions-found%EF%BC%9B-errors-in-the-file/</url>
     <content><![CDATA[<p><code>Vimplus</code>自带<code>YouCompleteMe</code>插件，在正确安装Vimplus后，使用C语言编程的过程中频繁报错：</p>
@@ -18,33 +34,6 @@
         <tag>Ubuntu</tag>
         <tag>Vim</tag>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo建站参考资料</title>
-    <url>/2021/04/20/Hexo%E5%BB%BA%E7%AB%99%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/</url>
-    <content><![CDATA[<p>本次建站主要参考了以下两篇博文</p>
-<p><a href="https://mupceet.com/2019/08/build-blog-based-on-hexo/">Hexo 博客搭建与主题配置（零基础版）</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/129644138">hexo+next个性化配置</a></p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Audacity简单使用体验</title>
-    <url>/2021/04/19/Audacity%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<p><code>Audacity</code>的安装非常简单，直接用apt管理器安装即可</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install audacity</span><br></pre></td></tr></table></figure>
-<p>以前没怎么剪辑过音频，这次安装<code>Audacity</code>是为了剪辑一首歌的纯音乐部分，可以说本人在剪辑方面就是完全的小白，但是在使用<code>Audacity</code>的时候仍然感觉十分舒服，用了一小会就能简单使用，布局和操作都非常人性化</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/20200323223858575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>后来在win上使用，依然是很棒的音频剪辑软件</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>Music</tag>
       </tags>
   </entry>
   <entry>
@@ -160,18 +149,74 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL安全配置向导mysql_secure_installation详解</title>
-    <url>/2021/04/19/MySQL%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BCmysql-secure-installation%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p><a href="https://www.jb51.net/article/47727.htm">原文地址</a></p>
-<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：</p>
+    <title>Hexo建站参考资料</title>
+    <url>/2021/04/20/Hexo%E5%BB%BA%E7%AB%99%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/</url>
+    <content><![CDATA[<p>本次建站主要参考了以下两篇博文</p>
+<p><a href="https://mupceet.com/2019/08/build-blog-based-on-hexo/">Hexo 博客搭建与主题配置（零基础版）</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/129644138">hexo+next个性化配置</a></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notion使用笔记一：实现子弹笔记电子化</title>
+    <url>/2021/04/25/Notion%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%AE%9E%E7%8E%B0%E5%AD%90%E5%BC%B9%E7%AC%94%E8%AE%B0%E7%94%B5%E5%AD%90%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="Notion使用笔记一：实现子弹笔记电子化"><a href="#Notion使用笔记一：实现子弹笔记电子化" class="headerlink" title="Notion使用笔记一：实现子弹笔记电子化"></a>Notion使用笔记一：实现子弹笔记电子化</h1><p><a href="https://www.douban.com/note/769517273/?type=like">原文地址</a></p>
+<p><a href="https://www.douban.com/people/206882534/"><img src="https://img2.doubanio.com/icon/u206882534-3.jpg" alt="CX"></a> <a href="https://www.douban.com/people/206882534/">CX</a> <strong>2020-07-04 11:01:06</strong></p>
 <span id="more"></span>
 
-<p>  a)为root用户设置密码<br>  b)删除匿名账号<br>  c)取消root用户远程登录<br>  d)删除test库和对test库的访问权限<br>  e)刷新授权表使修改生效</p>
-<p>通过这几项的设置能够提高mysql库的安全。建议生产环境中mysql安装这完成后一定要运行一次mysql_secure_installation，详细步骤请参看下面的命令:</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment"># mysql_secure_installation</span></span><br><span class="line">NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED <span class="keyword">FOR</span> ALL MySQL</span><br><span class="line">SERVERS <span class="keyword">IN</span> PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!</span><br><span class="line"><span class="keyword">In</span> order to log into MySQL to secure it, we<span class="string">&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user. If you&#x27;</span>ve just installed MySQL, and</span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string">Enter current password for root (enter for none):   																						初次运行直接回车</span></span><br><span class="line"><span class="string">OK, successfully used password, moving on…</span></span><br><span class="line"><span class="string">Setting the root password ensures that nobody can log into the MySQL</span></span><br><span class="line"><span class="string">root user without the proper authorisation.</span></span><br><span class="line"><span class="string">Set root password? [Y/n]																			是否设置root用户密码，输入y并回车或直接回车</span></span><br><span class="line"><span class="string">New password: 																																					设置root用户的密码</span></span><br><span class="line"><span class="string">Re-enter new password: 																															再输入一次你设置的密码</span></span><br><span class="line"><span class="string">Password updated successfully!</span></span><br><span class="line"><span class="string">Reloading privilege tables..</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, a MySQL installation has an anonymous user, allowing anyone</span></span><br><span class="line"><span class="string">to log into MySQL without having to have a user account created for</span></span><br><span class="line"><span class="string">them. This is intended only for testing, and to make the installation</span></span><br><span class="line"><span class="string">go a bit smoother. You should remove them before moving into a</span></span><br><span class="line"><span class="string">production environment.</span></span><br><span class="line"><span class="string">Remove anonymous users? [Y/n] 												 是否删除匿名用户,生产环境建议删除，所以直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Normally, root should only be allowed to connect from &#x27;</span>localhost<span class="string">&#x27;. This</span></span><br><span class="line"><span class="string">ensures that someone cannot guess at the root password from the network.</span></span><br><span class="line"><span class="string">Disallow root login remotely? [Y/n] 						是否禁止root远程登录,根据自己的需求选择Y/n并回车,建议禁止</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, MySQL comes with a database named &#x27;</span>test<span class="string">&#x27; that anyone can</span></span><br><span class="line"><span class="string">access. This is also intended only for testing, and should be removed</span></span><br><span class="line"><span class="string">before moving into a production environment.</span></span><br><span class="line"><span class="string">Remove test database and access to it? [Y/n] 																	 是否删除test数据库,直接回车</span></span><br><span class="line"><span class="string">- Dropping test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">- Removing privileges on test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Reloading the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="string">will take effect immediately.</span></span><br><span class="line"><span class="string">Reload privilege tables now? [Y/n] 																							是否重新加载权限表，直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Cleaning up…</span></span><br><span class="line"><span class="string">All done! If you&#x27;</span>ve completed all of the above steps, your MySQL</span><br><span class="line">installation should now be secure.</span><br><span class="line">Thanks <span class="keyword">for</span> <span class="keyword">using</span> MySQL!</span><br><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>]]></content>
+<p>我用子弹笔记做了两年的计划和笔记，喜欢它的灵活度，也可以满足我时不时想写写画画的需求。但子弹笔记对我来说的缺点是每个月都会需要花一定时间在做版面上面。一开始尝试各种新版面的时候很愉快，但之后就慢慢变成了重复工作。再来最近很多网络会议，而且每天基本都是对着电脑，直接把链接保存到日历更方便一些。</p>
+<p>接触Notion之后，发现Notion可以实现和子弹笔记一样的高自由度排版。而且因为可以创建模版，每次做计划的时候只需要建个新页面，之后也能再按需调整。<strong>模版链接在文末</strong></p>
+<p>另外，Notion也可以将我本来记在“待办事项”、“备忘录”、“日历”里的事项，还有其他零散的文件都整合到一起。把所有任务都储存到一张总任务表之后，还可以利用linked database和不同的视图/筛选功能在不同地方显示想要的部分（这个操作会在月计划模版里详细介绍）。</p>
+<p>先放两张对比图：</p>
+<p><img src="/D:/blog\source\image\p73986483.webp" alt="p73986483"></p>
+<p>现在使用的Notion版面</p>
+<p><img src="/D:/blog\source\image\p73986516.webp" alt="p73986516"></p>
+<p>原来的纸版子弹笔记</p>
+<h2 id="年计划"><a href="#年计划" class="headerlink" title="年计划"></a>年计划</h2><p><img src="/D:/blog\source\image\p73986519.webp" alt="p73986519"></p>
+<p>和子弹笔记一样，我的Notion也分成年计划、月计划，和周计划。</p>
+<p>年计划最简单：上面是月计划清单（图上只有六月份），下面是未来计划（Future Log）。</p>
+<p>未来计划（Future Log）沿用了子弹笔记的逻辑：在一月的时候我可能就知道八月份要参加会议，但因为我还没开始做八月的计划，就先把它记在这儿，等八月的时候再把这个事项放进去月计划里。（我不是很喜欢在年计划里放日历，因为一年的跨度翻起来不是很方便。）</p>
+<h2 id="月计划"><a href="#月计划" class="headerlink" title="月计划"></a>月计划</h2><p><img src="/D:/blog\source\image\p73986521.webp" alt="p73986521"></p>
+<p>月计划模版</p>
+<p>月计划的第1块是这个月的目标和周计划链接（因为我的截图是模版，所以图中没有显示链接）。</p>
+<p>第2块和第3块就用到了开头说到的Lined database。这两块是同一个database（标题都是“Master Project List”），就是下面这个页面：</p>
+<p><img src="/D:/blog\source\image\p73986537.webp" alt="p73986537"></p>
+<p>我的任务总表</p>
+<p><img src="/D:/blog\source\image\p73987340.webp" alt="p73987340"></p>
+<p>任务总表的日历视图，我还建了其他很多视图来满足其他需求</p>
+<p>这个页面里面放上了我所有的计划和项目，然后用标签来区分这是我正在做的，还是我准备要做的。然后继续细分是做到什么程度——比如写作任务是在第一稿还是在修改中。</p>
+<p>回到月计划的版面，第2块区域里我用的就是总任务表的日历视图，显示的是这个月已经计划好（放在日历上）的事情。至于我还没放上行程表的，我就用Board视图放在第3块区域，类似于子弹笔记月计划中的未来事项（总表里的标签就是“to be scheduled”）。这样的好处是我在这个月这个页面上做出的改动，可以同时反馈到总表里，保证信息的一致性，也方便跟踪。不用像纸质的子弹笔记一样，每次做计划都要再抄一遍。</p>
+<h2 id="周计划"><a href="#周计划" class="headerlink" title="周计划"></a>周计划</h2><p><img src="/D:/blog\source\image\p73987205.webp" alt="p73987205"></p>
+<p>周计划最复杂，但也是使用率最高的页面。</p>
+<p>这个模版来源于Marie Poulin的weekly planner，我在她的基础上做了些修改，大致上还是非常像的。[1]</p>
+<p>第1块区域是一些链接和这周的目标。第2块就是每天的任务清单。新建周计划的时候，我会把月日历上本周的事项放过来，然后每天开始工作之前再继续添加今天要做的任务。</p>
+<p>第3块，我的任务总表又出现了。这里我让它显示的是我现在正在处理的任务（总表中的标签是In progress）。因为每天早上做计划的时候都是打开的是这个页面，所以直接在这儿放个我正处理的事情更方便查看我手头有哪些任务。</p>
+<p><img src="/D:/blog\source\image\p73987424.png" alt="p73987424"></p>
+<p>第4块区域沿用了Marie Poulin的每周自我反思板块。说实话，我用笔记本的子弹笔记也会留这么一块区域，但其实从来没写过…所以留在这里，更多是…填版面…</p>
+<p>最后的第5块是生活习惯的追踪。我比较在意的是睡眠、运动，和工作效率，就建了个表把想记录的都放在这里。“Focus”是今天我做了多少个番茄时钟，最后的“Productivity”是给自己打分的一个地方，和子弹笔记的形式是一样的。</p>
+<p>然后它也是个Linked database（下图），同样也是一个单独的页面。每周周计划上显示的只是这两周的记录，但是在总表里面可以形成一个长期的记录。</p>
+<p><img src="/D:/blog\source\image\p73986551.webp" alt="p73986551"></p>
+<p>我的生活习惯总表</p>
+<p>最后，比较残念的是Notion的日历上无法设置重复任务。比如每个月交房租的事项，就得每次完成一个之后，拖到下个月。另一个小缺点就是Notion无法和iCal联动。不过它可以和谷歌日历联动，官方推特也表示正在考虑实现iCal的联动，所以希望之后能有这个功能。</p>
+<p>总的来说，Notion可以用来实现很多不同的需求，这里也只是提供一种思路，推荐大家去试试这个软件。</p>
+<p>附上之前写的安利贴（Notion读书追踪+习惯养成+书签收藏模版）：<a href="https://www.douban.com/group/topic/182080858/">https://www.douban.com/group/topic/182080858/</a></p>
+<p><strong>子弹笔记模版：</strong></p>
+<p>年计划：<a href="https://www.notion.so/_-a6ffe5450fc5433da934f4b36d508528">https://www.notion.so/_-a6ffe5450fc5433da934f4b36d508528</a></p>
+<p>月计划：<a href="https://www.notion.so/_-72ddb20f114447d185fa5f6f9022c5d6">https://www.notion.so/_-72ddb20f114447d185fa5f6f9022c5d6</a></p>
+<p>周计划：<a href="https://www.notion.so/_-fa967daa95d64bb182a68b64e6f38614">https://www.notion.so/_-fa967daa95d64bb182a68b64e6f38614</a></p>
+<p>总计划清单：<a href="https://www.notion.so/8800c2231d5c4f21b5580204d9e2ac12?v=2997082161ce473288227eba232689f7">https://www.notion.so/8800c2231d5c4f21b5580204d9e2ac12?v=2997082161ce473288227eba232689f7</a></p>
+<p>更新（21.02.10）：</p>
+<p><img src="/D:/blog\source\image\p79828120.webp" alt="p79828120"></p>
+<p>在模版中的年计划和月计划中新添加了小按钮，点击就可以添加新的月/周计划</p>
+<p>[1] <a href="https://www.notion.so/Weekly-agenda-9e197cdf88dc4d3abf798b999ebce40a">https://www.notion.so/Weekly-agenda-9e197cdf88dc4d3abf798b999ebce40a</a></p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
       <tags>
-        <tag>Ubuntu</tag>
-        <tag>MySQL</tag>
+        <tag>Notion</tag>
       </tags>
   </entry>
   <entry>
@@ -232,6 +277,15 @@
       </tags>
   </entry>
   <entry>
+    <title>Ubuntu 20.04LTS下安装pip</title>
+    <url>/2021/04/19/Ubuntu-20-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85pip/</url>
+    <content><![CDATA[<p><a href="https://www.itcoder.tech/posts/how-to-install-pip-on-ubuntu-20.04/">ITCoder</a></p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu18.04/19.04/20.04安装笔记&amp;&amp;通用指南</title>
     <url>/2021/04/19/Ubuntu18-04-19-04-20-04%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0-%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p><em>&emsp;使用集成显卡安装Ubuntu能减少麻烦，很多Nvidia独立显卡设备无法成功安装使用Ubuntu的原因在于，Ubuntu默认使用Noveau显卡驱动造成的兼容性问题，本文从这一点出发，能解决大多数同类型显卡设备的问题。</em></p>
@@ -267,12 +321,56 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu 20.04LTS下安装pip</title>
-    <url>/2021/04/19/Ubuntu-20-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85pip/</url>
-    <content><![CDATA[<p><a href="https://www.itcoder.tech/posts/how-to-install-pip-on-ubuntu-20.04/">ITCoder</a></p>
+    <title>Ubuntu18.04 Mac主题美化</title>
+    <url>/2021/04/19/Ubuntu18-04-Mac%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前总觉得原主题就挺好，看了一些美化教程后自然而然就香了起来，下面是效果图</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/20191213203229935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="美化准备"><a href="#美化准备" class="headerlink" title="美化准备"></a>美化准备</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-tweaks</span></span><br></pre></td></tr></table></figure>
+<p>安装后打开<strong>Tweaks</strong>，在<strong>拓展栏</strong>启用<code>Ubuntu appindicators</code>和<code>Ubuntu dock</code>,并在<strong>窗口栏</strong>修改<code>标题栏按钮</code>的位置,其他的一些配置根据个人喜好就行<img src="https://img-blog.csdnimg.cn/20191213203418757.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213205443523.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但是如果需要对<strong>Shell</strong>进行美化，则还需要安装一个拓展</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-shell</span><span class="literal">-extensions</span></span><br></pre></td></tr></table></figure>
+<p>打开<strong>Tweaks</strong>在<strong>拓展栏</strong>启用<code>User themes</code><br>&emsp;</p>
+<h2 id="正式美化"><a href="#正式美化" class="headerlink" title="正式美化"></a>正式美化</h2><h3 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h3><p>在<a href="https://www.pling.com/browse/cat/135/ord/rating/">这里</a>找喜欢的主题,本人用的是<a href="https://www.pling.com/p/1275087/">McMojave</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/themes**</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/themes</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2019121321042740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 应用程序</strong>,启用主题美化<br>&emsp;</p>
+<h3 id="Shell美化"><a href="#Shell美化" class="headerlink" title="Shell美化"></a>Shell美化</h3><p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; Shell</strong>,启用Shell美化<br>&emsp;</p>
+<h3 id="图标美化"><a href="#图标美化" class="headerlink" title="图标美化"></a>图标美化</h3><p>在<a href="https://www.pling.com/s/Gnome/browse/cat/132/order/latest/">这里</a>找喜欢的图标包,本人用的是<a href="https://www.pling.com/s/Gnome/p/1210856">Mcjave CT icons</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/icons**</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/icons</span><br></pre></td></tr></table></figure>
+<p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 图标</strong>,替换图标<br>&emsp;</p>
+<h3 id="Dash-to-Dock"><a href="#Dash-to-Dock" class="headerlink" title="Dash to Dock"></a>Dash to Dock</h3><p>在<strong>Ubuntu软件</strong>中搜索安装<code>Dash to Dock</code>,设置自定义<br><img src="https://img-blog.csdnimg.cn/20191213211948155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213212123894.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;</p>
+<h3 id="Terminal美化"><a href="#Terminal美化" class="headerlink" title="Terminal美化"></a>Terminal美化</h3><p>这里只改变了窗口的透明度,其他的可自行调整<br><img src="https://img-blog.csdnimg.cn/20191213212257751.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>结束</p>
 ]]></content>
       <tags>
         <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu18.04/20.04LTS实时监控网速、CPU和内存</title>
+    <url>/2021/04/19/Ubuntu18-04-20-04LTS%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E7%BD%91%E9%80%9F%E3%80%81CPU%E5%92%8C%E5%86%85%E5%AD%98/</url>
+    <content><![CDATA[<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install indicator-sysmonitor</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h5 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">indicator-sysmonitor &amp;</span><br></pre></td></tr></table></figure>
+<h5 id="后台挂起"><a href="#后台挂起" class="headerlink" title="后台挂起"></a>后台挂起</h5><p><code>Ctrl+D</code>后台运行indicator-sysmonitor。</p>
+<h5 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h5><p>右键标题栏上图标，首选项，在弹出的界面选中<code>Run on Startup</code><br>在高级可以自定义显示的内容。</p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu18.04安装使用jsoncpp库</title>
+    <url>/2021/04/19/Ubuntu18-04%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8jsoncpp%E5%BA%93/</url>
+    <content><![CDATA[<p>调用百度的API时为C++ SDK配置jsoncpp依赖，可用于C++解析json文件</p>
+<span id="more"></span>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libjsoncpp-dev</span><br></pre></td></tr></table></figure>
+<p> 库的头文件安装在/usr/include/jsoncpp中, 库API文档默认在/usr/share/doc/libjsoncpp-dev/jsoncpp-api-html/目录下 </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;jsoncpp/json/json.h&gt;</span> </span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>C++</tag>
+        <tag>图像识别</tag>
       </tags>
   </entry>
   <entry>
@@ -314,59 +412,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu18.04/20.04LTS实时监控网速、CPU和内存</title>
-    <url>/2021/04/19/Ubuntu18-04-20-04LTS%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E7%BD%91%E9%80%9F%E3%80%81CPU%E5%92%8C%E5%86%85%E5%AD%98/</url>
-    <content><![CDATA[<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install indicator-sysmonitor</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-
-<h5 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">indicator-sysmonitor &amp;</span><br></pre></td></tr></table></figure>
-<h5 id="后台挂起"><a href="#后台挂起" class="headerlink" title="后台挂起"></a>后台挂起</h5><p><code>Ctrl+D</code>后台运行indicator-sysmonitor。</p>
-<h5 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h5><p>右键标题栏上图标，首选项，在弹出的界面选中<code>Run on Startup</code><br>在高级可以自定义显示的内容。</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu18.04 Mac主题美化</title>
-    <url>/2021/04/19/Ubuntu18-04-Mac%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前总觉得原主题就挺好，看了一些美化教程后自然而然就香了起来，下面是效果图</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/20191213203229935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="美化准备"><a href="#美化准备" class="headerlink" title="美化准备"></a>美化准备</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-tweaks</span></span><br></pre></td></tr></table></figure>
-<p>安装后打开<strong>Tweaks</strong>，在<strong>拓展栏</strong>启用<code>Ubuntu appindicators</code>和<code>Ubuntu dock</code>,并在<strong>窗口栏</strong>修改<code>标题栏按钮</code>的位置,其他的一些配置根据个人喜好就行<img src="https://img-blog.csdnimg.cn/20191213203418757.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213205443523.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但是如果需要对<strong>Shell</strong>进行美化，则还需要安装一个拓展</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install gnome<span class="literal">-shell</span><span class="literal">-extensions</span></span><br></pre></td></tr></table></figure>
-<p>打开<strong>Tweaks</strong>在<strong>拓展栏</strong>启用<code>User themes</code><br>&emsp;</p>
-<h2 id="正式美化"><a href="#正式美化" class="headerlink" title="正式美化"></a>正式美化</h2><h3 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h3><p>在<a href="https://www.pling.com/browse/cat/135/ord/rating/">这里</a>找喜欢的主题,本人用的是<a href="https://www.pling.com/p/1275087/">McMojave</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/themes**</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/themes</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/2019121321042740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 应用程序</strong>,启用主题美化<br>&emsp;</p>
-<h3 id="Shell美化"><a href="#Shell美化" class="headerlink" title="Shell美化"></a>Shell美化</h3><p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; Shell</strong>,启用Shell美化<br>&emsp;</p>
-<h3 id="图标美化"><a href="#图标美化" class="headerlink" title="图标美化"></a>图标美化</h3><p>在<a href="https://www.pling.com/s/Gnome/browse/cat/132/order/latest/">这里</a>找喜欢的图标包,本人用的是<a href="https://www.pling.com/s/Gnome/p/1210856">Mcjave CT icons</a><br>下载解压tar.xz包后,将归档文件夹复制到**/usr/share/icons**</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> <span class="literal">-r</span> xxxxx /usr/share/icons</span><br></pre></td></tr></table></figure>
-<p><strong>Tweaks &gt;&gt; 外观 &gt;&gt; 图标</strong>,替换图标<br>&emsp;</p>
-<h3 id="Dash-to-Dock"><a href="#Dash-to-Dock" class="headerlink" title="Dash to Dock"></a>Dash to Dock</h3><p>在<strong>Ubuntu软件</strong>中搜索安装<code>Dash to Dock</code>,设置自定义<br><img src="https://img-blog.csdnimg.cn/20191213211948155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191213212123894.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;</p>
-<h3 id="Terminal美化"><a href="#Terminal美化" class="headerlink" title="Terminal美化"></a>Terminal美化</h3><p>这里只改变了窗口的透明度,其他的可自行调整<br><img src="https://img-blog.csdnimg.cn/20191213212257751.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjI3MDUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>结束</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu18.04安装使用jsoncpp库</title>
-    <url>/2021/04/19/Ubuntu18-04%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8jsoncpp%E5%BA%93/</url>
-    <content><![CDATA[<p>调用百度的API时为C++ SDK配置jsoncpp依赖，可用于C++解析json文件</p>
-<span id="more"></span>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libjsoncpp-dev</span><br></pre></td></tr></table></figure>
-<p> 库的头文件安装在/usr/include/jsoncpp中, 库API文档默认在/usr/share/doc/libjsoncpp-dev/jsoncpp-api-html/目录下 </p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;jsoncpp/json/json.h&gt;</span> </span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>C++</tag>
-        <tag>图像识别</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu20.04LTS安装Mysql8.0.21[转]</title>
     <url>/2021/04/19/Ubuntu20-04LTS%E5%AE%89%E8%A3%85Mysql8-0-21/</url>
     <content><![CDATA[<p><a href="https://ywnz.com/linuxysjk/4123.html">原文地址</a></p>
@@ -374,6 +419,32 @@
       <tags>
         <tag>Ubuntu</tag>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu20.04LTS安装OpenJDK8/Oracle JDK8</title>
+    <url>/2021/04/19/Ubuntu20-04LTS%E5%AE%89%E8%A3%85OpenJDK8-Oracle-JDK8/</url>
+    <content><![CDATA[<blockquote>
+<p>安装Java8为Minecraft服务器和客户端提供支持<br>@<a href>TOC</a></p>
+</blockquote>
+<h1 id="OpenJDK"><a href="#OpenJDK" class="headerlink" title="OpenJDK"></a>OpenJDK</h1><p>为服务器安装不包含OpenJFX的OpenJDK<br>安装过程只有一行代码</p>
+<span id="more"></span>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install openjdk<span class="literal">-8</span><span class="literal">-jdk</span></span><br></pre></td></tr></table></figure>
+<p>查看是否安装成功：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">java <span class="literal">-version</span></span><br></pre></td></tr></table></figure>
+<p>之后单独安装OpenJFX后MC客户端仍然报错，建议客户端安装Oracle JDK</p>
+<h1 id="Oracle-JDK"><a href="#Oracle-JDK" class="headerlink" title="Oracle JDK"></a>Oracle JDK</h1><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">Oracle JDK8</a><br>根据个人情况下载，本人是x64笔记本，用的这个，选错了的话后续过程会报错，之前脑抽选成了arm64然后gg了<br><img src="https://img-blog.csdnimg.cn/2020072819453826.png" alt="在这里插入图片描述"></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
+<li>解压<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo mkdir /usr/lib/jvm</span><br><span class="line">sudo tar <span class="literal">-zxvf</span> jdk<span class="literal">-8u261</span><span class="literal">-linux</span><span class="literal">-x64</span>.gz <span class="literal">-C</span> /usr/lib/jvm</span><br></pre></td></tr></table></figure></li>
+<li>配置环境变量<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+在文件末尾追加内容：<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Oracle JDK8 Envirenment</span></span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.<span class="number">8.0</span>_261  <span class="comment">## 目录要换成自己解压的目录</span></span><br><span class="line">export JRE_HOME=<span class="variable">$</span>&#123;JAVA_HOME&#125;/jre  </span><br><span class="line">export CLASSPATH=.:<span class="variable">$</span>&#123;JAVA_HOME&#125;/lib:<span class="variable">$</span>&#123;JRE_HOME&#125;/lib  </span><br><span class="line">export PATH=<span class="variable">$</span>&#123;JAVA_HOME&#125;/bin:<span class="variable">$PATH</span>  </span><br></pre></td></tr></table></figure>
+使环境变量立即生效：<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+查看是否安装成功：<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">java <span class="literal">-version</span>	<span class="comment">## 如果前面选错了压缩包，这里会报错</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -391,32 +462,6 @@
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo iconv <span class="operator">-f</span> gbk <span class="literal">-t</span> utf<span class="literal">-8</span> <span class="literal">-o</span> outfile infile</span><br></pre></td></tr></table></figure>
 <p>-f为原来的编码方式，-t 为输出文件的编码方式， -o表示输出文件名，这利用outfile表示，最后跟上要更改编码方式的文件名sourcefile 。</p>
 <p>很多时候用这两种方式也无法解决乱码问题，令人无奈</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu20.04LTS安装OpenJDK8/Oracle JDK8</title>
-    <url>/2021/04/19/Ubuntu20-04LTS%E5%AE%89%E8%A3%85OpenJDK8-Oracle-JDK8/</url>
-    <content><![CDATA[<blockquote>
-<p>安装Java8为Minecraft服务器和客户端提供支持<br>@<a href="">TOC</a></p>
-</blockquote>
-<h1 id="OpenJDK"><a href="#OpenJDK" class="headerlink" title="OpenJDK"></a>OpenJDK</h1><p>为服务器安装不包含OpenJFX的OpenJDK<br>安装过程只有一行代码</p>
-<span id="more"></span>
-
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install openjdk<span class="literal">-8</span><span class="literal">-jdk</span></span><br></pre></td></tr></table></figure>
-<p>查看是否安装成功：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">java <span class="literal">-version</span></span><br></pre></td></tr></table></figure>
-<p>之后单独安装OpenJFX后MC客户端仍然报错，建议客户端安装Oracle JDK</p>
-<h1 id="Oracle-JDK"><a href="#Oracle-JDK" class="headerlink" title="Oracle JDK"></a>Oracle JDK</h1><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">Oracle JDK8</a><br>根据个人情况下载，本人是x64笔记本，用的这个，选错了的话后续过程会报错，之前脑抽选成了arm64然后gg了<br><img src="https://img-blog.csdnimg.cn/2020072819453826.png" alt="在这里插入图片描述"></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
-<li>解压<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo mkdir /usr/lib/jvm</span><br><span class="line">sudo tar <span class="literal">-zxvf</span> jdk<span class="literal">-8u261</span><span class="literal">-linux</span><span class="literal">-x64</span>.gz <span class="literal">-C</span> /usr/lib/jvm</span><br></pre></td></tr></table></figure></li>
-<li>配置环境变量<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo vim ~/.bashrc</span><br></pre></td></tr></table></figure>
-在文件末尾追加内容：<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Oracle JDK8 Envirenment</span></span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.<span class="number">8.0</span>_261  <span class="comment">## 目录要换成自己解压的目录</span></span><br><span class="line">export JRE_HOME=<span class="variable">$</span>&#123;JAVA_HOME&#125;/jre  </span><br><span class="line">export CLASSPATH=.:<span class="variable">$</span>&#123;JAVA_HOME&#125;/lib:<span class="variable">$</span>&#123;JRE_HOME&#125;/lib  </span><br><span class="line">export PATH=<span class="variable">$</span>&#123;JAVA_HOME&#125;/bin:<span class="variable">$PATH</span>  </span><br></pre></td></tr></table></figure>
-使环境变量立即生效：<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-查看是否安装成功：<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">java <span class="literal">-version</span>	<span class="comment">## 如果前面选错了压缩包，这里会报错</span></span><br></pre></td></tr></table></figure></li>
-</ol>
 ]]></content>
       <tags>
         <tag>Ubuntu</tag>
@@ -465,21 +510,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu终端内打开当前目录文件夹图形界面</title>
-    <url>/2021/04/19/Ubuntu%E7%BB%88%E7%AB%AF%E5%86%85%E6%89%93%E5%BC%80%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/</url>
-    <content><![CDATA[<p>Ubuntu18.04中已经缺省支持在右键菜单中从当前目录打开终端，但是怎么通过终端打开当前目录的文件夹？<br>看了一些帖子，知道了可以通过<code>nautilus</code>命令解决</p>
-<span id="more"></span>
-
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 默认打开~/目录文件夹</span></span><br><span class="line">nautilus</span><br><span class="line"><span class="comment"># 打开当前目录文件</span></span><br><span class="line">nautilus ./</span><br><span class="line"><span class="comment"># 打开/usr/bin 目录文件夹</span></span><br><span class="line">nautilus /usr/bin</span><br></pre></td></tr></table></figure>
-<p>但是很快我就发现了另一个更方便的解决方案——<code>xdg-open</code>!<br>之前一直用<code>xdg-open</code>命令打开目录、各种文件、网址等等，却没想到用它打开文件路径</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xdg<span class="literal">-open</span> ./</span><br><span class="line">xdg<span class="literal">-open</span> a.jpg</span><br><span class="line">xdg<span class="literal">-open</span>  b.odt</span><br><span class="line">xdg<span class="literal">-open</span> http://www.google.com</span><br></pre></td></tr></table></figure>
-<p><code>gnome-open</code>实现以上需求</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu安装WPS后报错：缺失字体[转]</title>
     <url>/2021/04/19/Ubuntu%E5%AE%89%E8%A3%85WPS%E5%90%8E%E6%8A%A5%E9%94%99%EF%BC%9A%E7%BC%BA%E5%A4%B1%E5%AD%97%E4%BD%93-%E8%BD%AC/</url>
     <content><![CDATA[<p><a href="https://blog.csdn.net/dejunyang/article/details/81437632">原文地址</a></p>
@@ -516,6 +546,56 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
+    <title>Vim简单配置</title>
+    <url>/2021/04/19/Vim%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>总是折腾，每次重新配置vim重新写很麻烦，就在此做个备份</p>
+<span id="more"></span>
+
+<p>set autoindent “”自动缩进<br>set cindent “”以C语言的方式缩进<br>set shiftwidth=4 “”设置自动缩进的空格数量<br>set softtabstop=4 “”tab键的实际占有空格数，统一缩进<br>set tabstop=4 “”设置tab键的空格数</p>
+<p>set cursorline “”突出当前行<br>syntax on “”语法高亮<br>set nu “”设置行号</p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu终端内打开当前目录文件夹图形界面</title>
+    <url>/2021/04/19/Ubuntu%E7%BB%88%E7%AB%AF%E5%86%85%E6%89%93%E5%BC%80%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/</url>
+    <content><![CDATA[<p>Ubuntu18.04中已经缺省支持在右键菜单中从当前目录打开终端，但是怎么通过终端打开当前目录的文件夹？<br>看了一些帖子，知道了可以通过<code>nautilus</code>命令解决</p>
+<span id="more"></span>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 默认打开~/目录文件夹</span></span><br><span class="line">nautilus</span><br><span class="line"><span class="comment"># 打开当前目录文件</span></span><br><span class="line">nautilus ./</span><br><span class="line"><span class="comment"># 打开/usr/bin 目录文件夹</span></span><br><span class="line">nautilus /usr/bin</span><br></pre></td></tr></table></figure>
+<p>但是很快我就发现了另一个更方便的解决方案——<code>xdg-open</code>!<br>之前一直用<code>xdg-open</code>命令打开目录、各种文件、网址等等，却没想到用它打开文件路径</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">xdg<span class="literal">-open</span> ./</span><br><span class="line">xdg<span class="literal">-open</span> a.jpg</span><br><span class="line">xdg<span class="literal">-open</span>  b.odt</span><br><span class="line">xdg<span class="literal">-open</span> http://www.google.com</span><br></pre></td></tr></table></figure>
+<p><code>gnome-open</code>实现以上需求</p>
+]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>firt_blog</title>
+    <url>/2021/04/01/firt-blog/</url>
+    <content><![CDATA[<p>I’m so happy to build and own the first blog by myself  : )! And thanks to Hexo help me achieve this plan !</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>MySQL安全配置向导mysql_secure_installation详解</title>
+    <url>/2021/04/19/MySQL%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BCmysql-secure-installation%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p><a href="https://www.jb51.net/article/47727.htm">原文地址</a></p>
+<p>安装完mysql-server 会提示可以运行mysql_secure_installation。运行mysql_secure_installation会执行几个设置：</p>
+<span id="more"></span>
+
+<p>  a)为root用户设置密码<br>  b)删除匿名账号<br>  c)取消root用户远程登录<br>  d)删除test库和对test库的访问权限<br>  e)刷新授权表使修改生效</p>
+<p>通过这几项的设置能够提高mysql库的安全。建议生产环境中mysql安装这完成后一定要运行一次mysql_secure_installation，详细步骤请参看下面的命令:</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment"># mysql_secure_installation</span></span><br><span class="line">NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED <span class="keyword">FOR</span> ALL MySQL</span><br><span class="line">SERVERS <span class="keyword">IN</span> PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!</span><br><span class="line"><span class="keyword">In</span> order to log into MySQL to secure it, we<span class="string">&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user. If you&#x27;</span>ve just installed MySQL, and</span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string">Enter current password for root (enter for none):   																						初次运行直接回车</span></span><br><span class="line"><span class="string">OK, successfully used password, moving on…</span></span><br><span class="line"><span class="string">Setting the root password ensures that nobody can log into the MySQL</span></span><br><span class="line"><span class="string">root user without the proper authorisation.</span></span><br><span class="line"><span class="string">Set root password? [Y/n]																			是否设置root用户密码，输入y并回车或直接回车</span></span><br><span class="line"><span class="string">New password: 																																					设置root用户的密码</span></span><br><span class="line"><span class="string">Re-enter new password: 																															再输入一次你设置的密码</span></span><br><span class="line"><span class="string">Password updated successfully!</span></span><br><span class="line"><span class="string">Reloading privilege tables..</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, a MySQL installation has an anonymous user, allowing anyone</span></span><br><span class="line"><span class="string">to log into MySQL without having to have a user account created for</span></span><br><span class="line"><span class="string">them. This is intended only for testing, and to make the installation</span></span><br><span class="line"><span class="string">go a bit smoother. You should remove them before moving into a</span></span><br><span class="line"><span class="string">production environment.</span></span><br><span class="line"><span class="string">Remove anonymous users? [Y/n] 												 是否删除匿名用户,生产环境建议删除，所以直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Normally, root should only be allowed to connect from &#x27;</span>localhost<span class="string">&#x27;. This</span></span><br><span class="line"><span class="string">ensures that someone cannot guess at the root password from the network.</span></span><br><span class="line"><span class="string">Disallow root login remotely? [Y/n] 						是否禁止root远程登录,根据自己的需求选择Y/n并回车,建议禁止</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">By default, MySQL comes with a database named &#x27;</span>test<span class="string">&#x27; that anyone can</span></span><br><span class="line"><span class="string">access. This is also intended only for testing, and should be removed</span></span><br><span class="line"><span class="string">before moving into a production environment.</span></span><br><span class="line"><span class="string">Remove test database and access to it? [Y/n] 																	 是否删除test数据库,直接回车</span></span><br><span class="line"><span class="string">- Dropping test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">- Removing privileges on test database…</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Reloading the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="string">will take effect immediately.</span></span><br><span class="line"><span class="string">Reload privilege tables now? [Y/n] 																							是否重新加载权限表，直接回车</span></span><br><span class="line"><span class="string">… Success!</span></span><br><span class="line"><span class="string">Cleaning up…</span></span><br><span class="line"><span class="string">All done! If you&#x27;</span>ve completed all of the above steps, your MySQL</span><br><span class="line">installation should now be secure.</span><br><span class="line">Thanks <span class="keyword">for</span> <span class="keyword">using</span> MySQL!</span><br><span class="line">[<span class="type">root</span>@<span class="type">server1</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows安装GCC</title>
     <url>/2021/04/19/Windows%E5%AE%89%E8%A3%85GCC/</url>
     <content><![CDATA[<blockquote>
@@ -536,20 +616,6 @@ sudo mkfontdir
 ]]></content>
       <tags>
         <tag>Gcc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vim简单配置</title>
-    <url>/2021/04/19/Vim%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>总是折腾，每次重新配置vim重新写很麻烦，就在此做个备份</p>
-<span id="more"></span>
-
-<p>set autoindent “”自动缩进<br>set cindent “”以C语言的方式缩进<br>set shiftwidth=4 “”设置自动缩进的空格数量<br>set softtabstop=4 “”tab键的实际占有空格数，统一缩进<br>set tabstop=4 “”设置tab键的空格数</p>
-<p>set cursorline “”突出当前行<br>syntax on “”语法高亮<br>set nu “”设置行号</p>
-]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>Vim</tag>
       </tags>
   </entry>
   <entry>
@@ -612,12 +678,6 @@ sudo mkfontdir
       </tags>
   </entry>
   <entry>
-    <title>firt_blog</title>
-    <url>/2021/04/01/firt-blog/</url>
-    <content><![CDATA[<p>I’m so happy to build and own the first blog by myself  : )! And thanks to Hexo help me achieve this plan !</p>
-]]></content>
-  </entry>
-  <entry>
     <title>初次使用Qt时遇到的几个坑</title>
     <url>/2021/04/19/%E5%88%9D%E6%AC%A1%E4%BD%BF%E7%94%A8Qt%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91/</url>
     <content><![CDATA[<h2 id="1-error-cannot-find-lGL"><a href="#1-error-cannot-find-lGL" class="headerlink" title="1.　error:cannot find -lGL"></a>1.　error:cannot find -lGL</h2><p>原因分析: 在已经安装openGL库的前提下出现这种错误，是因为libGL没有正确链接:</p>
@@ -647,16 +707,49 @@ sudo mkfontdir
     <content><![CDATA[<p>[TOC]</p>
 <span id="more"></span>
 
-<h1 id="餐厅玩法方向"><a href="#餐厅玩法方向" class="headerlink" title="餐厅玩法方向"></a>餐厅玩法方向</h1><h2 id="五星厨神"><a href="#五星厨神" class="headerlink" title="五星厨神"></a>五星厨神</h2><h3 id="1-5"><a href="#1-5" class="headerlink" title="1~5"></a>1~5</h3><h3 id="6-34"><a href="#6-34" class="headerlink" title="6~34"></a>6~34</h3><h3 id="35-47"><a href="#35-47" class="headerlink" title="35~47"></a>35~47</h3><h3 id="48-60"><a href="#48-60" class="headerlink" title="48~60"></a>48~60</h3><h2 id="快速升级"><a href="#快速升级" class="headerlink" title="快速升级"></a>快速升级</h2><h2 id="随缘佛系"><a href="#随缘佛系" class="headerlink" title="随缘佛系"></a>随缘佛系</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+<h1 id="餐厅玩法方向"><a href="#餐厅玩法方向" class="headerlink" title="餐厅玩法方向"></a>餐厅玩法方向</h1><h2 id="五星厨神"><a href="#五星厨神" class="headerlink" title="五星厨神"></a>五星厨神</h2><h3 id="1-5"><a href="#1-5" class="headerlink" title="1~5"></a>1~5</h3><h3 id="6-34"><a href="#6-34" class="headerlink" title="6~34"></a>6~34</h3><h3 id="35-47"><a href="#35-47" class="headerlink" title="35~47"></a>35~47</h3><h3 id="48-60"><a href="#48-60" class="headerlink" title="48~60"></a>48~60</h3><h2 id="快速升级"><a href="#快速升级" class="headerlink" title="快速升级"></a>快速升级</h2><h2 id="随缘佛系"><a href="#随缘佛系" class="headerlink" title="随缘佛系"></a>随缘佛系</h2><h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
       <tags>
         <tag>摩尔庄园</tag>
       </tags>
   </entry>
   <entry>
-    <title>文章迁移公告</title>
-    <url>/2021/04/19/%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB%E5%85%AC%E5%91%8A/</url>
-    <content><![CDATA[<p>2021.4.19日及之前日期的博客均迁移自原博客<a href="https://blog.csdn.net/qq_29627051">CSDN</a>，至今日，文章迁移全部完成</p>
+    <title>树莓派3B+自动挂载移动硬盘或U盘[转]</title>
+    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/</url>
+    <content><![CDATA[<p><a href="http://blog.sina.com.cn/s/blog_563ac5900102wwxq.html">原文地址</a></p>
+<p>fdisk -l<br>命令查看一下U盘是否有被识别到，及识别的U盘是在哪个位置<br>外接U盘或移动硬盘时，默认不会自动挂载，所以需要用mount 命令挂载。通常我们在/mnt 或/media 目录下新建一个目录作为挂载点。比如：</p>
+<p>sudo mkdir /mnt/1GB_USB_flash<br>sudo mount -o uid=pi,gid=pi /dev/sda1 /mnt/1GB_USB_flash<br>//用完之后卸载<br>sudo umount /mnt/1GB_USB_flash  </p>
+<span id="more"></span>
+
+<p>sda1 是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。</p>
+<p>挂载exFAT格式的硬盘<br>FAT 格式U盘mount 本身就能支持，但如果你的U盘或移动硬盘使用的是exFAT 格式，mount会说不支持。没关系，安装 exfat-fuse软件之后 mount就支持了。</p>
+<p>sudo apt-get install exfat-fuse  </p>
+<p>如果想开机自动挂载，而不是每次手工执行，可以编辑 /etc/fstab 文件。比如在末尾添加一行：</p>
+<p>/dev/sda1 /mnt/usbdisk vfat rw,defaults 0 0  </p>
+<p>挂载NTFS格式的硬盘(读写方式挂载)<br>默认挂载NTFS格式的硬盘只有只读权限，需要借助其它工具实现。</p>
+<p>#安装所需软件包  </p>
+<p>sudo apt-get install fuse-utils ntfs-3g  </p>
+<p>#加载内核模块  </p>
+<p>modprobe fuse  </p>
+<p>#编辑fstab让移动硬盘开机自动挂载  </p>
+<p>sudo nano /etc/fstab  </p>
+<p>#在最后一行添加如下内容  </p>
+<p>/dev/sda1 /mnt/myusbdrive ntfs-3g defaults,noatime,umask=0000 0 0  </p>
+<p>#保存重启，即可生效  </p>
+<p>挂载FAT32格式的硬盘</p>
+<p>#创建挂载点  </p>
+<p>sudo mkdir /mnt/myusbdrive  </p>
+<p>#编辑fstab让移动硬盘开机自动挂载  </p>
+<p>sudo nano /etc/fstab  </p>
+<p>#在最后一行添加如下内容  </p>
+<p>/dev/sda1 /mnt/myusbdrive auto defaults,noatime,umask=0000 0 0  </p>
+<p>#保存重启，即可生效  </p>
+<p>说明：<br>sda1是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。<br>umask=0000 0 0<br>前面四个0就是对所有人,可读可写可执行,<br>后面两个0,第一个代表dump,0是不备份<br>第二个代表fsck检查的顺序,0表示不检查<br>卸载：sudo umount /mnt/myusbdrive<br>查看挂载情况可使用以下命令。<br>cd /mnt/myusbdrive  </p>
+<p>ls  </p>
 ]]></content>
+      <tags>
+        <tag>Raspberry</tag>
+        <tag>Raspbian</tag>
+      </tags>
   </entry>
   <entry>
     <title>树莓派3B+无屏幕和键盘配置WiFi[转]</title>
@@ -679,6 +772,72 @@ sudo mkfontdir
       <tags>
         <tag>Raspberry</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>文章迁移公告</title>
+    <url>/2021/04/19/%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB%E5%85%AC%E5%91%8A/</url>
+    <content><![CDATA[<p>2021.4.19日及之前日期的博客均迁移自原博客<a href="https://blog.csdn.net/qq_29627051">CSDN</a>，至今日，文章迁移全部完成</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>阿里云Ubuntu搭建Steam饥荒联机版服务器</title>
+    <url>/2021/04/19/%E9%98%BF%E9%87%8C%E4%BA%91Ubuntu%E6%90%AD%E5%BB%BASteam%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p>@<a href>TOC</a></p>
+<h2 id="一、安装依赖"><a href="#一、安装依赖" class="headerlink" title="一、安装依赖"></a>一、安装依赖</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install libstdc++<span class="number">6</span>:i386 libgcc1:i386 libcurl4<span class="literal">-gnutls</span><span class="literal">-dev</span>:i386 lib32gcc1</span><br></pre></td></tr></table></figure>
+<h2 id="二、安装SteamCMD"><a href="#二、安装SteamCMD" class="headerlink" title="二、安装SteamCMD"></a>二、安装SteamCMD</h2><p>新建目录并进入，安装steamcmd</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">mkdir ~/steamcmd</span><br><span class="line"><span class="built_in">cd</span> steamcmd</span><br></pre></td></tr></table></figure>
+<p>安装SteamCMD</p>
+<span id="more"></span>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 下载安装文件</span></span><br><span class="line"><span class="built_in">wget</span> https://steamcdn<span class="literal">-a</span>.akamaihd.net/client/installer/steamcmd_linux.tar.gz</span><br><span class="line"><span class="comment">## 解压并删除</span></span><br><span class="line">tar <span class="literal">-xvzf</span> ~/steamcmd/steamcmd_linux.tar.gz</span><br><span class="line"><span class="built_in">rm</span> steamcmd_linux.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="三、安装DST服务端"><a href="#三、安装DST服务端" class="headerlink" title="三、安装DST服务端"></a>三、安装DST服务端</h2><p>启动steamcmd</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">./steamcmd.sh</span><br></pre></td></tr></table></figure>
+<p>使用公共账号登录steam</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">login anonymous</span><br></pre></td></tr></table></figure>
+<p>指定DST安装目录</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">force_install_dir ../myDSTserver</span><br></pre></td></tr></table></figure>
+<p>安装DST服务端</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">app_update <span class="number">343050</span> validate</span><br></pre></td></tr></table></figure>
+<p>当出现<code>Success! App &#39;343050&#39; fully installed.</code>的时候表示安装成功<br>安装完成后退出steamcmd</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure>
+<h2 id="四、配置DST服务端"><a href="#四、配置DST服务端" class="headerlink" title="四、配置DST服务端"></a>四、配置DST服务端</h2><h4 id="1-生成其余配置文件"><a href="#1-生成其余配置文件" class="headerlink" title="1. 生成其余配置文件"></a>1. 生成其余配置文件</h4><p>进入DST的安装目录的bin文件夹，运行<code>dontstarve_dedicated_server_nullrenderer</code>生成<code>.klei</code>等目录和文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;myDSTserver&#x2F;bin</span><br><span class="line">.&#x2F;dontstarve_dedicated_server_nullrenderer</span><br></pre></td></tr></table></figure>
+<h4 id="2-目录结构"><a href="#2-目录结构" class="headerlink" title="2. 目录结构"></a>2. 目录结构</h4><p><code>/root/.klei</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── Agreements</span><br><span class="line">│   └── DoNotStarveTogether</span><br><span class="line">│       └── agreements.ini</span><br><span class="line">└── DoNotStarveTogether</span><br><span class="line">    ├── Cluster_1</span><br><span class="line">    │   └── Master</span><br><span class="line">    └── MyDediServer</span><br><span class="line">        ├── Caves</span><br><span class="line">        ├── Master</span><br><span class="line">        ├── adminlist.txt</span><br><span class="line">        ├── cluster.ini</span><br><span class="line">        └── cluster_token.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><code>/root/myDSTserver</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── bin</span><br><span class="line">│   ├── dontstarve</span><br><span class="line">│   ├── dontstarve.xpm</span><br><span class="line">│   ├── dontstarve_dedicated_server_nullrenderer</span><br><span class="line">│   ├── lib32</span><br><span class="line">│   ├── scripts</span><br><span class="line">│   └── steam_appid.txt</span><br><span class="line">├── data</span><br><span class="line">│   ├── anim</span><br><span class="line">│   ├── bigportraits</span><br><span class="line">│   ├── databundles</span><br><span class="line">│   ├── fx</span><br><span class="line">│   ├── images</span><br><span class="line">│   ├── levels</span><br><span class="line">│   ├── minimap</span><br><span class="line">│   ├── movies</span><br><span class="line">│   ├── scripts_readme.txt</span><br><span class="line">│   └── sound</span><br><span class="line">├── dontstarve.xpm</span><br><span class="line">├── mods</span><br><span class="line">│   ├── INSTALLING_MODS.txt</span><br><span class="line">│   ├── MAKING_MODS.txt</span><br><span class="line">│   ├── dedicated_server_mods_setup.lua</span><br><span class="line">│   └── modsettings.lua</span><br><span class="line">├── steamapps</span><br><span class="line">│   ├── appmanifest_343050.acf</span><br><span class="line">│   ├── downloading</span><br><span class="line">│   ├── libraryfolders.vdf</span><br><span class="line">│   ├── shadercache</span><br><span class="line">│   └── temp</span><br><span class="line">└── version.txt</span><br></pre></td></tr></table></figure>
+<h4 id="3-获取服务器配置文件"><a href="#3-获取服务器配置文件" class="headerlink" title="3. 获取服务器配置文件"></a>3. 获取服务器配置文件</h4><p><a href="https://accounts.klei.com/account/game/servers?game=DontStarveTogether">官网创建并下载配置文件</a><br>(MyDediServer.zip)<br>把服务器配置压缩包远程传输到服务器上</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scp <span class="literal">-r</span> MyDediServer.zip username@<span class="number">192.168</span>.<span class="number">0.1</span>:/home/username/</span><br></pre></td></tr></table></figure>
+<h4 id="4-替换服务器配置文件"><a href="#4-替换服务器配置文件" class="headerlink" title="4. 替换服务器配置文件"></a>4. 替换服务器配置文件</h4><p>在服务器内把压缩包解压，替换掉默认存档</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unzip MyDediServer.zip</span><br><span class="line">rm -r ~&#x2F;.klei&#x2F;DoNotStarveTogether&#x2F;Cluster_1</span><br><span class="line">mv MyDediServer ~&#x2F;.klei&#x2F;DoNotStarveTogether</span><br></pre></td></tr></table></figure>
+<h4 id="5-添加管理员"><a href="#5-添加管理员" class="headerlink" title="5. 添加管理员"></a>5. 添加管理员</h4><p>在存档目录下建立<code>adminlist.txt</code>文件，将需要的UserID输入即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;.klei&#x2F;DoNotStarveTogether&#x2F;MyDediServer</span><br><span class="line">touch adminlist.txt</span><br><span class="line">vim adminlist.txt     ## 写入UserID即可</span><br></pre></td></tr></table></figure>
+<h2 id="五、添加Mod"><a href="#五、添加Mod" class="headerlink" title="五、添加Mod"></a>五、添加Mod</h2><p>修改<code>dedicated_server_mods_setup.lua</code>文件可以让服务器每次启动的时候自动加载和更新mod，该文件位于<code>~/myDSTserver/mods</code>文件夹。向下面这样添加，数字为创意工坊中mod的编号。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ServerModSetup(&quot;345692228&quot;)</span><br><span class="line">ServerModSetup(&quot;346968521&quot;)</span><br><span class="line">ServerModSetup(&quot;352373173&quot;)</span><br><span class="line">ServerModCollectionSetup(&quot;379114180&quot;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、启动脚本"><a href="#六、启动脚本" class="headerlink" title="六、启动脚本"></a>六、启动脚本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">steamcmd_dir&#x3D;&quot;$HOME&#x2F;steamcmd&quot;</span><br><span class="line">install_dir&#x3D;&quot;$HOME&#x2F;myDSTserver&quot;</span><br><span class="line">cluster_name&#x3D;&quot;MyDediServer&quot;</span><br><span class="line">dontstarve_dir&#x3D;&quot;$HOME&#x2F;.klei&#x2F;DoNotStarveTogether&quot;</span><br><span class="line">cd &quot;$steamcmd_dir&quot;</span><br><span class="line">cd &quot;$install_dir&#x2F;bin&quot;</span><br><span class="line">run_shared&#x3D;(.&#x2F;dontstarve_dedicated_server_nullrenderer)</span><br><span class="line">run_shared+&#x3D;(-console)</span><br><span class="line">run_shared+&#x3D;(-cluster &quot;$cluster_name&quot;)</span><br><span class="line">run_shared+&#x3D;(-monitor_parent_process $$)</span><br><span class="line">run_shared+&#x3D;(-shard)</span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; Caves  | sed &#39;s&#x2F;^&#x2F;Caves: &#x2F;&#39; &amp;</span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; Master | sed &#39;s&#x2F;^&#x2F;Master: &#x2F;&#39;</span><br></pre></td></tr></table></figure>
+<h2 id="验证服务器运行"><a href="#验证服务器运行" class="headerlink" title="验证服务器运行"></a>验证服务器运行</h2><p><a href="https://dstserverlist.appspot.com/">在线验证服务器运行</a></p>
+<h2 id="六、后台运行服务器"><a href="#六、后台运行服务器" class="headerlink" title="六、后台运行服务器"></a>六、后台运行服务器</h2><p>screen常用命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 列出当前所有screen</span><br><span class="line">screen -ls</span><br><span class="line"></span><br><span class="line"># 创建一个名为server的screen</span><br><span class="line">screen -S server</span><br><span class="line"></span><br><span class="line"># 切换到server的screen</span><br><span class="line">screen -r server</span><br><span class="line"></span><br><span class="line"># 杀死一个名为server的screen</span><br><span class="line">screen -S server -X quit</span><br><span class="line"></span><br><span class="line"># 退出该screen(会继续执行）</span><br><span class="line">ctrl+a+d</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>云服务器</tag>
+        <tag>饥荒</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>远为观止</title>
+    <url>/2021/04/21/%E8%BF%9C%E4%B8%BA%E8%A7%82%E4%B9%8B/</url>
+    <content><![CDATA[<p>如果想戒掉某种习惯</p>
+<span id="more"></span>
+
+<p>某种东西，某个人，那么，就不要去做任何的接触</p>
+<p>不要去想，不要去看，不要去触摸</p>
+<p>一旦触及到，一种名为瘾的东西就会发作，无法遏止，之前做的努力就会大打折扣</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
   </entry>
   <entry>
     <title>阿里云Ubuntu18.04/20.04LTS上搭建Minecraft服务器</title>
@@ -735,165 +894,6 @@ sudo mkfontdir
         <tag>SSH</tag>
         <tag>云服务器</tag>
         <tag>Minecraft</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>树莓派3B+自动挂载移动硬盘或U盘[转]</title>
-    <url>/2021/04/19/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96U%E7%9B%98/</url>
-    <content><![CDATA[<p><a href="http://blog.sina.com.cn/s/blog_563ac5900102wwxq.html">原文地址</a></p>
-<p>fdisk -l<br>命令查看一下U盘是否有被识别到，及识别的U盘是在哪个位置<br>外接U盘或移动硬盘时，默认不会自动挂载，所以需要用mount 命令挂载。通常我们在/mnt 或/media 目录下新建一个目录作为挂载点。比如：</p>
-<p>sudo mkdir /mnt/1GB_USB_flash<br>sudo mount -o uid=pi,gid=pi /dev/sda1 /mnt/1GB_USB_flash<br>//用完之后卸载<br>sudo umount /mnt/1GB_USB_flash  </p>
-<span id="more"></span>
-
-<p>sda1 是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。</p>
-<p>挂载exFAT格式的硬盘<br>FAT 格式U盘mount 本身就能支持，但如果你的U盘或移动硬盘使用的是exFAT 格式，mount会说不支持。没关系，安装 exfat-fuse软件之后 mount就支持了。</p>
-<p>sudo apt-get install exfat-fuse  </p>
-<p>如果想开机自动挂载，而不是每次手工执行，可以编辑 /etc/fstab 文件。比如在末尾添加一行：</p>
-<p>/dev/sda1 /mnt/usbdisk vfat rw,defaults 0 0  </p>
-<p>挂载NTFS格式的硬盘(读写方式挂载)<br>默认挂载NTFS格式的硬盘只有只读权限，需要借助其它工具实现。</p>
-<p>#安装所需软件包  </p>
-<p>sudo apt-get install fuse-utils ntfs-3g  </p>
-<p>#加载内核模块  </p>
-<p>modprobe fuse  </p>
-<p>#编辑fstab让移动硬盘开机自动挂载  </p>
-<p>sudo nano /etc/fstab  </p>
-<p>#在最后一行添加如下内容  </p>
-<p>/dev/sda1 /mnt/myusbdrive ntfs-3g defaults,noatime,umask=0000 0 0  </p>
-<p>#保存重启，即可生效  </p>
-<p>挂载FAT32格式的硬盘</p>
-<p>#创建挂载点  </p>
-<p>sudo mkdir /mnt/myusbdrive  </p>
-<p>#编辑fstab让移动硬盘开机自动挂载  </p>
-<p>sudo nano /etc/fstab  </p>
-<p>#在最后一行添加如下内容  </p>
-<p>/dev/sda1 /mnt/myusbdrive auto defaults,noatime,umask=0000 0 0  </p>
-<p>#保存重启，即可生效  </p>
-<p>说明：<br>sda1是取决于你的实际情况，a表示第一个硬盘，1表示第一个分区。<br>umask=0000 0 0<br>前面四个0就是对所有人,可读可写可执行,<br>后面两个0,第一个代表dump,0是不备份<br>第二个代表fsck检查的顺序,0表示不检查<br>卸载：sudo umount /mnt/myusbdrive<br>查看挂载情况可使用以下命令。<br>cd /mnt/myusbdrive  </p>
-<p>ls  </p>
-]]></content>
-      <tags>
-        <tag>Raspberry</tag>
-        <tag>Raspbian</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>远为观止</title>
-    <url>/2021/04/21/%E8%BF%9C%E4%B8%BA%E8%A7%82%E4%B9%8B/</url>
-    <content><![CDATA[<p>如果想戒掉某种习惯</p>
-<span id="more"></span>
-
-<p>某种东西，某个人，那么，就不要去做任何的接触</p>
-<p>不要去想，不要去看，不要去触摸</p>
-<p>一旦触及到，一种名为瘾的东西就会发作，无法遏止，之前做的努力就会大打折扣</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>阿里云Ubuntu搭建Steam饥荒联机版服务器</title>
-    <url>/2021/04/19/%E9%98%BF%E9%87%8C%E4%BA%91Ubuntu%E6%90%AD%E5%BB%BASteam%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p>@<a href="">TOC</a></p>
-<h2 id="一、安装依赖"><a href="#一、安装依赖" class="headerlink" title="一、安装依赖"></a>一、安装依赖</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt<span class="literal">-get</span> install libstdc++<span class="number">6</span>:i386 libgcc1:i386 libcurl4<span class="literal">-gnutls</span><span class="literal">-dev</span>:i386 lib32gcc1</span><br></pre></td></tr></table></figure>
-<h2 id="二、安装SteamCMD"><a href="#二、安装SteamCMD" class="headerlink" title="二、安装SteamCMD"></a>二、安装SteamCMD</h2><p>新建目录并进入，安装steamcmd</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">mkdir ~/steamcmd</span><br><span class="line"><span class="built_in">cd</span> steamcmd</span><br></pre></td></tr></table></figure>
-<p>安装SteamCMD</p>
-<span id="more"></span>
-
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 下载安装文件</span></span><br><span class="line"><span class="built_in">wget</span> https://steamcdn<span class="literal">-a</span>.akamaihd.net/client/installer/steamcmd_linux.tar.gz</span><br><span class="line"><span class="comment">## 解压并删除</span></span><br><span class="line">tar <span class="literal">-xvzf</span> ~/steamcmd/steamcmd_linux.tar.gz</span><br><span class="line"><span class="built_in">rm</span> steamcmd_linux.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="三、安装DST服务端"><a href="#三、安装DST服务端" class="headerlink" title="三、安装DST服务端"></a>三、安装DST服务端</h2><p>启动steamcmd</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">./steamcmd.sh</span><br></pre></td></tr></table></figure>
-<p>使用公共账号登录steam</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">login anonymous</span><br></pre></td></tr></table></figure>
-<p>指定DST安装目录</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">force_install_dir ../myDSTserver</span><br></pre></td></tr></table></figure>
-<p>安装DST服务端</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">app_update <span class="number">343050</span> validate</span><br></pre></td></tr></table></figure>
-<p>当出现<code>Success! App &#39;343050&#39; fully installed.</code>的时候表示安装成功<br>安装完成后退出steamcmd</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure>
-<h2 id="四、配置DST服务端"><a href="#四、配置DST服务端" class="headerlink" title="四、配置DST服务端"></a>四、配置DST服务端</h2><h4 id="1-生成其余配置文件"><a href="#1-生成其余配置文件" class="headerlink" title="1. 生成其余配置文件"></a>1. 生成其余配置文件</h4><p>进入DST的安装目录的bin文件夹，运行<code>dontstarve_dedicated_server_nullrenderer</code>生成<code>.klei</code>等目录和文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;myDSTserver&#x2F;bin</span><br><span class="line">.&#x2F;dontstarve_dedicated_server_nullrenderer</span><br></pre></td></tr></table></figure>
-<h4 id="2-目录结构"><a href="#2-目录结构" class="headerlink" title="2. 目录结构"></a>2. 目录结构</h4><p><code>/root/.klei</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── Agreements</span><br><span class="line">│   └── DoNotStarveTogether</span><br><span class="line">│       └── agreements.ini</span><br><span class="line">└── DoNotStarveTogether</span><br><span class="line">    ├── Cluster_1</span><br><span class="line">    │   └── Master</span><br><span class="line">    └── MyDediServer</span><br><span class="line">        ├── Caves</span><br><span class="line">        ├── Master</span><br><span class="line">        ├── adminlist.txt</span><br><span class="line">        ├── cluster.ini</span><br><span class="line">        └── cluster_token.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><code>/root/myDSTserver</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── bin</span><br><span class="line">│   ├── dontstarve</span><br><span class="line">│   ├── dontstarve.xpm</span><br><span class="line">│   ├── dontstarve_dedicated_server_nullrenderer</span><br><span class="line">│   ├── lib32</span><br><span class="line">│   ├── scripts</span><br><span class="line">│   └── steam_appid.txt</span><br><span class="line">├── data</span><br><span class="line">│   ├── anim</span><br><span class="line">│   ├── bigportraits</span><br><span class="line">│   ├── databundles</span><br><span class="line">│   ├── fx</span><br><span class="line">│   ├── images</span><br><span class="line">│   ├── levels</span><br><span class="line">│   ├── minimap</span><br><span class="line">│   ├── movies</span><br><span class="line">│   ├── scripts_readme.txt</span><br><span class="line">│   └── sound</span><br><span class="line">├── dontstarve.xpm</span><br><span class="line">├── mods</span><br><span class="line">│   ├── INSTALLING_MODS.txt</span><br><span class="line">│   ├── MAKING_MODS.txt</span><br><span class="line">│   ├── dedicated_server_mods_setup.lua</span><br><span class="line">│   └── modsettings.lua</span><br><span class="line">├── steamapps</span><br><span class="line">│   ├── appmanifest_343050.acf</span><br><span class="line">│   ├── downloading</span><br><span class="line">│   ├── libraryfolders.vdf</span><br><span class="line">│   ├── shadercache</span><br><span class="line">│   └── temp</span><br><span class="line">└── version.txt</span><br></pre></td></tr></table></figure>
-<h4 id="3-获取服务器配置文件"><a href="#3-获取服务器配置文件" class="headerlink" title="3. 获取服务器配置文件"></a>3. 获取服务器配置文件</h4><p><a href="https://accounts.klei.com/account/game/servers?game=DontStarveTogether">官网创建并下载配置文件</a><br>(MyDediServer.zip)<br>把服务器配置压缩包远程传输到服务器上</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scp <span class="literal">-r</span> MyDediServer.zip username@<span class="number">192.168</span>.<span class="number">0.1</span>:/home/username/</span><br></pre></td></tr></table></figure>
-<h4 id="4-替换服务器配置文件"><a href="#4-替换服务器配置文件" class="headerlink" title="4. 替换服务器配置文件"></a>4. 替换服务器配置文件</h4><p>在服务器内把压缩包解压，替换掉默认存档</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unzip MyDediServer.zip</span><br><span class="line">rm -r ~&#x2F;.klei&#x2F;DoNotStarveTogether&#x2F;Cluster_1</span><br><span class="line">mv MyDediServer ~&#x2F;.klei&#x2F;DoNotStarveTogether</span><br></pre></td></tr></table></figure>
-<h4 id="5-添加管理员"><a href="#5-添加管理员" class="headerlink" title="5. 添加管理员"></a>5. 添加管理员</h4><p>在存档目录下建立<code>adminlist.txt</code>文件，将需要的UserID输入即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;.klei&#x2F;DoNotStarveTogether&#x2F;MyDediServer</span><br><span class="line">touch adminlist.txt</span><br><span class="line">vim adminlist.txt     ## 写入UserID即可</span><br></pre></td></tr></table></figure>
-<h2 id="五、添加Mod"><a href="#五、添加Mod" class="headerlink" title="五、添加Mod"></a>五、添加Mod</h2><p>修改<code>dedicated_server_mods_setup.lua</code>文件可以让服务器每次启动的时候自动加载和更新mod，该文件位于<code>~/myDSTserver/mods</code>文件夹。向下面这样添加，数字为创意工坊中mod的编号。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ServerModSetup(&quot;345692228&quot;)</span><br><span class="line">ServerModSetup(&quot;346968521&quot;)</span><br><span class="line">ServerModSetup(&quot;352373173&quot;)</span><br><span class="line">ServerModCollectionSetup(&quot;379114180&quot;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="六、启动脚本"><a href="#六、启动脚本" class="headerlink" title="六、启动脚本"></a>六、启动脚本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">steamcmd_dir&#x3D;&quot;$HOME&#x2F;steamcmd&quot;</span><br><span class="line">install_dir&#x3D;&quot;$HOME&#x2F;myDSTserver&quot;</span><br><span class="line">cluster_name&#x3D;&quot;MyDediServer&quot;</span><br><span class="line">dontstarve_dir&#x3D;&quot;$HOME&#x2F;.klei&#x2F;DoNotStarveTogether&quot;</span><br><span class="line">cd &quot;$steamcmd_dir&quot;</span><br><span class="line">cd &quot;$install_dir&#x2F;bin&quot;</span><br><span class="line">run_shared&#x3D;(.&#x2F;dontstarve_dedicated_server_nullrenderer)</span><br><span class="line">run_shared+&#x3D;(-console)</span><br><span class="line">run_shared+&#x3D;(-cluster &quot;$cluster_name&quot;)</span><br><span class="line">run_shared+&#x3D;(-monitor_parent_process $$)</span><br><span class="line">run_shared+&#x3D;(-shard)</span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; Caves  | sed &#39;s&#x2F;^&#x2F;Caves: &#x2F;&#39; &amp;</span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; Master | sed &#39;s&#x2F;^&#x2F;Master: &#x2F;&#39;</span><br></pre></td></tr></table></figure>
-<h2 id="验证服务器运行"><a href="#验证服务器运行" class="headerlink" title="验证服务器运行"></a>验证服务器运行</h2><p><a href="https://dstserverlist.appspot.com/">在线验证服务器运行</a></p>
-<h2 id="六、后台运行服务器"><a href="#六、后台运行服务器" class="headerlink" title="六、后台运行服务器"></a>六、后台运行服务器</h2><p>screen常用命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 列出当前所有screen</span><br><span class="line">screen -ls</span><br><span class="line"></span><br><span class="line"># 创建一个名为server的screen</span><br><span class="line">screen -S server</span><br><span class="line"></span><br><span class="line"># 切换到server的screen</span><br><span class="line">screen -r server</span><br><span class="line"></span><br><span class="line"># 杀死一个名为server的screen</span><br><span class="line">screen -S server -X quit</span><br><span class="line"></span><br><span class="line"># 退出该screen(会继续执行）</span><br><span class="line">ctrl+a+d</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>云服务器</tag>
-        <tag>饥荒</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Notion使用笔记一：实现子弹笔记电子化</title>
-    <url>/2021/04/25/Notion%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%AE%9E%E7%8E%B0%E5%AD%90%E5%BC%B9%E7%AC%94%E8%AE%B0%E7%94%B5%E5%AD%90%E5%8C%96/</url>
-    <content><![CDATA[<h1 id="Notion使用笔记一：实现子弹笔记电子化"><a href="#Notion使用笔记一：实现子弹笔记电子化" class="headerlink" title="Notion使用笔记一：实现子弹笔记电子化"></a>Notion使用笔记一：实现子弹笔记电子化</h1><p><a href="https://www.douban.com/note/769517273/?type=like">原文地址</a></p>
-<p><a href="https://www.douban.com/people/206882534/"><img src="https://img2.doubanio.com/icon/u206882534-3.jpg" alt="CX"></a> <a href="https://www.douban.com/people/206882534/">CX</a> <strong>2020-07-04 11:01:06</strong></p>
-<span id="more"></span>
-
-<p>我用子弹笔记做了两年的计划和笔记，喜欢它的灵活度，也可以满足我时不时想写写画画的需求。但子弹笔记对我来说的缺点是每个月都会需要花一定时间在做版面上面。一开始尝试各种新版面的时候很愉快，但之后就慢慢变成了重复工作。再来最近很多网络会议，而且每天基本都是对着电脑，直接把链接保存到日历更方便一些。</p>
-<p>接触Notion之后，发现Notion可以实现和子弹笔记一样的高自由度排版。而且因为可以创建模版，每次做计划的时候只需要建个新页面，之后也能再按需调整。<strong>模版链接在文末</strong></p>
-<p>另外，Notion也可以将我本来记在“待办事项”、“备忘录”、“日历”里的事项，还有其他零散的文件都整合到一起。把所有任务都储存到一张总任务表之后，还可以利用linked database和不同的视图/筛选功能在不同地方显示想要的部分（这个操作会在月计划模版里详细介绍）。</p>
-<p>先放两张对比图：</p>
-<p><img src="https://img2.doubanio.com/view/note/l/public/p73986483.webp" alt="img"></p>
-<p>现在使用的Notion版面</p>
-<p><img src="https://img9.doubanio.com/view/note/l/public/p73986516.webp" alt="img"></p>
-<p>原来的纸版子弹笔记</p>
-<h2 id="年计划"><a href="#年计划" class="headerlink" title="年计划"></a>年计划</h2><p><img src="https://img1.doubanio.com/view/note/l/public/p73986519.webp" alt="img"></p>
-<p>和子弹笔记一样，我的Notion也分成年计划、月计划，和周计划。</p>
-<p>年计划最简单：上面是月计划清单（图上只有六月份），下面是未来计划（Future Log）。</p>
-<p>未来计划（Future Log）沿用了子弹笔记的逻辑：在一月的时候我可能就知道八月份要参加会议，但因为我还没开始做八月的计划，就先把它记在这儿，等八月的时候再把这个事项放进去月计划里。（我不是很喜欢在年计划里放日历，因为一年的跨度翻起来不是很方便。）</p>
-<h2 id="月计划"><a href="#月计划" class="headerlink" title="月计划"></a>月计划</h2><p><img src="https://img3.doubanio.com/view/note/l/public/p73986521.webp" alt="img"></p>
-<p>月计划模版</p>
-<p>月计划的第1块是这个月的目标和周计划链接（因为我的截图是模版，所以图中没有显示链接）。</p>
-<p>第2块和第3块就用到了开头说到的Lined database。这两块是同一个database（标题都是“Master Project List”），就是下面这个页面：</p>
-<p><img src="https://img1.doubanio.com/view/note/l/public/p73986537.webp" alt="img"></p>
-<p>我的任务总表</p>
-<p><img src="https://img3.doubanio.com/view/note/l/public/p73987340.webp" alt="img"></p>
-<p>任务总表的日历视图，我还建了其他很多视图来满足其他需求</p>
-<p>这个页面里面放上了我所有的计划和项目，然后用标签来区分这是我正在做的，还是我准备要做的。然后继续细分是做到什么程度——比如写作任务是在第一稿还是在修改中。</p>
-<p>回到月计划的版面，第2块区域里我用的就是总任务表的日历视图，显示的是这个月已经计划好（放在日历上）的事情。至于我还没放上行程表的，我就用Board视图放在第3块区域，类似于子弹笔记月计划中的未来事项（总表里的标签就是“to be scheduled”）。这样的好处是我在这个月这个页面上做出的改动，可以同时反馈到总表里，保证信息的一致性，也方便跟踪。不用像纸质的子弹笔记一样，每次做计划都要再抄一遍。</p>
-<h2 id="周计划"><a href="#周计划" class="headerlink" title="周计划"></a>周计划</h2><p><img src="https://img9.doubanio.com/view/note/l/public/p73987205.webp" alt="img"></p>
-<p>周计划最复杂，但也是使用率最高的页面。</p>
-<p>这个模版来源于Marie Poulin的weekly planner，我在她的基础上做了些修改，大致上还是非常像的。[1]</p>
-<p>第1块区域是一些链接和这周的目标。第2块就是每天的任务清单。新建周计划的时候，我会把月日历上本周的事项放过来，然后每天开始工作之前再继续添加今天要做的任务。</p>
-<p>第3块，我的任务总表又出现了。这里我让它显示的是我现在正在处理的任务（总表中的标签是In progress）。因为每天早上做计划的时候都是打开的是这个页面，所以直接在这儿放个我正处理的事情更方便查看我手头有哪些任务。</p>
-<p><img src="https://img9.doubanio.com/view/note/l/public/p73987424.webp" alt="img"></p>
-<p>第4块区域沿用了Marie Poulin的每周自我反思板块。说实话，我用笔记本的子弹笔记也会留这么一块区域，但其实从来没写过…所以留在这里，更多是…填版面…</p>
-<p>最后的第5块是生活习惯的追踪。我比较在意的是睡眠、运动，和工作效率，就建了个表把想记录的都放在这里。“Focus”是今天我做了多少个番茄时钟，最后的“Productivity”是给自己打分的一个地方，和子弹笔记的形式是一样的。</p>
-<p>然后它也是个Linked database（下图），同样也是一个单独的页面。每周周计划上显示的只是这两周的记录，但是在总表里面可以形成一个长期的记录。</p>
-<p><img src="https://img3.doubanio.com/view/note/l/public/p73986551.webp" alt="img"></p>
-<p>我的生活习惯总表</p>
-<p>最后，比较残念的是Notion的日历上无法设置重复任务。比如每个月交房租的事项，就得每次完成一个之后，拖到下个月。另一个小缺点就是Notion无法和iCal联动。不过它可以和谷歌日历联动，官方推特也表示正在考虑实现iCal的联动，所以希望之后能有这个功能。</p>
-<p>总的来说，Notion可以用来实现很多不同的需求，这里也只是提供一种思路，推荐大家去试试这个软件。</p>
-<p>附上之前写的安利贴（Notion读书追踪+习惯养成+书签收藏模版）：<a href="https://www.douban.com/group/topic/182080858/">https://www.douban.com/group/topic/182080858/</a></p>
-<p><strong>子弹笔记模版：</strong></p>
-<p>年计划：<a href="https://www.notion.so/_-a6ffe5450fc5433da934f4b36d508528">https://www.notion.so/_-a6ffe5450fc5433da934f4b36d508528</a></p>
-<p>月计划：<a href="https://www.notion.so/_-72ddb20f114447d185fa5f6f9022c5d6">https://www.notion.so/_-72ddb20f114447d185fa5f6f9022c5d6</a></p>
-<p>周计划：<a href="https://www.notion.so/_-fa967daa95d64bb182a68b64e6f38614">https://www.notion.so/_-fa967daa95d64bb182a68b64e6f38614</a></p>
-<p>总计划清单：<a href="https://www.notion.so/8800c2231d5c4f21b5580204d9e2ac12?v=2997082161ce473288227eba232689f7">https://www.notion.so/8800c2231d5c4f21b5580204d9e2ac12?v=2997082161ce473288227eba232689f7</a></p>
-<p>更新（21.02.10）：</p>
-<p><img src="https://img3.doubanio.com/view/note/l/public/p79828120.webp" alt="img"></p>
-<p>在模版中的年计划和月计划中新添加了小按钮，点击就可以添加新的月/周计划</p>
-<p>[1] <a href="https://www.notion.so/Weekly-agenda-9e197cdf88dc4d3abf798b999ebce40a">https://www.notion.so/Weekly-agenda-9e197cdf88dc4d3abf798b999ebce40a</a></p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-      <tags>
-        <tag>Notion</tag>
       </tags>
   </entry>
 </search>
