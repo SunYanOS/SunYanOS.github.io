@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"sunyanos.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="[转载]Notion使用笔记一：实现子弹笔记电子化原文地址  CX 2020-07-04 11:01:06 我用子弹笔记做了两年的计划和笔记，喜欢它的灵活度，也可以满足我时不时想写写画画的需求。但子弹笔记对我来说的缺点是每个月都会需要花一定时间在做版面上面。一开始尝试各种新版面的时候很愉快，但之后就慢慢变成了重复工作。再来最近很多网络会议，而且每天基本都是对着电脑，直接把链接保存到日历更方便一些。">
+  <meta name="description" content="Notion使用笔记一：实现子弹笔记电子化【转】原文地址  CX 2020-07-04 11:01:06 我用子弹笔记做了两年的计划和笔记，喜欢它的灵活度，也可以满足我时不时想写写画画的需求。但子弹笔记对我来说的缺点是每个月都会需要花一定时间在做版面上面。一开始尝试各种新版面的时候很愉快，但之后就慢慢变成了重复工作。再来最近很多网络会议，而且每天基本都是对着电脑，直接把链接保存到日历更方便一些。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Notion使用笔记一：实现子弹笔记电子化[转]">
 <meta property="og:url" content="http://sunyanos.github.io/2021/04/25/Notion%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%AE%9E%E7%8E%B0%E5%AD%90%E5%BC%B9%E7%AC%94%E8%AE%B0%E7%94%B5%E5%AD%90%E5%8C%96/index.html">
 <meta property="og:site_name" content="Lxfmly&#39;s Blog">
-<meta property="og:description" content="[转载]Notion使用笔记一：实现子弹笔记电子化原文地址  CX 2020-07-04 11:01:06 我用子弹笔记做了两年的计划和笔记，喜欢它的灵活度，也可以满足我时不时想写写画画的需求。但子弹笔记对我来说的缺点是每个月都会需要花一定时间在做版面上面。一开始尝试各种新版面的时候很愉快，但之后就慢慢变成了重复工作。再来最近很多网络会议，而且每天基本都是对着电脑，直接把链接保存到日历更方便一些。">
+<meta property="og:description" content="Notion使用笔记一：实现子弹笔记电子化【转】原文地址  CX 2020-07-04 11:01:06 我用子弹笔记做了两年的计划和笔记，喜欢它的灵活度，也可以满足我时不时想写写画画的需求。但子弹笔记对我来说的缺点是每个月都会需要花一定时间在做版面上面。一开始尝试各种新版面的时候很愉快，但之后就慢慢变成了重复工作。再来最近很多网络会议，而且每天基本都是对着电脑，直接把链接保存到日历更方便一些。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img2.doubanio.com/icon/u206882534-3.jpg">
 <meta property="og:image" content="https://img2.doubanio.com/view/note/l/public/p73986483.webp">
@@ -41,7 +41,7 @@
 <meta property="og:image" content="https://img3.doubanio.com/view/note/l/public/p73986551.webp">
 <meta property="og:image" content="https://img3.doubanio.com/view/note/l/public/p79828120.webp">
 <meta property="article:published_time" content="2021-04-25T06:38:03.000Z">
-<meta property="article:modified_time" content="2021-04-25T06:41:15.243Z">
+<meta property="article:modified_time" content="2021-04-25T06:43:23.491Z">
 <meta property="article:author" content="Lxfmly">
 <meta property="article:tag" content="Notion">
 <meta name="twitter:card" content="summary">
@@ -233,7 +233,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-04-25 14:38:03 / 修改时间：14:41:15" itemprop="dateCreated datePublished" datetime="2021-04-25T14:38:03+08:00">2021-04-25</time>
+              <time title="创建时间：2021-04-25 14:38:03 / 修改时间：14:43:23" itemprop="dateCreated datePublished" datetime="2021-04-25T14:38:03+08:00">2021-04-25</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -263,7 +263,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="转载-Notion使用笔记一：实现子弹笔记电子化"><a href="#转载-Notion使用笔记一：实现子弹笔记电子化" class="headerlink" title="[转载]Notion使用笔记一：实现子弹笔记电子化"></a>[转载]Notion使用笔记一：实现子弹笔记电子化</h1><p><a target="_blank" rel="noopener" href="https://www.douban.com/note/769517273/?type=like">原文地址</a></p>
+        <h1 id="Notion使用笔记一：实现子弹笔记电子化【转】"><a href="#Notion使用笔记一：实现子弹笔记电子化【转】" class="headerlink" title="Notion使用笔记一：实现子弹笔记电子化【转】"></a>Notion使用笔记一：实现子弹笔记电子化【转】</h1><p><a target="_blank" rel="noopener" href="https://www.douban.com/note/769517273/?type=like">原文地址</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.douban.com/people/206882534/"><img src="https://img2.doubanio.com/icon/u206882534-3.jpg" alt="CX"></a> <a target="_blank" rel="noopener" href="https://www.douban.com/people/206882534/">CX</a> <strong>2020-07-04 11:01:06</strong></p>
 <p>我用子弹笔记做了两年的计划和笔记，喜欢它的灵活度，也可以满足我时不时想写写画画的需求。但子弹笔记对我来说的缺点是每个月都会需要花一定时间在做版面上面。一开始尝试各种新版面的时候很愉快，但之后就慢慢变成了重复工作。再来最近很多网络会议，而且每天基本都是对着电脑，直接把链接保存到日历更方便一些。</p>
 <p>接触Notion之后，发现Notion可以实现和子弹笔记一样的高自由度排版。而且因为可以创建模版，每次做计划的时候只需要建个新页面，之后也能再按需调整。<strong>模版链接在文末</strong></p>
@@ -390,7 +390,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AC%E8%BD%BD-Notion%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%AE%9E%E7%8E%B0%E5%AD%90%E5%BC%B9%E7%AC%94%E8%AE%B0%E7%94%B5%E5%AD%90%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">[转载]Notion使用笔记一：实现子弹笔记电子化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B4%E8%AE%A1%E5%88%92"><span class="nav-number">1.1.</span> <span class="nav-text">年计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%88%E8%AE%A1%E5%88%92"><span class="nav-number">1.2.</span> <span class="nav-text">月计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%A8%E8%AE%A1%E5%88%92"><span class="nav-number">1.3.</span> <span class="nav-text">周计划</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Notion%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%AE%9E%E7%8E%B0%E5%AD%90%E5%BC%B9%E7%AC%94%E8%AE%B0%E7%94%B5%E5%AD%90%E5%8C%96%E3%80%90%E8%BD%AC%E3%80%91"><span class="nav-number">1.</span> <span class="nav-text">Notion使用笔记一：实现子弹笔记电子化【转】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B4%E8%AE%A1%E5%88%92"><span class="nav-number">1.1.</span> <span class="nav-text">年计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%88%E8%AE%A1%E5%88%92"><span class="nav-number">1.2.</span> <span class="nav-text">月计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%A8%E8%AE%A1%E5%88%92"><span class="nav-number">1.3.</span> <span class="nav-text">周计划</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
