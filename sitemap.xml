@@ -312,14 +312,14 @@
   </url>
   
   <url>
-    <loc>http://sunyanos.github.io/tags/Hexo/</loc>
+    <loc>http://sunyanos.github.io/tags/MySQL/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://sunyanos.github.io/tags/Notion/</loc>
+    <loc>http://sunyanos.github.io/tags/Hexo/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -340,13 +340,6 @@
   </url>
   
   <url>
-    <loc>http://sunyanos.github.io/tags/MySQL/</loc>
-    <lastmod>2021-05-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://sunyanos.github.io/tags/Raspberry/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
@@ -361,14 +354,14 @@
   </url>
   
   <url>
-    <loc>http://sunyanos.github.io/tags/Gcc/</loc>
+    <loc>http://sunyanos.github.io/tags/Via/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://sunyanos.github.io/tags/Python/</loc>
+    <loc>http://sunyanos.github.io/tags/Gcc/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -389,6 +382,13 @@
   </url>
   
   <url>
+    <loc>http://sunyanos.github.io/tags/Python/</loc>
+    <lastmod>2021-05-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://sunyanos.github.io/tags/%E6%91%A9%E5%B0%94%E5%BA%84%E5%9B%AD/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
@@ -403,13 +403,6 @@
   </url>
   
   <url>
-    <loc>http://sunyanos.github.io/tags/%E9%A5%A5%E8%8D%92/</loc>
-    <lastmod>2021-05-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://sunyanos.github.io/tags/Minecraft/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
@@ -417,20 +410,20 @@
   </url>
   
   <url>
-    <loc>http://sunyanos.github.io/tags/Via/</loc>
+    <loc>http://sunyanos.github.io/tags/%E9%A5%A5%E8%8D%92/</loc>
+    <lastmod>2021-05-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://sunyanos.github.io/tags/Notion/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
 
-  
-  <url>
-    <loc>http://sunyanos.github.io/categories/Tool/</loc>
-    <lastmod>2021-05-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
   <url>
     <loc>http://sunyanos.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
@@ -441,6 +434,13 @@
   
   <url>
     <loc>http://sunyanos.github.io/categories/Life/</loc>
+    <lastmod>2021-05-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://sunyanos.github.io/categories/Tool/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
